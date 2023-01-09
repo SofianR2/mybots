@@ -15,10 +15,13 @@ for j in range(5):
       length = 0.9*length
       width = 0.9*width
       height = 0.9*height
+    z = 0.5
     y += 1
     length = 1
     width = 1
     height = 1
+  y = 0
+  z = 0.5
   x += 1
   length = 1
   width = 1
