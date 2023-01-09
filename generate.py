@@ -5,7 +5,7 @@ width = 1
 height = 1
 x=0
 y=0
-z=0
+z=0.5
 
 def Create_World():
   pyrosim.Start_SDF("world.sdf")
