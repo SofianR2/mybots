@@ -8,7 +8,7 @@ y=0
 z=0
 
 def Create_World():
-  pyrosim.Start_SDF("box.sdf")
+  pyrosim.Start_SDF("world.sdf")
   pyrosim.Send_Cube(name="Box", pos=[x,y,z] , size=[length,width,height])
   pyrosim.End()
   
