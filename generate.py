@@ -25,6 +25,8 @@ def Create_Robot():
   pyrosim.Send_Cube(name="Link4", pos=[x,y+0.5,z] , size=[length,width,height])
   pyrosim.Send_Joint( name = "Link4_Link5" , parent= "Link4" , child = "Link5" , type = "revolute", position = [x,y+0.5,z-0.5])
   pyrosim.Send_Cube(name="Link5", pos=[x,y,z-1] , size=[length,width,height])
+  pyrosim.Send_Joint( name = "Link5_Link6" , parent= "Link5" , child = "Link6" , type = "revolute", position = [x,y,z-1.5])
+  pyrosim.Send_Cube(name="Link6", pos=[x,y,z-1] , size=[length,width,height])
   pyrosim.End()
   
 Create_World()
