@@ -27,7 +27,7 @@ def Create_Robot():
   #pyrosim.Send_Cube(name="Link5", pos=[x,y+0.5,z] , size=[length,width,height])
   pyrosim.End()
   
-Create_World(
+Create_World()
 Create_Robot()
   
 #x = 0
