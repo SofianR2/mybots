@@ -1,3 +1,4 @@
 import numpy
 
-numpy.load(data/backLegSensorValues.npy)
+backLegSensorValues = numpy.load(data/backLegSensorValues.npy)
+print(backLegSensorValues)
