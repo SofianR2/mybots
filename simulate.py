@@ -9,6 +9,7 @@ p.setGravity(0,0,-9.8)
 planeId = p.loadURDF("plane.urdf")
 robotId = p.loadURDF("body.urdf")
 p.loadSDF("world.sdf")
+pyrosim.Prepare_To_Simulate(robotId)
 
 for x in range(1000):
   p.stepSimulation()
