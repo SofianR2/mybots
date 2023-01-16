@@ -10,7 +10,7 @@ backAmplitude = numpy.pi/4
 backFrequency = 5
 backPhaseOffset = numpy.pi/8
 
-frontAmplitude = numpy.pi/6
+frontAmplitude = numpy.pi/4
 frontFrequency = 5
 frontPhaseOffset = 0
 
