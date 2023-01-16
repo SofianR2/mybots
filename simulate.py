@@ -39,7 +39,7 @@ for i in range(1000):
   targetPosition = random.randrange(-1, 1) * 0.2,
   maxForce = 500)
   
-  time.sleep(1/60)
+  #time.sleep(1/60)
   
 numpy.save('data/backLegSensorValues.npy', backLegSensorValues)
 numpy.save('data/frontLegSensorValues.npy', frontLegSensorValues)
