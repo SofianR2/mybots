@@ -18,7 +18,8 @@ backLegSensorValues = numpy.zeros(1000)
 frontLegSensorValues = numpy.zeros(1000)
 targetAngles = numpy.zeros(1000)
 
-targetAngles = numpy.linspace(0, 2 * numpy.pi, num=1000)
+targetAngles = numpy.linspace(0, 2 * numpy.pi, 1000)
+targetAngles = numpy.sin(targetAngles) * numpy.pi/4
 
 for i in range(1000):
   p.stepSimulation()
