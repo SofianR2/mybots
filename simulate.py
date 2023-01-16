@@ -44,6 +44,6 @@ for i in range(1000):
   
 numpy.save('data/backLegSensorValues.npy', backLegSensorValues)
 numpy.save('data/frontLegSensorValues.npy', frontLegSensorValues)
-numpy.save('data/targetAngles', targetAngles)
+#numpy.save('data/targetAngles', targetAngles)
 p.disconnect()
 print(backLegSensorValues)
