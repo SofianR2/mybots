@@ -6,9 +6,9 @@ import numpy
 import math
 import random
 
-backAmplitude = numpy.pi/4
+backAmplitude = 10
 backFrequency = 10
-backPhaseOffset = 1
+backPhaseOffset = 2
 
 frontAmplitude = numpy.pi/4
 frontFrequency = 10
