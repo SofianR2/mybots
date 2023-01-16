@@ -7,7 +7,7 @@ import math
 import random
 
 amplitude = numpy.pi/4
-frequency = 1000
+frequency = 2
 phaseOffset = 0
 
 physicsClient = p.connect(p.GUI)
@@ -25,7 +25,7 @@ targetAngles = numpy.zeros(1000)
 #targetAngles = numpy.linspace(0, 2 * numpy.pi, 1000)
 #targetAngles = numpy.sin(targetAngles) * numpy.pi/4
 
-targetAngles = numpy.linspace(phaseOffset, frequency * 2 * numpy.pi, 1000)
+targetAngles = numpy.linspace(phaseOffset, frequency * (2 * numpy.pi), 1000)
 targetAngles = numpy.sin(targetAngles) * amplitude
 
 numpy.save('data/targetAngles', targetAngles)
