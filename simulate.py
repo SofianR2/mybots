@@ -11,7 +11,7 @@ backFrequency = 50
 backPhaseOffset = 0
 
 frontAmplitude = numpy.pi/4
-frontFrequency = 10
+frontFrequency = 50
 frontPhaseOffset = 0
 
 physicsClient = p.connect(p.GUI)
