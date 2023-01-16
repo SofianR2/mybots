@@ -40,7 +40,7 @@ for i in range(1000):
   targetPosition = targetAngles[i],
   maxForce = 500)
   
-  #time.sleep(1/60)
+  time.sleep(1/60)
   
 numpy.save('data/backLegSensorValues.npy', backLegSensorValues)
 numpy.save('data/frontLegSensorValues.npy', frontLegSensorValues)
