@@ -11,8 +11,8 @@ backFrequency = 5
 backPhaseOffset = 0
 
 frontAmplitude = numpy.pi/4
-frontFrequency = 10
-frontPhaseOffset = 0
+frontFrequency = 5
+frontPhaseOffset = 1
 
 physicsClient = p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
