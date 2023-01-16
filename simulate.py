@@ -25,7 +25,7 @@ targetAngles = numpy.zeros(1000)
 #targetAngles = numpy.linspace(0, 2 * numpy.pi, 1000)
 #targetAngles = numpy.sin(targetAngles) * numpy.pi/4
 
-targetAngles = numpy.linspace(phaseOffset, 2 * numpy.pi * frequency, 1000)
+targetAngles = numpy.linspace(phaseOffset, frequency * 2 * numpy.pi, 1000)
 targetAngles = numpy.sin(targetAngles) * amplitude
 
 numpy.save('data/targetAngles', targetAngles)
