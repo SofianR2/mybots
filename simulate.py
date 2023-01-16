@@ -25,7 +25,7 @@ for i in range(1000):
   bodyIndex = robotId,
   jointName = "Torso_BackLeg",
   controlMode = p.POSITION_CONTROL,
-  targetPosition = 0.0,
+  targetPosition = -pi/4.0,
   maxForce = 500)
   
   time.sleep(1/60)
