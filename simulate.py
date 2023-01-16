@@ -7,11 +7,11 @@ import math
 import random
 
 backAmplitude = numpy.pi/4
-backFrequency = 100
-backPhaseOffset = 0
+backFrequency = 10
+backPhaseOffset = 10
 
 frontAmplitude = numpy.pi/4
-frontFrequency = 100
+frontFrequency = 10
 frontPhaseOffset = 0
 
 physicsClient = p.connect(p.GUI)
