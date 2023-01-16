@@ -6,6 +6,10 @@ import numpy
 import math
 import random
 
+amplitude = numpy.pi/4
+frequency = 1
+phaseOffset = 0
+
 physicsClient = p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
