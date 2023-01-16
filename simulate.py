@@ -6,12 +6,12 @@ import numpy
 import math
 import random
 
-backAmplitude = numpy.pi/4
-backFrequency = 5
+backAmplitude = numpy.pi/8
+backFrequency = 10
 backPhaseOffset = 0
 
-frontAmplitude = numpy.pi/4
-frontFrequency = 5
+frontAmplitude = numpy.pi/8
+frontFrequency = 10
 frontPhaseOffset = numpy.pi/8
 
 physicsClient = p.connect(p.GUI)
