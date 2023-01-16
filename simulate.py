@@ -6,9 +6,13 @@ import numpy
 import math
 import random
 
-amplitude = numpy.pi/4
-frequency = 10
-phaseOffset = 0
+backAmplitude = numpy.pi/4
+backFrequency = 10
+backPhaseOffset = 0
+
+frontAmplitude = numpy.pi/4
+frontFrequency = 10
+frontPhaseOffset = 0
 
 physicsClient = p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
@@ -25,8 +29,11 @@ targetAngles = numpy.zeros(1000)
 #targetAngles = numpy.linspace(0, 2 * numpy.pi, 1000)
 #targetAngles = numpy.sin(targetAngles) * numpy.pi/4
 
-targetAngles = numpy.linspace(phaseOffset, 2 * numpy.pi * frequency, 1000)
-targetAngles = numpy.sin(targetAngles) * amplitude
+backTargetAngles = numpy.linspace(backPhaseOffset, 2 * numpy.pi * backFrequency, 1000)
+backTargetAngles = numpy.sin(backTargetAngles) * backAmplitude
+
+frontTargetAngles = numpy.linspace(frontPhaseOffset, 2 * numpy.pi * frontFrequency, 1000)
+frontTargetAngles = numpy.sin(frontTargetAngles) * frontAmplitude
 
 #numpy.save('data/targetAngles', targetAngles)
 #exit()
