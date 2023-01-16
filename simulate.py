@@ -26,7 +26,7 @@ for i in range(1000):
   bodyIndex = robotId,
   jointName = "Torso_BackLeg",
   controlMode = p.POSITION_CONTROL,
-  targetPosition = math.pi/4,
+  targetPosition = -math.pi/4,
   maxForce = 500)
   
   pyrosim.Set_Motor_For_Joint(
