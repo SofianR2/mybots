@@ -8,6 +8,6 @@ frontLegSensorValues = numpy.load('data/frontLegSensorValues.npy')
 print(frontLegSensorValues)
 
 matplotlib.pyplot.plot(backLegSensorValues, linewidth=2)
-matplotlib.pyplot.plot(frontLegSensorValues, linewidth=2)
+matplotlib.pyplot.plot(frontLegSensorValues)
 matplotlib.pyplot.legend()
 matplotlib.pyplot.show()
