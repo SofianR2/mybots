@@ -7,7 +7,7 @@ import math
 import random
 
 backAmplitude = numpy.pi/4
-backFrequency = 10
+backFrequency = 7
 backPhaseOffset = 0
 
 frontAmplitude = numpy.pi/8
