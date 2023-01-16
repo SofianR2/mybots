@@ -28,8 +28,8 @@ targetAngles = numpy.zeros(1000)
 targetAngles = numpy.linspace(phaseOffset, 2 * numpy.pi * frequency, 1000)
 targetAngles = numpy.sin(targetAngles) * amplitude
 
-numpy.save('data/targetAngles', targetAngles)
-exit()
+#numpy.save('data/targetAngles', targetAngles)
+#exit()
 
 for i in range(1000):
   p.stepSimulation()
