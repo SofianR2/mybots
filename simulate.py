@@ -8,11 +8,11 @@ import random
 
 backAmplitude = numpy.pi/4
 backFrequency = 5
-backPhaseOffset = numpy.pi/8
+backPhaseOffset = 0
 
 frontAmplitude = numpy.pi/4
 frontFrequency = 5
-frontPhaseOffset = 0
+frontPhaseOffset = numpy.pi/8
 
 physicsClient = p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
