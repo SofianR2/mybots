@@ -17,7 +17,7 @@ pyrosim.Prepare_To_Simulate(robotId)
 backLegSensorValues = numpy.zeros(1000)
 frontLegSensorValues = numpy.zeros(1000)
 
-targetAngles = numpy.linspace(0, 2 * numpy.pi, 10000)
+targetAngles = numpy.linspace(0, 2 * numpy.pi)
 
 for i in range(1000):
   p.stepSimulation()
