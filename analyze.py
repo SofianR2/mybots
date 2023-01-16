@@ -11,6 +11,6 @@ targetAngles = numpy.load('data/targetAngles.npy')
 
 #matplotlib.pyplot.plot(backLegSensorValues, linewidth=5, label='Back Leg')
 #matplotlib.pyplot.plot(frontLegSensorValues, label='Front Leg')
-matplotlib.pyplot.plot(targetAngles, 0.8 * numpy.sin(targetAngles))
+matplotlib.pyplot.plot(targetAngles, numpy.pi/4 * numpy.sin(targetAngles))
 #matplotlib.pyplot.legend()
 matplotlib.pyplot.show()
