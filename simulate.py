@@ -28,6 +28,9 @@ targetAngles = numpy.zeros(1000)
 targetAngles = numpy.linspace(phaseOffset, 2 * numpy.pi * frequency, 1000)
 targetAngles = numpy.sin(targetAngles) * amplitude
 
+numpy.save('data/targetAngles', targetAngles)
+exit()
+
 for i in range(1000):
   p.stepSimulation()
   backLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
@@ -51,6 +54,5 @@ for i in range(1000):
   
 numpy.save('data/backLegSensorValues.npy', backLegSensorValues)
 numpy.save('data/frontLegSensorValues.npy', frontLegSensorValues)
-#numpy.save('data/targetAngles', targetAngles)
 p.disconnect()
 print(backLegSensorValues)
