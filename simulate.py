@@ -6,7 +6,7 @@ import numpy
 import math
 import random
 
-backAmplitude = numpy.pi/2
+backAmplitude = numpy.pi/4
 backFrequency = 5
 backPhaseOffset = 0
 
