@@ -7,6 +7,8 @@ import math
 import random
 import constants as c
 
+from sensor import SENSOR
+
 class ROBOT:
   def __init__(self):
     
