@@ -16,7 +16,7 @@ class ROBOT:
     #self.robotId = p.loadURDF("body.urdf")
     
   def Prepare_To_Sense(self):
-    self.sensor = {}
+    self.sensors = {}
     for linkName in pyrosim.linkNamesToIndices:
       self.sensors[linkName] = SENSOR(linkName)
     
