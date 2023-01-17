@@ -12,7 +12,7 @@ class MOTOR:
     self.jointName = jointName
     def Prepare_To_Act(self):
       self.amplitude = c.amplitude
-      if self.jointName != self.jointName:
+      if self.jointName != 'BackLeg':
         self.frequency = c.frequency/2
       else:
         self.frequency = c.frequency
