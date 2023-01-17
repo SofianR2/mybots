@@ -16,7 +16,7 @@ class MOTOR:
       self.frequency = 0
     else:
       self.frequency = c.frequency
-    self.offset = c.offset
+    self.offset = c.phaseOffset
     self.motorValues = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
     self.motorValues = numpy.sin(self.motorValues) * self.amplitude
     
