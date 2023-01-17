@@ -19,5 +19,4 @@ class ROBOT:
     self.sensor = {}
     for linkName in pyrosim.linkNamesToIndices:
       self.sensors[linkName] = SENSOR(linkName)
-      self.linkName = linkName
     
