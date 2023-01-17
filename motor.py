@@ -12,7 +12,10 @@ class MOTOR:
     self.jointName = jointName
     def Prepare_To_Act(self):
       self.amplitude = c.amplitude
-      self.frequency = c.frequency
+      if self.jointName != self.jointName:
+        self.frequency = c.frequency/2
+      else:
+        self.frequency = c.frequency
       self.offset = c.phaseOffset
       self.motorValues = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
       self.motorValues = numpy.sin(self.motorValues) * self.amplitude
