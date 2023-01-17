@@ -26,9 +26,9 @@ class SIMULATION:
     p.disconnect()
     
   def Run(self):
-    backLegSensorValues = numpy.zeros(1000)
-    frontLegSensorValues = numpy.zeros(1000)
-    targetAngles = numpy.zeros(1000)
+    #backLegSensorValues = numpy.zeros(1000)
+    #frontLegSensorValues = numpy.zeros(1000)
+    #targetAngles = numpy.zeros(1000)
     
     backTargetAngles = numpy.linspace(c.backPhaseOffset, 2 * numpy.pi * c.backFrequency, 1000)
     backTargetAngles = numpy.sin(backTargetAngles) * c.backAmplitude
