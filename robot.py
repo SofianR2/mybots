@@ -28,14 +28,14 @@ class ROBOT:
   def Prepare_To_Act(self):
     for jointName in pyrosim.jointNamesToIndices:
       self.motors[jointName] = MOTOR(jointName)\
-      
+      '''
     self.amplitude = c.backAmplitude
     self.frequency = c.backFrequency
     self.offset = c.backPhaseOffset
 
     backTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
     backTargetAngles = numpy.sin(backTargetAngles) * self.amplitude
-      
+      '''
   def Act(self):
     for i in self.motors:
       self.motors[i].Set_Value(self.robotId)
