@@ -13,10 +13,10 @@ from robot import ROBOT
 class SIMULATION:
   def __init__(self):
     self.physicsClient = p.connect(p.GUI)
-    #self.robotId = p.loadURDF("body.urdf")
-    self.world = WORLD()
-    self.robot = ROBOT()    
+    #self.robotId = p.loadURDF("body.urdf")  
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
+    self.world = WORLD()
+    self.robot = ROBOT()  
     p.setGravity(0,0,-9.8)
     pyrosim.Prepare_To_Simulate(self.robotId)
     
