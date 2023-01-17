@@ -1,5 +1,7 @@
 import pybullet as p
 import pybullet_data
+import pyrosim.pyrosim as pyrosim
+
 from world import WORLD
 from robot import ROBOT
 
