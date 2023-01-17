@@ -10,9 +10,9 @@ import constants as c
 from sensor import SENSOR
 
 class ROBOT:
-  def __init__(self, jointName):    
+  def __init__(self):    
     self.motor = {}
-    self.jointName = jointName
+    
     #self.robotId = p.loadURDF("body.urdf")
     
   def Prepare_To_Sense(self):
@@ -27,5 +27,6 @@ class ROBOT:
     
   def Prepare_To_Act(self):
     for jointName in pyrosim.jointNamesToIndices:
+      self.motor[jointName] = MOTOR(jointName)
       
     
