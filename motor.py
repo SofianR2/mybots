@@ -12,7 +12,7 @@ class MOTOR:
     self.jointName = jointName
     
     self.amplitude = c.amplitude
-    if self.jointName == b'Torso_BackLeg':
+    if self.jointName == 'Torso_BackLeg':
       self.frequency = 0
     else:
       self.frequency = c.frequency
