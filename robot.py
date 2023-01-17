@@ -37,8 +37,8 @@ class ROBOT:
     backTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
     backTargetAngles = numpy.sin(backTargetAngles) * self.amplitude
     '''
-  def Act(self):
+  def Act(self, t):
     for i in self.motors:
-      self.motors[i].Set_Value(self.robotId)
+      self.motors[i].Set_Value(self.robotId, t)
       
     
