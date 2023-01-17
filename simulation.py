@@ -1,3 +1,3 @@
 class SIMULATION:
-  def__init__(self):
+  def __init__(self):
     pass
