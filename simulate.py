@@ -26,7 +26,7 @@ backTargetAngles = numpy.linspace(c.backPhaseOffset, 2 * numpy.pi * c.backFreque
 backTargetAngles = numpy.sin(backTargetAngles) * c.backAmplitude
 
 frontTargetAngles = numpy.linspace(c.frontPhaseOffset, 2 * numpy.pi * c.frontFrequency, 1000)
-frontTargetAngles = numpy.sin(c.frontTargetAngles) * c.frontAmplitude
+frontTargetAngles = numpy.sin(frontTargetAngles) * c.frontAmplitude
 
 #numpy.save('data/targetAngles', targetAngles)
 #exit()
