@@ -22,6 +22,7 @@ class SIMULATION:
     self.robot.Prepare_To_Sense()
     
   def __del__(self):
+    self.physicsClient = p.connect(p.GUI)
     p.disconnect()
     
   def Run(self):
