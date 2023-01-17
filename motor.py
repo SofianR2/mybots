@@ -10,7 +10,6 @@ import constants as c
 class MOTOR:
   def __init__(self, jointName):
     self.jointName = jointName
-    Prepare_To_Act()
     
   def Prepare_To_Act(self):
     self.amplitude = c.backAmplitude
