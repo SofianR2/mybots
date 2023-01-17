@@ -19,5 +19,5 @@ class SENSOR:
       print(self.values)
       
   def Save_Values():
-    numpy.save('data/motorValues.npy', motorValues)
+    numpy.save('data/sensorValues.npy', self.values)
     p.disconnect()
