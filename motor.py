@@ -11,18 +11,18 @@ class MOTOR:
   def __init__(self, jointName):
     self.jointName = jointName
     def Prepare_To_Act(self):
-      self.amplitude = c.backAmplitude
-      self.frequency = c.backFrequency
-      self.offset = c.backPhaseOffset
-      self.backTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
-      self.backTargetAngles = numpy.sin(self.backTargetAngles) * self.amplitude
+      self.amplitude = c.amplitude
+      self.frequency = c.frequency
+      self.offset = c.phaseOffset
+      self.motorValues = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
+      self.motorValues = numpy.sin(self.motorValues) * self.amplitude
     Prepare_To_Act(self)
    
     
   def Prepare_To_Act(self):
-    self.amplitude = c.backAmplitude
-    self.frequency = c.backFrequency
-    self.offset = c.backPhaseOffset
+    self.amplitude = c.amplitude
+    self.frequency = c.frequency
+    self.offset = c.phaseOffset
 
    
 
