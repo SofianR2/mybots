@@ -12,7 +12,7 @@ from motor import MOTOR
 
 class ROBOT:
   def __init__(self):    
-    self.motors = {}    
+    #self.motors = {}    
     self.robotId = p.loadURDF("body.urdf")
     
   def Prepare_To_Sense(self):
@@ -26,6 +26,7 @@ class ROBOT:
       self.sensors[i].Get_Value(t)
     
   def Prepare_To_Act(self):
+    self.motors = {} 
     for jointName in pyrosim.jointNamesToIndices:
       self.motors[jointName] = MOTOR(jointName)
     '''
