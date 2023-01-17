@@ -1,4 +1,5 @@
 from simulation import SIMULATION
+from simulation import Run
 
 simulation = SIMULATION()
 Run()
