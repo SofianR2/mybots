@@ -9,7 +9,6 @@ import constants as c
 
 from world import WORLD
 from robot import ROBOT
-from motor import MOTOR
 
 class SIMULATION:
   def __init__(self):
