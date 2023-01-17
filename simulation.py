@@ -20,6 +20,8 @@ class SIMULATION:
     p.setGravity(0,0,-9.8)
     pyrosim.Prepare_To_Simulate(self.robotId)
     
+  def __del__(self):
+    p.disconnect()
     
   def Run(self):
     backLegSensorValues = numpy.zeros(1000)
