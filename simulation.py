@@ -13,7 +13,7 @@ from robot import ROBOT
 class SIMULATION:
   def __init__(self):
     self.physicsClient = p.connect(p.GUI)
-    self.robotId = p.loadURDF("body.urdf")  
+    #self.robotId = p.loadURDF("body.urdf")  
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
     self.world = WORLD()
     self.robot = ROBOT()  
@@ -45,20 +45,20 @@ class SIMULATION:
       #backLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
       #frontLegSensorValues[i] = pyrosim.Get_Touch_Sensor_Value_For_Link("FrontLeg")
 
-      '''
-      pyrosim.Set_Motor_For_Joint(
-      bodyIndex = self.robotId,
-      jointName = "Torso_BackLeg",
-      controlMode = p.POSITION_CONTROL,
-      targetPosition = backTargetAngles[i],
-      maxForce = 500)
 
-      pyrosim.Set_Motor_For_Joint(
-      bodyIndex = self.robotId,
-      jointName = "Torso_FrontLeg",
-      controlMode = p.POSITION_CONTROL,
-      targetPosition = frontTargetAngles[i],
-      maxForce = 500)
-      '''
+      #pyrosim.Set_Motor_For_Joint(
+      #bodyIndex = self.robotId,
+      #jointName = "Torso_BackLeg",
+      #controlMode = p.POSITION_CONTROL,
+      #targetPosition = backTargetAngles[i],
+      #maxForce = 500)
+
+      #pyrosim.Set_Motor_For_Joint(
+      #bodyIndex = self.robotId,
+      #jointName = "Torso_FrontLeg",
+      #controlMode = p.POSITION_CONTROL,
+      #targetPosition = frontTargetAngles[i],
+      #maxForce = 500)
+
 
       time.sleep(1/240)
