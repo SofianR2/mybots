@@ -17,17 +17,6 @@ class MOTOR:
       self.motorValues = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
       self.motorValues = numpy.sin(self.motorValues) * self.amplitude
     Prepare_To_Act(self)
-   
-    
-  #def Prepare_To_Act(self):
-  #  self.amplitude = c.amplitude
-  #  self.frequency = c.frequency
-  #  self.offset = c.phaseOffset
-
-   
-
-    #frontTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
-    #frontTargetAngles = numpy.sin(frontTargetAngles) * self.amplitude
 
   def Set_Value(self, robot, t):
     pyrosim.Set_Motor_For_Joint(
