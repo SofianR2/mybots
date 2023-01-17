@@ -29,7 +29,7 @@ class ROBOT:
     self.motors = {} 
     for jointName in pyrosim.jointNamesToIndices:
       self.motors[jointName] = MOTOR(jointName)
-      print(self.motors[jointName].self.frequency)
+
    
   def Act(self, t):
     for i in self.motors:
