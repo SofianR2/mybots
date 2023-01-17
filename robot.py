@@ -12,7 +12,7 @@ from sensor import SENSOR
 class ROBOT:
   def __init__(self):    
     self.motors = {}    
-    #self.robotId = p.loadURDF("body.urdf")
+    self.robotId = p.loadURDF("body.urdf")
     
   def Prepare_To_Sense(self):
     self.sensors = {}
@@ -30,6 +30,6 @@ class ROBOT:
       
   def Act(self):
     for i in self.motors:
-      self.motors[i] = Set_Value()
+      self.motors[i] = Set_Value(self.robotId)
       
     
