@@ -9,10 +9,12 @@ import constants as c
 
 class ROBOT:
   def __init__(self):
-    self.sensor = {}
+    
     self.motor = {}
     #self.robotId = p.loadURDF("body.urdf")
     
   def Prepare_To_Sense(self):
-    pass
+    self.sensor = {}
+    for linkName in pyrosim.linkNamesToIndices:
+      print(linkName)
     
