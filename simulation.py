@@ -20,6 +20,7 @@ class SIMULATION:
     p.setGravity(0,0,-9.8)
     pyrosim.Prepare_To_Simulate(self.robot.robotId)
     self.robot.Prepare_To_Sense()
+    self.robot.Prepare_To_Act()
     
   def __del__(self):
     self.physicsClient = p.connect(p.GUI)
