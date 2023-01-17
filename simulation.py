@@ -1,6 +1,8 @@
 import pybullet as p
+import pybullet_data
 from world import WORLD
 from robot import ROBOT
+
 class SIMULATION:
   def __init__(self):
     self.physicsClient = p.connect(p.GUI)
