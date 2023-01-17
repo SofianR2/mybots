@@ -19,10 +19,10 @@ class MOTOR:
     Prepare_To_Act(self)
    
     
-  def Prepare_To_Act(self):
-    self.amplitude = c.amplitude
-    self.frequency = c.frequency
-    self.offset = c.phaseOffset
+  #def Prepare_To_Act(self):
+  #  self.amplitude = c.amplitude
+  #  self.frequency = c.frequency
+  #  self.offset = c.phaseOffset
 
    
 
