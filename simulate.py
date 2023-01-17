@@ -1,3 +1,8 @@
+from simulation import SIMULATION
+
+simulation = SIMULATION()
+
+'''
 import pybullet as p
 import time
 import pybullet_data
@@ -56,3 +61,4 @@ numpy.save('data/backLegSensorValues.npy', backLegSensorValues)
 numpy.save('data/frontLegSensorValues.npy', frontLegSensorValues)
 p.disconnect()
 print(backLegSensorValues)
+'''
