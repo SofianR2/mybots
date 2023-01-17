@@ -34,6 +34,6 @@ class MOTOR:
     bodyIndex = robot,
     jointName = self.jointName,
     controlMode = p.POSITION_CONTROL,
-    targetPosition = self.backTargetAngles[t],
+    targetPosition = self.motorValues[t],
     maxForce = 500)
 
