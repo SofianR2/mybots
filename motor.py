@@ -14,3 +14,18 @@ class MOTOR:
     
   def Prepare_To_Act(self):
     pass
+    '''
+    pyrosim.Set_Motor_For_Joint(
+      bodyIndex = self.robotId,
+      jointName = "Torso_BackLeg",
+      controlMode = p.POSITION_CONTROL,
+      targetPosition = backTargetAngles[i],
+      maxForce = 500)
+
+      pyrosim.Set_Motor_For_Joint(
+      bodyIndex = self.robotId,
+      jointName = "Torso_FrontLeg",
+      controlMode = p.POSITION_CONTROL,
+      targetPosition = frontTargetAngles[i],
+      maxForce = 500)
+    '''
