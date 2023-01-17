@@ -11,12 +11,12 @@ class MOTOR:
   def __init__(self, jointName):
     self.jointName = jointName
     
-    self.amplitude = 0
+    self.amplitude = c.amplitude
     if self.jointName == b'Torso_BackLeg':
       self.frequency = 0
     else:
-      self.frequency = 0
-    self.offset = 0
+      self.frequency = c.frequency
+    self.offset = c.offset
     self.motorValues = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
     self.motorValues = numpy.sin(self.motorValues) * self.amplitude
     
