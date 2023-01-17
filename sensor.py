@@ -18,6 +18,6 @@ class SENSOR:
     if self.values[len(self.values) - 1] != 0:
       print(self.values)
       
-  def Save_Values():
+  def Save_Values(self):
     numpy.save('data/sensorValues.npy', self.values)
     p.disconnect()
