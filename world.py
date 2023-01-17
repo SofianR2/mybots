@@ -1,3 +1,3 @@
-CLASS WORLD:
+class WORLD:
   def __init__(self):
     pass
