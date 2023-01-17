@@ -10,14 +10,15 @@ import constants as c
 class MOTOR:
   def __init__(self, jointName):
     self.jointName = jointName
+    self.backTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
+    self.backTargetAngles = numpy.sin(backTargetAngles) * self.amplitude
     
   def Prepare_To_Act(self):
     self.amplitude = c.backAmplitude
     self.frequency = c.backFrequency
     self.offset = c.backPhaseOffset
 
-    backTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
-    backTargetAngles = numpy.sin(backTargetAngles) * self.amplitude
+   
 
     #frontTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
     #frontTargetAngles = numpy.sin(frontTargetAngles) * self.amplitude
