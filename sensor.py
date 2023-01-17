@@ -17,3 +17,7 @@ class SENSOR:
     self.values[i] = pyrosim.Get_Touch_Sensor_Value_For_Link(self.linkName)
     if self.values[len(self.values) - 1] != 0:
       print(self.values)
+      
+  def Save_Values():
+    numpy.save('data/motorValues.npy', motorValues)
+    p.disconnect()
