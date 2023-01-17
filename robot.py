@@ -11,7 +11,7 @@ from sensor import SENSOR
 
 class ROBOT:
   def __init__(self):    
-    self.motor = {}    
+    self.motors = {}    
     #self.robotId = p.loadURDF("body.urdf")
     
   def Prepare_To_Sense(self):
@@ -26,9 +26,10 @@ class ROBOT:
     
   def Prepare_To_Act(self):
     for jointName in pyrosim.jointNamesToIndices:
-      self.motor[jointName] = MOTOR(jointName)
+      self.motors[jointName] = MOTOR(jointName)
       
   def Act(self):
-    pass
+    for i in self.motors:
+      self.motors[i] = Set_Value()
       
     
