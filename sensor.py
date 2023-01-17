@@ -1,3 +1,3 @@
 class SENSOR:
-  def __init__(linkName):
-    pass
+  def __init__(self, linkName):
+    self.linkName = linkName
