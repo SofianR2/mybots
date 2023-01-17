@@ -12,3 +12,7 @@ class ROBOT:
     self.sensor = {}
     self.motor = {}
     #self.robotId = p.loadURDF("body.urdf")
+    
+  def Prepare_To_Sense(self):
+    pass
+    
