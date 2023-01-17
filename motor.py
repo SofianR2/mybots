@@ -12,5 +12,4 @@ class MOTOR:
     self.jointName = jointName'
     
   def Prepare_To_Act(self):
-    for jointName in pyrosim.jointNamesToIndices:
-      self.motor[jointName] = MOTOR(jointName)
+    pass
