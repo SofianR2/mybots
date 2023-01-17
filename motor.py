@@ -16,6 +16,7 @@ class MOTOR:
       self.offset = c.backPhaseOffset
       self.backTargetAngles = numpy.linspace(self.offset, 2 * numpy.pi * self.frequency, 1000)
       self.backTargetAngles = numpy.sin(backTargetAngles) * self.amplitude
+    Prepare_To_Act(self)
    
     
   def Prepare_To_Act(self):
