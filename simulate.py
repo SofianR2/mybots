@@ -5,6 +5,7 @@ import pyrosim.pyrosim as pyrosim
 import numpy
 import math
 import random
+import constants as c
 
 backAmplitude = numpy.pi/8
 backFrequency = 10
