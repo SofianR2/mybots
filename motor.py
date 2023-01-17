@@ -13,7 +13,9 @@ class MOTOR:
     Prepare_To_Act()
     
   def Prepare_To_Act(self):
-    pass
+    self.amplitude = c.backAmplitude
+    self.frequency = c.backFrequency
+    self.offset = c.backPhaseOffset
     '''
     pyrosim.Set_Motor_For_Joint(
       bodyIndex = self.robotId,
