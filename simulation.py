@@ -18,7 +18,7 @@ class SIMULATION:
     self.world = WORLD()
     self.robot = ROBOT()  
     p.setGravity(0,0,-9.8)
-    pyrosim.Prepare_To_Simulate(self.robotId)
+    pyrosim.Prepare_To_Simulate(self.robot.robotId)
     self.robot.Prepare_To_Sense()
     
   def __del__(self):
