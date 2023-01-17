@@ -3,7 +3,7 @@ from simulation import SIMULATION
 simulation = SIMULATION()
 
 '''
-import pybullet as p
+#import pybullet as p
 import time
 import pybullet_data
 import pyrosim.pyrosim as pyrosim
@@ -12,14 +12,14 @@ import math
 import random
 import constants as c
 
-physicsClient = p.connect(p.GUI)
-p.setAdditionalSearchPath(pybullet_data.getDataPath())
+#physicsClient = p.connect(p.GUI)
+#p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
-p.setGravity(0,0,-9.8)
+#p.setGravity(0,0,-9.8)
 planeId = p.loadURDF("plane.urdf")
 robotId = p.loadURDF("body.urdf")
 p.loadSDF("world.sdf")
-pyrosim.Prepare_To_Simulate(robotId)
+#pyrosim.Prepare_To_Simulate(robotId)
 backLegSensorValues = numpy.zeros(1000)
 frontLegSensorValues = numpy.zeros(1000)
 targetAngles = numpy.zeros(1000)
