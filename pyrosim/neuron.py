@@ -75,9 +75,9 @@ class NEURON:
             if(self.Get_Name() == i[1]):
                 self.Allow_Presynaptic_Neuron_To_Influence_Me(synapses[i].Get_Weight(), neurons[0].Get_Value())
                 
-    def Allow_Presynaptic_Neuron_To_Influence_Me(self, synapse, neuron):
+    def Allow_Presynaptic_Neuron_To_Influence_Me(self, float synapse, float neuron):
         print(synapse, neuron)
-        #exit()
+        exit()
         
 
 # -------------------------- Private methods -------------------------
