@@ -34,6 +34,9 @@ class NEURAL_NETWORK:
                 self.neurons[neuronName].Update_Sensor_Neuron()
             else:
                 self.neurons[neuronName].Update_Hidden_Or_Motor_Neuron()
+    
+    def Get_Neuron_Names():
+        return self.neurons.keys()
 
 # ---------------- Private methods --------------------------------------
 
