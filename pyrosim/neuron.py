@@ -71,9 +71,10 @@ class NEURON:
         
     def Update_Hidden_Or_Motor_Neuron(self, neurons, synapses):
         self.Set_Value(0)
+        print(self.GetName())
         for i in synapses:
+            if(self.GetName() == i[1]):
             print(i)
-        exit()
 
 # -------------------------- Private methods -------------------------
 
