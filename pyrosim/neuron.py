@@ -77,7 +77,7 @@ class NEURON:
                 
     def Allow_Presynaptic_Neuron_To_Influence_Me(self, synapse, neuron):
         print(synapse, neuron)
-        exit()
+        #exit()
         
 
 # -------------------------- Private methods -------------------------
