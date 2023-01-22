@@ -15,12 +15,9 @@ class NEURAL_NETWORK:
         for line in f.readlines():
 
             self.Digest(line)
-            
-        
-        
+                
         f.close()
         print(self.synapses)
-        exit()
         
 
     def Print(self):
