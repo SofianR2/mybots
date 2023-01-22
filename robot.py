@@ -15,6 +15,7 @@ class ROBOT:
   def __init__(self):    
     #self.motors = {}    
     self.robotId = p.loadURDF("body.urdf")
+    self.nn = NEURAL_NETWORK("brain.nndf")
     
   def Prepare_To_Sense(self):
     self.sensors = {}
@@ -36,6 +37,6 @@ class ROBOT:
       self.motors[i].Set_Value(self.robotId, t)
   
   def Think(self):
-    pass
+    self.nn.Print()
       
     
