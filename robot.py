@@ -34,7 +34,8 @@ class ROBOT:
    
   def Act(self, t):
     for neuronName in self.nn.Get_Neuron_Names():
-      print(neuronName)
+      if self.nn.Is_Motor>Neuron(neuronName):        
+        print(neuronName)
       
     for i in self.motors:
       self.motors[i].Set_Value(self.robotId, t)
