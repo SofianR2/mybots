@@ -22,7 +22,7 @@ def Generate_Body():
   pyrosim.End()
   
 def Create_Robot():
-
+  pass
   #pyrosim.Send_Cube(name="Link0", pos=[x,y,z] , size=[length,width,height])
   #pyrosim.Send_Joint( name = "Link0_Link1" , parent= "Link0" , child = "Link1" , type = "revolute", position = [x,y,z+0.5])
   #pyrosim.Send_Cube(name="Link1", pos=[x,y,z] , size=[length,width,height])
