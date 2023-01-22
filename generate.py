@@ -21,6 +21,11 @@ def Generate_Body():
   pyrosim.Send_Cube(name="FrontLeg", pos=[x+0.5,y,z-1] , size=[length,width,height])
   pyrosim.End()
   
+def Generate_Brain():
+  pyrosim.Start_NeuralNetwork("brain.nndf")
+ 
+  pyrosim.End()
+  
 def Create_Robot():
   pass
   #pyrosim.Send_Cube(name="Link0", pos=[x,y,z] , size=[length,width,height])
@@ -40,6 +45,7 @@ def Create_Robot():
 Create_World()
 Create_Robot()
 Generate_Body()
+Generate_Brain()
   
 #x = 0
 #y = 0
