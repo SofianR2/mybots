@@ -30,7 +30,7 @@ class NEURAL_NETWORK:
         
     def Update(self):
         for i in self.neurons:
-            print(self.neurons[i])
+            print(i)
 
 # ---------------- Private methods --------------------------------------
 
