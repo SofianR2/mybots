@@ -39,7 +39,7 @@ class NEURAL_NETWORK:
         return self.neurons.keys()
     
     def Is_Motor_Neuron(self, neuronName):
-        return neuronName.Is_Motor_Neuron()
+        return self.neurons[neuronName].Is_Motor_Neuron()
 
 # ---------------- Private methods --------------------------------------
 
