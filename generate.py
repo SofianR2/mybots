@@ -7,6 +7,12 @@ x=0
 y=0
 z=0.5
 
+for i in [0, 1, 2]:
+  for j in [3, 4]:
+    pyrosim.Send_Synapse( sourceNeuronName = i , targetNeuronName = j , weight = 1.0 )
+    
+  
+
 def Create_World():
   pyrosim.Start_SDF("world.sdf")
   pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z] , size=[length,width,height])
