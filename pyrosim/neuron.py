@@ -74,7 +74,7 @@ class NEURON:
         #print(self.Get_Value())
         for i in synapses:
             if(self.Get_Name() == i[1]):
-                self.Allow_Presynaptic_Neuron_To_Influence_Me(synapses[i].Get_Weight(), neurons[self.Get_Name()].Get_Value())
+                self.Allow_Presynaptic_Neuron_To_Influence_Me(synapses[i].Get_Weight(), neurons[i[0]].Get_Value())
         #print(self.Get_Value())
                 
     def Allow_Presynaptic_Neuron_To_Influence_Me(self, synapse, neuron):
