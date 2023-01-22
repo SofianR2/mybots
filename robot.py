@@ -6,6 +6,7 @@ import numpy
 import math
 import random
 import constants as c
+from pyrosim.neuralNetwork import NEURAL_NETWORK
 
 from sensor import SENSOR
 from motor import MOTOR
@@ -29,10 +30,12 @@ class ROBOT:
     self.motors = {} 
     for jointName in pyrosim.jointNamesToIndices:
       self.motors[jointName] = MOTOR(jointName)
-
    
   def Act(self, t):
     for i in self.motors:
       self.motors[i].Set_Value(self.robotId, t)
+  
+  def Think(self):
+    pass
       
     
