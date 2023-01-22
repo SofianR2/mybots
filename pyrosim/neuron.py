@@ -73,7 +73,7 @@ class NEURON:
         self.Set_Value(0)
         print(self.GetName())
         for i in synapses:
-            if(self.GetName() == i[1]):
+            if(self.Get_Name() == i[1]):
                 print(i)
 
 # -------------------------- Private methods -------------------------
