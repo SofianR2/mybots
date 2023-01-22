@@ -1,4 +1,5 @@
 import pyrosim.pyrosim as pyrosim
+import random
   
 length = 1
 width = 1
