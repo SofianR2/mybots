@@ -17,8 +17,8 @@ class ROBOT:
     #self.motors = {}    
     self.solutionID = solutionID
     self.robotId = p.loadURDF("body.urdf")
-    self.nn = NEURAL_NETWORK("brain" + solutionID + ".nndf")
-    os.system("del brain" + solutionID + ".nndf")
+    self.nn = NEURAL_NETWORK("brain" + str(solutionID) + ".nndf")
+    os.system("del brain" + str(solutionID) + ".nndf")
     
   def Prepare_To_Sense(self):
     self.sensors = {}
