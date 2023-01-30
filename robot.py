@@ -15,6 +15,7 @@ from motor import MOTOR
 class ROBOT:
   def __init__(self, solutionID):    
     #self.motors = {}    
+    self.solutionID = solutionID
     self.robotId = p.loadURDF("body.urdf")
     self.nn = NEURAL_NETWORK("brain" + solutionID + ".nndf")
     os.system("del brain" + solutionID + ".nndf")
@@ -53,7 +54,7 @@ class ROBOT:
     positionOfLinkZero = stateOfLinkZero[0]
     xCoordinateOfLinkZero = positionOfLinkZero[0]
     print(xCoordinateOfLinkZero)
-    f = open("fitness" + solutionID + ".txt", "w")
+    f = open("fitness" + self.solutionID + ".txt", "w")
     f.write(str(xCoordinateOfLinkZero))
     f.close()
     exit()
