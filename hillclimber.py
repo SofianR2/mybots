@@ -5,4 +5,7 @@ class HILLCLIMBER:
     self.parent = SOLUTION()
     
   def Evolve(self):
+    self.parent.Create_World()
+    self.parent.Create_Body()
+    self.parent.Create_Brain()
     self.parent.Evaluate()
