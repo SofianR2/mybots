@@ -12,7 +12,7 @@ from sensor import SENSOR
 from motor import MOTOR
 
 class ROBOT:
-  def __init__(self):    
+  def __init__(self, solutionID):    
     #self.motors = {}    
     self.robotId = p.loadURDF("body.urdf")
     self.nn = NEURAL_NETWORK("brain.nndf")
