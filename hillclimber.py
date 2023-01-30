@@ -11,9 +11,6 @@ class HILLCLIMBER:
   
   def Mutate(self):
     self.child.Mutate()
-    print(self.parent.weights)
-    print(self.child.weights)
-    exit()
   
   def Select(self):
     pass
@@ -22,6 +19,7 @@ class HILLCLIMBER:
     self.Spawn()
     self.Mutate()
     self.child.Evaluate()
+    exit()
     self.Select()
     
   def Evolve(self):
