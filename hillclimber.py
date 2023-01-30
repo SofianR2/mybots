@@ -12,7 +12,7 @@ class HILLCLIMBER:
   def Mutate(self):
     self.child.Mutate()
     print(self.parent.weights)
-    print(self.child.fitness)
+    print(self.child.weights)
     exit()
   
   def Select(self):
