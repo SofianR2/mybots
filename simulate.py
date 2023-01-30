@@ -1,8 +1,8 @@
 from simulation import SIMULATION
 
 simulation = SIMULATION()
-simulation.Get_Fitness()
 simulation.Run()
+simulation.Get_Fitness()
 
 
 '''
