@@ -12,7 +12,7 @@ class PARALLEL_HILL_CLIMBER:
     
   def Spawn(self):
     self.child = copy.deepcopy(self.parent)
-    self.child.Set_ID()
+    self.child.Set_ID(self.nextAvailableID)
     self.nextAvailableID += 1
   
   def Mutate(self):
