@@ -15,11 +15,13 @@ class SIMULATION:
   def __init__(self, directOrGUI):
     
     if(directOrGUI == "DIRECT"):
-      self.physicsClient = p.connect(p.DIRECT)
+      #self.physicsClient = p.connect(p.DIRECT)
+      p.connect(p.DIRECT)
     else:
-      self.physicsClient = p.connect(p.GUI)
+      #self.physicsClient = p.connect(p.GUI)
+      p.connect(p.GUI)
         
-    #self.physicsClient = p.connect(p.DIRECT)
+    self.physicsClient = p.connect(p.DIRECT)
     #self.robotId = p.loadURDF("body.urdf")  
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
     self.world = WORLD()
