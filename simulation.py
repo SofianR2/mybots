@@ -7,6 +7,7 @@ import math
 import random
 import constants as c
 import sys
+from simulate import simulate.directOrGUI as directOrGUI
 
 from world import WORLD
 from robot import ROBOT
