@@ -5,8 +5,9 @@ import copy
 class PARALLEL_HILL_CLIMBER:
   def __init__(self):
     self.parents = {}
-    for i in range(0, 2):
+    for i in range(0, c.populationSize-1):
       self.parents[i] = SOLUTION()
+      print(i)
       print(self.parents[0])
       print(self.parents[1])
     
