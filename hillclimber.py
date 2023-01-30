@@ -1,12 +1,13 @@
 from solution import SOLUTION
 import constants as c
+import copy
 
 class HILLCLIMBER:
   def __init__(self):
     self.parent = SOLUTION()
     
   def Spawn(self):
-    pass
+    copy.deepcopy(self.parent)
   
   def Mutate(self):
     pass
