@@ -2,6 +2,10 @@ import numpy
 import pyrosim.pyrosim as pyrosim
 import os
 
+Create_World()
+Create_Body()
+Create_Brain()
+
 class SOLUTION:
   def __init__(self):
     self.weights = numpy.random.rand(3,2)
