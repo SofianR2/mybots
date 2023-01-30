@@ -66,4 +66,4 @@ class SIMULATION:
       time.sleep(1/240)
       
   def Get_Fitness(self):
-    self.robot.Get_Fitness
+    self.robot.Get_Fitness()
