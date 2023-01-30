@@ -6,6 +6,7 @@ import numpy
 import math
 import random
 import constants as c
+import sys
 
 from world import WORLD
 from robot import ROBOT
