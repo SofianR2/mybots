@@ -48,6 +48,7 @@ class ROBOT:
     
   def Get_Fitness(self):
     stateOfLinkZero = p.getLinkState(self.robotId, 0)
-    print(stateOfLinkZero)
+    positionOfLinkZero = stateOfLinkZero[0]
+    print(positionOfLinkZero)
     exit()
     
