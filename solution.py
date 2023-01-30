@@ -56,6 +56,6 @@ class SOLUTION:
   def Mutate(self):
     randomRow = random.randint(0, 2)
     randomColumn = random.randint(0, 1)
-    self.weights[randomRow, randomColumn] =  self.weights[randomRow, randomColumn] * 2 - 1
+    self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
   
 
