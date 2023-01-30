@@ -1,3 +1,4 @@
+from hillclimber import HILLCLIMBER
 import os
 
 for x in range(1, 6):
