@@ -61,7 +61,7 @@ class SOLUTION:
     self.Create_Body()
     self.Create_Brain()
     
-    f = open("fitness.txt", "r")
+    f = open("fitness" + solutionID + " .txt", "r")
     self.fitness = float(f.read())
     f.close()
     
