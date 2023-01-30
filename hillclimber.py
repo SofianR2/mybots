@@ -19,7 +19,7 @@ class HILLCLIMBER:
   def Evolve_For_One_Generation(self):
     self.Spawn()
     self.Mutate()
-    self.child.Evaluate()
+    self.child.Evaluate("DIRECT")
     self.Print()
     self.Select()
     
@@ -27,7 +27,7 @@ class HILLCLIMBER:
     #self.parent.Create_World()
     #self.parent.Create_Body()
     #self.parent.Create_Brain()
-    self.parent.Evaluate()
+    self.parent.Evaluate("DIRECT")
     for currentGeneration in range(c.numberOfGenerations):
       self.Evolve_For_One_Generation()
       
