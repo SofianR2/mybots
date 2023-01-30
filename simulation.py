@@ -23,7 +23,7 @@ class SIMULATION:
     self.robot.Prepare_To_Act()
     
   def __del__(self):
-    self.physicsClient = p.connect(p.GUI)
+    self.physicsClient = p.connect(p.DIRECT)
     p.disconnect()
     
   def Run(self):
