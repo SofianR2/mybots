@@ -73,8 +73,8 @@ class SIMULATION:
       #maxForce = 500)
 
 
-    if(self.directOrGUI == "GUI"):
-      time.sleep(1/240)
+      if(self.directOrGUI == "GUI"):
+        time.sleep(1/240)
       
   def Get_Fitness(self):
     self.robot.Get_Fitness()
