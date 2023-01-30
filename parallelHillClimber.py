@@ -6,8 +6,7 @@ class PARALLEL_HILL_CLIMBER:
   def __init__(self):
     self.parents = {}
     for i in range(0, (c.populationSize)):
-      #self.parents[i] = SOLUTION()
-      print(i)
+      self.parents[i] = SOLUTION()
     
   def Spawn(self):
     self.child = copy.deepcopy(self.parent)
@@ -39,5 +38,4 @@ class PARALLEL_HILL_CLIMBER:
     print(self.parent.fitness, self.child.fitness)
     
   def Show_Best(self):
-    pass
-    #self.parent.Evaluate("GUI")
+    self.parent.Evaluate("GUI")
