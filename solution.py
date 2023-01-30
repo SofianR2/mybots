@@ -6,12 +6,12 @@ class SOLUTION:
   def __init__(self):
     self.weights = numpy.random.rand(3,2)
     self.weights = self.weights * 2 - 1
-    length = 1
-    width = 1
-    height = 1
-    x=0
-    y=0
-    z=0.5
+    #length = 1
+    #width = 1
+    #height = 1
+    #x=0
+    #y=0
+    #z=0.5
     
   def Create_World(self):
     pyrosim.Start_SDF("world.sdf")
