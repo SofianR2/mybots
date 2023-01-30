@@ -1,3 +1,5 @@
+import numpy as np
+
 class SOLUTION:
   def __init__(self):
-    pass
+    np.random.rand(3,2)
