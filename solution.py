@@ -89,8 +89,12 @@ class SOLUTION:
     f.close()
     print(self.fitness)
     print("CCCCCCCCCCC")
+    os.system("ls")
+    pritn("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
     os.system("del fitness" + str(self.myID) + ".txt")
     print("DDDDDDDDDDD")
+    os.system("ls")
+    
     
   def Mutate(self):
     randomRow = random.randint(0, 2)
