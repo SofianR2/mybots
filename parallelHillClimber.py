@@ -31,16 +31,18 @@ class PARALLEL_HILL_CLIMBER:
     
   def Evolve(self):
     for i in range(0, c.populationSize):
-      #print(self.parents[i])
-      #self.parents[i].Evaluate("GUI")
       self.parents[i].Start_Simulation("GUI")
-#    self.parent.Evaluate("GUI")
-#    for currentGeneration in range(c.numberOfGenerations):
-#      self.Evolve_For_One_Generation()
     for j in range(0, c.populationSize):
       print("HELLOOOOOOOOOOOOOOOOOOOOOO")
       self.parents[i].Wait_For_Simulation_To_End()
       
+    #for i in range(0, c.populationSize):
+      #print(self.parents[i])
+      #self.parents[i].Evaluate("GUI")
+      #self.parents[i].Start_Simulation("GUI")
+#    self.parent.Evaluate("GUI")
+#    for currentGeneration in range(c.numberOfGenerations):
+#      self.Evolve_For_One_Generation()  
   def Print(self):
     print(self.parent.fitness, self.child.fitness)
     
