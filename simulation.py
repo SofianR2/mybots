@@ -14,7 +14,7 @@ from robot import ROBOT
 
 class SIMULATION:
   def __init__(self):
-    directOrGUI = sys.argv[1]
+    #directOrGUI = sys.argv[1]
     
     if(directOrGUI == "DIRECT"):
       self.physicsClient = p.connect(p.DIRECT)
