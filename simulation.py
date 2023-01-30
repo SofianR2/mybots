@@ -13,8 +13,7 @@ from world import WORLD
 from robot import ROBOT
 
 class SIMULATION:
-  def __init__(self):
-    directOrGUI = simulate.directOrGUI
+  def __init__(self, directOrGUI):
     
     if(directOrGUI == "DIRECT"):
       self.physicsClient = p.connect(p.DIRECT)
