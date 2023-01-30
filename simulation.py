@@ -70,7 +70,7 @@ class SIMULATION:
       #maxForce = 500)
 
 
-      #time.sleep(1/240)
+      time.sleep(1/480)
       
   def Get_Fitness(self):
     self.robot.Get_Fitness()
