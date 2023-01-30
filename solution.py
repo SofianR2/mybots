@@ -10,12 +10,12 @@ class SOLUTION:
   def Evaluate(self):
     os.system("python3 simulate.py")
   
-  def Create_World():
+  def Create_World(self):
     pyrosim.Start_SDF("world.sdf")
     pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z] , size=[length,width,height])
     pyrosim.End()
 
-  def Create_Body():
+  def Create_Body(self):
     pyrosim.Start_URDF("body.urdf")
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z+1] , size=[length,width,height])
     pyrosim.Send_Joint(name = "Torso_BackLeg" , parent= "Torso" , child = "BackLeg" , type = "revolute", position = [x-0.5,y,z+0.5])
@@ -24,7 +24,7 @@ class SOLUTION:
     pyrosim.Send_Cube(name="FrontLeg", pos=[x+0.5,y,z-1] , size=[length,width,height])
     pyrosim.End()
 
-  def Create_Brain():
+  def Create_Brain(self):
     pyrosim.Start_NeuralNetwork("brain.nndf")
     pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "Torso")
     pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "BackLeg")
