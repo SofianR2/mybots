@@ -20,6 +20,7 @@ class HILLCLIMBER:
     self.Spawn()
     self.Mutate()
     self.child.Evaluate()
+    print(self.parent.fitness, self.child.fitness)
     self.Select()
     
   def Evolve(self):
