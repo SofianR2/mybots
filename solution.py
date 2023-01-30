@@ -48,5 +48,8 @@ class SOLUTION:
     
   def Evaluate(self):
     os.system("python3 simulate.py")
+    f = open("fintess.txt", "r")
+    self.fitness = float(f.read())
+    f.close()
   
 
