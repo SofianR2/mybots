@@ -88,12 +88,8 @@ class SOLUTION:
     self.fitness = float(f.read())
     f.close()
     print(self.fitness)
-    print("CCCCCCCCCCC")
-    os.system("dir")
-    print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
+    print("fitness" + str(self.myID) + ".txt")
     os.system("del fitness" + str(self.myID) + ".txt")
-    print("DDDDDDDDDDD")
-    os.system("dir")
     
     
   def Mutate(self):
