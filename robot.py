@@ -7,6 +7,7 @@ import math
 import random
 import constants as c
 from pyrosim.neuralNetwork import NEURAL_NETWORK
+import os
 
 from sensor import SENSOR
 from motor import MOTOR
