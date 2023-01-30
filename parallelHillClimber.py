@@ -7,7 +7,8 @@ class PARALLEL_HILL_CLIMBER:
     self.parents = {}
     for i in range(0, c.populationSize-1):
       self.parents[i] = SOLUTION()
-      print(self.parents[i])
+      print(self.parents[0])
+      print(self.parents[1])
     
   def Spawn(self):
     self.child = copy.deepcopy(self.parent)
@@ -28,7 +29,8 @@ class PARALLEL_HILL_CLIMBER:
     
   def Evolve(self):
     for i in range(0, c.populationSize-1):
-      print(self.parents[i])
+      pass
+      #print(self.parents[i])
       #self.parents[i].Evaluate("GUI")
 #    self.parent.Evaluate("GUI")
 #    for currentGeneration in range(c.numberOfGenerations):
