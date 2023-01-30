@@ -7,13 +7,14 @@ import math
 import random
 import constants as c
 import sys
+import simulate
 
 from world import WORLD
 from robot import ROBOT
 
 class SIMULATION:
   def __init__(self):
-    directOrGUI = sys.argv[1]
+    directOrGUI = simulate.directOrGUI
     
     if(directOrGUI == "DIRECT"):
       self.physicsClient = p.connect(p.DIRECT)
