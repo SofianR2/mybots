@@ -56,7 +56,8 @@ class ROBOT:
     print(xCoordinateOfLinkZero)
     f = open("tmp" + self.solutionID + ".txt", "w")
     f.write(str(xCoordinateOfLinkZero))
-    f.close()
     os.system("rename tmp" + self.solutionID + ".txt " + "fitness" + self.solutionID + ".txt")
+    f.close()
+    
     exit()
     
