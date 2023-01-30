@@ -51,5 +51,8 @@ class SOLUTION:
     f = open("fitness.txt", "r")
     self.fitness = float(f.read())
     f.close()
+    
+  def Mutate(self):
+    random.randint(0, 2)
   
 
