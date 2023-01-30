@@ -48,7 +48,7 @@ class SOLUTION:
     pyrosim.End()
     
   def Evaluate(self, directOrGUI):
-    os.system("python3 simulate.py DIRECT")
+    os.system("python3 simulate.py " + directOrGUI)
     
     self.Create_World()
     self.Create_Body()
