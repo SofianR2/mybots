@@ -21,7 +21,9 @@ class HILLCLIMBER:
     self.Mutate()
     self.child.Evaluate()
     print(self.parent.fitness, self.child.fitness)
-    self.Select()
+    print(self.parent.fitness)
+    print(self.child.fitness)
+    #self.Select()
     
   def Evolve(self):
     self.parent.Create_World()
