@@ -47,7 +47,7 @@ class SOLUTION:
         pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + 3 , weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
     
-  def Evaluate(self):
+  def Evaluate(self, directOrGUI):
     os.system("python3 simulate.py DIRECT")
     
     self.Create_World()
