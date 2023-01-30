@@ -24,12 +24,14 @@ class PARALLEL_HILL_CLIMBER):
     self.Select()
     
   def Evolve(self):
-    self.parent.Evaluate("GUI")
-    for currentGeneration in range(c.numberOfGenerations):
-      self.Evolve_For_One_Generation()
+    pass
+#    self.parent.Evaluate("GUI")
+#    for currentGeneration in range(c.numberOfGenerations):
+#      self.Evolve_For_One_Generation()
       
   def Print(self):
     print(self.parent.fitness, self.child.fitness)
     
   def Show_Best(self):
-    self.parent.Evaluate("GUI")
+    pass
+    #self.parent.Evaluate("GUI")
