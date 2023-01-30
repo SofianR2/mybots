@@ -19,7 +19,8 @@ class ROBOT:
     self.robotId = p.loadURDF("body.urdf")
     self.nn = NEURAL_NETWORK("brain" + str(solutionID) + ".nndf")
     print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-    os.system("del brain" + str(solutionID) + ".nndf")
+    #os.system("del brain" + str(solutionID) + ".nndf")
+    os.system("del brainID.nndf")
     print("BBBBBBBBBBBBBBBBBBBBBBBBB")
     
   def Prepare_To_Sense(self):
