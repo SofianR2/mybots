@@ -1,8 +1,9 @@
 from simulation import SIMULATION
 
 simulation = SIMULATION()
-simulation.Run()
 simulation.Get_Fitness()
+simulation.Run()
+
 
 '''
 #import pybullet as p
