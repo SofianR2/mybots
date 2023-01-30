@@ -1,3 +1,3 @@
 class HILLCLIMBER:
-  def__init__(self):
+  def __init__(self):
     pass
