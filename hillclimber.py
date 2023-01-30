@@ -13,7 +13,9 @@ class HILLCLIMBER:
     self.child.Mutate()
   
   def Select(self):
-    pass
+    print(self.parent.fitness)
+    print(self.child.fitness)
+    exit()
   
   def Evolve_For_One_Generation(self):
     self.Spawn()
