@@ -22,7 +22,7 @@ class SIMULATION:
     
     
     #self.physicsClient = p.connect(p.DIRECT)
-    self.robotId = p.loadURDF("body.urdf")  
+    #self.robotId = p.loadURDF("body.urdf")  
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
     self.world = WORLD()
     self.robot = ROBOT()  
