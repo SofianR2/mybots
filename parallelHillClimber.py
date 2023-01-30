@@ -26,7 +26,7 @@ class PARALLEL_HILL_CLIMBER:
     self.Select()
     
   def Evolve(self):
-    for i in range(0, (c.populationSize-1)):
+    for i in range(0, c.populationSize):
       #print(self.parents[i])
       self.parents[i].Evaluate("GUI")
 #    self.parent.Evaluate("GUI")
