@@ -86,8 +86,8 @@ class SOLUTION:
       time.sleep(0.01)
 
     self.fitness = float(f.read())
-    print(self.fitness)
     f.close()
+    print(self.fitness)
     os.system("del fitness" + str(self.myID) + ".txt")
     
   def Mutate(self):
