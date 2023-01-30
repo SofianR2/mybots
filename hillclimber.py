@@ -24,9 +24,9 @@ class HILLCLIMBER:
     self.Select()
     
   def Evolve(self):
-    self.parent.Create_World()
-    self.parent.Create_Body()
-    self.parent.Create_Brain()
+    #self.parent.Create_World()
+    #self.parent.Create_Body()
+    #self.parent.Create_Brain()
     self.parent.Evaluate()
     for currentGeneration in range(c.numberOfGenerations):
       self.Evolve_For_One_Generation()
