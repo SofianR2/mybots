@@ -10,10 +10,10 @@ class SOLUTION:
     pass
   
   def Create_World():
-  pyrosim.Start_SDF("world.sdf")
-  pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z] , size=[length,width,height])
-  pyrosim.End()
-  
+    pyrosim.Start_SDF("world.sdf")
+    pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z] , size=[length,width,height])
+    pyrosim.End()
+
   def Create_Body():
     pyrosim.Start_URDF("body.urdf")
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z+1] , size=[length,width,height])
