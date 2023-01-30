@@ -46,7 +46,7 @@ class SIMULATION:
     frontTargetAngles = numpy.sin(frontTargetAngles) * c.frontAmplitude
     '''
     
-    for i in range(1000):
+    for i in range(10000):
       p.stepSimulation()
       self.robot.Sense(i)
       self.robot.Think()
@@ -70,7 +70,7 @@ class SIMULATION:
       #maxForce = 500)
 
 
-      time.sleep(1/6000)
+      #time.sleep(1/240)
       
   def Get_Fitness(self):
     self.robot.Get_Fitness()
