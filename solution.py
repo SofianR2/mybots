@@ -63,6 +63,7 @@ class SOLUTION:
     
     f = open("fitness" + str(self.myID) + " .txt", "r")
     self.fitness = float(f.read())
+    print(self.fitness)
     f.close()
     
   def Mutate(self):
