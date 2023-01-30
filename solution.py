@@ -62,6 +62,10 @@ class SOLUTION:
     self.Create_Brain()
     
     f = open("fitness" + str(self.myID) + ".txt", "r")
+    
+    while not os.path.exists("fitness" + str(self.myID) + ".txt"):
+      time.sleep(0.01)
+    
     self.fitness = float(f.read())
     print(self.fitness)
     f.close()
