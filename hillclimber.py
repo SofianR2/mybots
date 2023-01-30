@@ -13,7 +13,7 @@ class HILLCLIMBER:
     self.child.Mutate()
   
   def Select(self):
-    if(self.parent.fitness < self.child.fitness):
+    if(self.parent.fitness > self.child.fitness):
       self.parent = self.child
   
   def Evolve_For_One_Generation(self):
