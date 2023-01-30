@@ -36,8 +36,6 @@ class SIMULATION:
     p.disconnect()
     
   def Run(self):
-    if(self.directOrGUI == "GUI"):
-      time.sleep(5)
 
     #backLegSensorValues = numpy.zeros(1000)
     #frontLegSensorValues = numpy.zeros(1000)
@@ -75,7 +73,8 @@ class SIMULATION:
       #maxForce = 500)
 
 
-      #time.sleep(1/240)
+    if(self.directOrGUI == "GUI"):
+      time.sleep(1/240)
       
   def Get_Fitness(self):
     self.robot.Get_Fitness()
