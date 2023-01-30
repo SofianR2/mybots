@@ -6,10 +6,9 @@ class PARALLEL_HILL_CLIMBER:
   def __init__(self):
     self.parents = {}
     for i in range(0, c.populationSize-1):
-      self.parents[i] = SOLUTION()
-      print(i)
+      self.parents[1] = SOLUTION()
       #print(self.parents[0])
-      #print(self.parents[1])
+      print(self.parents[1])
     
   def Spawn(self):
     self.child = copy.deepcopy(self.parent)
