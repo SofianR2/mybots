@@ -6,6 +6,12 @@ class SOLUTION:
   def __init__(self):
     self.weights = numpy.random.rand(3,2)
     self.weights = self.weights * 2 - 1
+    length = 1
+    width = 1
+    height = 1
+    x=0
+    y=0
+    z=0.5
     
   def Evaluate(self):
     os.system("python3 simulate.py")
@@ -39,3 +45,7 @@ class SOLUTION:
       for CurrentColumn in [0, 1]:
         pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + 3 , weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
+    
+    Create_World()
+    Create_Body()
+    Create_Brain()
