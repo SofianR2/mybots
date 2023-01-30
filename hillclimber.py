@@ -19,7 +19,6 @@ class HILLCLIMBER:
     self.Spawn()
     self.Mutate()
     self.child.Evaluate()
-    exit()
     self.Select()
     
   def Evolve(self):
