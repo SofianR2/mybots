@@ -16,10 +16,10 @@ class SIMULATION:
     
     if(directOrGUI == "DIRECT"):
       #self.physicsClient = p.connect(p.DIRECT)
-      p.connect(p.DIRECT)
+      self.physicsClient = p.connect(p.DIRECT)
     else:
       #self.physicsClient = p.connect(p.GUI)
-      p.connect(p.GUI)
+      self.physicsClient = p.connect(p.GUI)
         
     #self.physicsClient = p.connect(p.DIRECT)
     #self.robotId = p.loadURDF("body.urdf")  
