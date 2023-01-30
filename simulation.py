@@ -37,9 +37,8 @@ class SIMULATION:
     
   def Run(self):
     if(self.directOrGUI == "GUI"):
-      time.sleep(1/60)
-    else:
-      time.sleep(1/60)
+      time.sleep()
+
     #backLegSensorValues = numpy.zeros(1000)
     #frontLegSensorValues = numpy.zeros(1000)
     #targetAngles = numpy.zeros(1000)
