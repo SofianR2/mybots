@@ -13,7 +13,7 @@ from robot import ROBOT
 
 class SIMULATION:
   def __init__(self, directOrGUI):
-    
+    self.directOrGUI = directOrGUI
     if(directOrGUI == "DIRECT"):
       #self.physicsClient = p.connect(p.DIRECT)
       p.connect(p.DIRECT)
@@ -36,6 +36,8 @@ class SIMULATION:
     p.disconnect()
     
   def Run(self):
+    if(self.directOrGUI == "GUI"):
+      time.sleep(1/240)
     #backLegSensorValues = numpy.zeros(1000)
     #frontLegSensorValues = numpy.zeros(1000)
     #targetAngles = numpy.zeros(1000)
