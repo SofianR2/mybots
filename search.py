@@ -1,4 +1,4 @@
-from parallelHillClimber import PARALLEL_HILL_CLIMBER as
+from parallelHillClimber import PARALLEL_HILL_CLIMBER
 import os
 
 phc = PARALLEL_HILL_CLIMBER()
