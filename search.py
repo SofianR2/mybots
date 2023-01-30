@@ -2,6 +2,7 @@ from hillclimber import HILLCLIMBER
 import os
 
 hc = HILLCLIMBER()
+hc.Evolve()
 
 #for x in range(1, 6):
 #  os.system("python3 generate.py")
