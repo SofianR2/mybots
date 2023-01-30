@@ -37,6 +37,8 @@ class PARALLEL_HILL_CLIMBER:
 #    self.parent.Evaluate("GUI")
 #    for currentGeneration in range(c.numberOfGenerations):
 #      self.Evolve_For_One_Generation()
+    for j in range(0, c.populationSize):
+      self.parents[i].Wait_For_Simulation_To_End()
       
   def Print(self):
     print(self.parent.fitness, self.child.fitness)
