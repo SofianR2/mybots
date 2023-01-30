@@ -41,9 +41,9 @@ class SOLUTION:
     pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "FrontLeg")
     pyrosim.Send_Motor_Neuron( name = 3 , jointName = "Torso_BackLeg")
     pyrosim.Send_Motor_Neuron( name = 4 , jointName = "Torso_FrontLeg")
-    for CurrentRow in [0, 1, 2]:
-      for CurrentColumn in [0, 1]:
-        pyrosim.Send_Synapse( sourceNeuronName = CurrentRow , targetNeuronName = CurrentColumn + 3 , weight = self.weights[currentRow][currentColumn])
+    for currentRow in [0, 1, 2]:
+      for currentColumn in [0, 1]:
+        pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + 3 , weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
     
   def Evaluate(self):
