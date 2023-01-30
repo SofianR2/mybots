@@ -7,7 +7,6 @@ import math
 import random
 import constants as c
 import sys
-import simulate
 
 from world import WORLD
 from robot import ROBOT
