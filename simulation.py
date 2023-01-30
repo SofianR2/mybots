@@ -13,7 +13,15 @@ from robot import ROBOT
 
 class SIMULATION:
   def __init__(self):
-    self.physicsClient = p.connect(p.DIRECT)
+    directOrGUI = sys.argv[1]
+    
+    if(directOrGUI == "DIRECT"):
+      self.physicsClient = p.connect(p.DIRECT)
+    else:
+      self.physicsClient = p.connect(p.GUI)
+    
+    
+    #self.physicsClient = p.connect(p.DIRECT)
     self.robotId = p.loadURDF("body.urdf")  
     p.setAdditionalSearchPath(pybullet_data.getDataPath())
     self.world = WORLD()
