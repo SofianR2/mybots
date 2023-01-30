@@ -2,7 +2,7 @@ from solution import SOLUTION
 import constants as c
 import copy
 
-class PARALLEL_HILL_CLIMBER):
+class PARALLEL_HILL_CLIMBER:
   def __init__(self):
     self.parent = SOLUTION()
     
