@@ -7,26 +7,32 @@ class SOLUTION:
   def __init__(self):
     self.weights = numpy.random.rand(3,2)
     self.weights = self.weights * 2 - 1
+    self.length = 1
+    self.width = 1
+    self.height = 1
+    self.x=0
+    self.y=0
+    self.z=0.5
    
     
   def Create_World(self):
-    length = 1
-    width = 1
-    height = 1
-    x=0
-    y=0
-    z=0.5
+    length = self.length
+    width = self.width
+    height = self.height
+    x = self.x
+    y = self.y
+    z = self.z
     pyrosim.Start_SDF("world.sdf")
     pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z] , size=[length,width,height])
     pyrosim.End()
 
   def Create_Body(self):
-    length = 1
-    width = 1
-    height = 1
-    x=0
-    y=0
-    z=0.5
+    length = self.length
+    width = self.width
+    height = self.height
+    x = self.x
+    y = self.y
+    z = self.z
     pyrosim.Start_URDF("body.urdf")
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z+1] , size=[length,width,height])
     pyrosim.Send_Joint(name = "Torso_BackLeg" , parent= "Torso" , child = "BackLeg" , type = "revolute", position = [x-0.5,y,z+0.5])
