@@ -7,7 +7,7 @@ class HILLCLIMBER:
     self.parent = SOLUTION()
     
   def Spawn(self):
-    copy.deepcopy(self.parent)
+    self.child = copy.deepcopy(self.parent)
   
   def Mutate(self):
     self.child.Mutate()
