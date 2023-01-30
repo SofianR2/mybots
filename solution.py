@@ -88,7 +88,9 @@ class SOLUTION:
     self.fitness = float(f.read())
     f.close()
     print(self.fitness)
+    print("CCCCCCCCCCC")
     os.system("del fitness" + str(self.myID) + ".txt")
+    print("DDDDDDDDDDD")
     
   def Mutate(self):
     randomRow = random.randint(0, 2)
