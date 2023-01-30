@@ -32,6 +32,7 @@ class PARALLEL_HILL_CLIMBER:
   def Evolve(self):
     for i in range(0, c.populationSize):
       self.parents[i].Start_Simulation("GUI")
+      print("HELLOOOOOOOOOOOOOOOOOOOOOO")
     for j in range(0, c.populationSize):
       print("HELLOOOOOOOOOOOOOOOOOOOOOO")
       self.parents[i].Wait_For_Simulation_To_End()
