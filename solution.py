@@ -49,6 +49,11 @@ class SOLUTION:
     
   def Evaluate(self):
     os.system("python3 simulate.py")
+    
+    self.Create_World()
+    self.Create_Body()
+    self.Create_Brain()
+    
     f = open("fitness.txt", "r")
     self.fitness = float(f.read())
     f.close()
