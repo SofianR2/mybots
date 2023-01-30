@@ -20,6 +20,7 @@ class ROBOT:
     self.nn = NEURAL_NETWORK("brain" + str(solutionID) + ".nndf")
     print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     print(os.system("del brain" + str(solutionID) + ".nndf"))
+    print("BBBBBBBBBBBBBBBBBBBBBBBBB")
     
   def Prepare_To_Sense(self):
     self.sensors = {}
