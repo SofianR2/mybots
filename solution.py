@@ -50,7 +50,7 @@ class SOLUTION:
     pyrosim.Send_Joint(name = "Torso_RightLeg" , parent= "Torso" , child = "RightLeg" , type = "revolute", position = [x+0.5,y,z+0.5], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="RightLeg", pos=[x+0.5,y,z-0.5] , size=[length,width-0.8,height-0.8])
     pyrosim.Send_Joint(name = "FrontLeg_FrontLowerLeg" , parent= "FrontLeg" , child = "FrontLowerLeg" , type = "revolute", position = [x,y+1,z-0.5], jointAxis = "0 1 0")
-    pyrosim.Send_Cube(name="FrontLowerLeg", pos=[x,y,z-1] , size=[length,width-0.8,height-0.8])
+    pyrosim.Send_Cube(name="FrontLowerLeg", pos=[x-0.8,y-0.8,z+0.5] , size=[length,width-0.8,height-0.8])
     pyrosim.End()
 
   def Create_Brain(self):
