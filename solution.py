@@ -46,6 +46,7 @@ class SOLUTION:
     pyrosim.Send_Joint(name = "Torso_FrontLeg" , parent= "Torso" , child = "FrontLeg" , type = "revolute", position = [x,y+0.5,z+0.5], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="FrontLeg", pos=[x,y+0.5,z-0.5] , size=[length-0.8,width,height-0.8])
     pyrosim.End()
+    exit()
 
   def Create_Brain(self):
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
