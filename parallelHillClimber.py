@@ -44,7 +44,7 @@ class PARALLEL_HILL_CLIMBER:
     '''
     
   def Evolve(self):
-    Evaluate(self.parents)
+    self.Evaluate(self.parents)
     exit()
       
     for currentGeneration in range(c.numberOfGenerations):
