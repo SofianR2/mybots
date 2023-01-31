@@ -26,7 +26,8 @@ class PARALLEL_HILL_CLIMBER:
     #self.nextAvailableID += 1
   
   def Mutate(self):
-    self.child.Mutate()
+    for i in self.children:
+      self.children[i].Mutate()
   
   def Select(self):
     if(self.parent.fitness > self.child.fitness):
@@ -34,8 +35,9 @@ class PARALLEL_HILL_CLIMBER:
   
   def Evolve_For_One_Generation(self):
     self.Spawn()
-    '''
     self.Mutate()
+    '''
+    
     self.child.Evaluate("DIRECT")
     self.Print()
     self.Select()
