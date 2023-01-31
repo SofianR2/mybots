@@ -1,9 +1,9 @@
 import numpy
 
 amplitude = numpy.pi/8
-frequency = 10
+frequency = 9
 phaseOffset = 0
-numberOfGenerations = 10
+numberOfGenerations = 9
 populationSize = 10
 numSensorNeurons = 9
 numMotorNeurons = 8
