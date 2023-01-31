@@ -5,5 +5,5 @@ frequency = 10
 phaseOffset = 0
 numberOfGenerations = 1
 populationSize = 1
-numSensorNeurons = 7
-numMotorNeurons = 6
+numSensorNeurons = 8
+numMotorNeurons = 7
