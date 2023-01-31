@@ -63,7 +63,8 @@ class PARALLEL_HILL_CLIMBER:
     best = self.parents[0]
     for i in self.parents:
       if (self.parents[i].fitness < best.fitness):
-        best = self.parents[i]      
+        best = self.parents[i]
+    print(best.fitness)
     best.Start_Simulation("GUI")
   
   def Evaluate(self, solutions):
