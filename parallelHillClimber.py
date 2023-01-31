@@ -16,9 +16,8 @@ class PARALLEL_HILL_CLIMBER:
   def Spawn(self):
     self.children = {}
     
-    for i in self.parents:      
-
-      self.children[i] = copy.deepcopy(self.parents[i][0])
+    for i in self.parents.keys():      
+      self.children[i] = copy.deepcopy(self.parents[i])
       self.children[i].Set_ID(self.nextAvailableID)
       self.nextAvailableID += 1
     
