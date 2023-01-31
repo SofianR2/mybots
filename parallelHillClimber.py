@@ -57,7 +57,7 @@ class PARALLEL_HILL_CLIMBER:
   def Print(self):
     for i in self.parents:
       print()
-      print(self.parents[i].fitness, self.child[i].fitness)
+      print(self.parents[i].fitness, self.children[i].fitness)
       print()
       
   def Show_Best(self):
