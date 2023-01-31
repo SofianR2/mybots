@@ -55,7 +55,7 @@ class SOLUTION:
       for currentColumn in range(0, c.numMotorNeurons):
         pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons , weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
-    exit()
+    #exit()
     
   def Evaluate(self, directOrGUI):
     '''
