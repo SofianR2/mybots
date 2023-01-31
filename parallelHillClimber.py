@@ -24,10 +24,6 @@ class PARALLEL_HILL_CLIMBER:
     #self.child = copy.deepcopy(self.parent)
     #self.child.Set_ID(self.nextAvailableID)
     #self.nextAvailableID += 1
-    for i in self.children:
-      print(self.children[i])
-    exit()
-    
   
   def Mutate(self):
     self.child.Mutate()
