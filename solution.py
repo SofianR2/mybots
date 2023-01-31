@@ -80,11 +80,10 @@ class SOLUTION:
     self.Create_Brain()
     
   def Wait_For_Simulation_To_End(self):
-    f = open("fitness" + str(self.myID) + ".txt", "r")
-    
     while not os.path.exists("fitness" + str(self.myID) + ".txt"):
       time.sleep(0.01)
-
+    
+    f = open("fitness" + str(self.myID) + ".txt", "r")
     self.fitness = float(f.read())
     f.close()
     print(self.fitness)
