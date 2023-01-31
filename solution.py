@@ -88,7 +88,6 @@ class SOLUTION:
     self.fitness = float(f.read())
     f.close()
     print(self.fitness)
-    print("fitness" + str(self.myID) + ".txt")
     os.system("del fitness" + str(self.myID) + ".txt")
     
     
