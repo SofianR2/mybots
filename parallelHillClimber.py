@@ -34,7 +34,7 @@ class PARALLEL_HILL_CLIMBER:
       self.parents[i].Start_Simulation("GUI")
       
     for j in range(0, c.populationSize):
-      self.parents[i].Wait_For_Simulation_To_End()
+      self.parents[j].Wait_For_Simulation_To_End()
       
     #for i in range(0, c.populationSize):
       #print(self.parents[i])
