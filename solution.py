@@ -106,11 +106,12 @@ class SOLUTION:
     '''
     
   def Start_Simulation(self, directOrGUI):
-    os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID))
-    
     self.Create_World()
     self.Create_Body()
     self.Create_Brain()
+    
+    os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID))
+
     
   def Wait_For_Simulation_To_End(self):
     while not os.path.exists("fitness" + str(self.myID) + ".txt"):
