@@ -7,7 +7,7 @@ class PARALLEL_HILL_CLIMBER:
   def __init__(self):
     os.system("del brain*.nndf")
     print("AAAAAAAAAAAAAAAAAAAAA")
-    os.system("del fitness*.nndf")
+    os.system("del fitness*.txt")
     print("BBBBBBBBBBBBBBBBBBBBB")
     self.parents = {}
     self.nextAvailableID = 0
