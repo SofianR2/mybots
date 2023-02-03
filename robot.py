@@ -18,7 +18,7 @@ class ROBOT:
     self.solutionID = solutionID
     self.robotId = p.loadURDF("body.urdf")
     self.nn = NEURAL_NETWORK("brain" + str(solutionID) + ".nndf")
-    os.system("del brain" + str(solutionID) + ".nndf")
+    # os.system("rm brain" + str(solutionID) + ".nndf")
     #os.system("del brainID.nndf")
     
   def Prepare_To_Sense(self):
@@ -58,7 +58,7 @@ class ROBOT:
     f = open("tmp" + str(self.solutionID) + ".txt", "w")
     f.write(str(xCoordinateOfLinkZero))
     f.close()
-    os.system("rename tmp" + str(self.solutionID) + ".txt " + "fitness" + str(self.solutionID) + ".txt")
+    os.system("mv tmp" + str(self.solutionID) + ".txt " + "fitness" + str(self.solutionID) + ".txt")
     #os.system("del fitness" + str(self.solutionID) + ".txt")
 
     

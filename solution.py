@@ -74,11 +74,10 @@ class SOLUTION:
     '''
     
   def Start_Simulation(self, directOrGUI):
-    os.system("start /B python3 simulate.py " + directOrGUI + " " + str(self.myID))
-    
     self.Create_World()
     self.Create_Body()
     self.Create_Brain()
+    os.system("python3 simulate.py " + directOrGUI + " " + str(self.myID)+ " 2&>1 &")
     
   def Wait_For_Simulation_To_End(self):
     while not os.path.exists("fitness" + str(self.myID) + ".txt"):
@@ -87,7 +86,7 @@ class SOLUTION:
     f = open("fitness" + str(self.myID) + ".txt", "r")
     self.fitness = float(f.read())
     f.close()
-    os.system("del fitness" + str(self.myID) + ".txt")
+    os.system("rm fitness" + str(self.myID) + ".txt")
     
     
   def Mutate(self):
