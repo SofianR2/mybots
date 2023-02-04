@@ -121,7 +121,7 @@ class SOLUTION:
     print(self.myID)
     self.fitness = float(f.read())
     f.close()
-    #os.system("del fitness" + str(self.myID) + ".txt")
+    os.system("del fitness" + str(self.myID) + ".txt")
     
     
   def Mutate(self):
