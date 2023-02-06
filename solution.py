@@ -45,6 +45,7 @@ class SOLUTION:
     z = self.z
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+    pyrosim.Send_Cube(name="New", pos=[x-2,y+2,z] , size=[length+10,width+10,height+10])
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z+0.5] , size=[length,width,height])
     pyrosim.Send_Joint(name = "Torso_BackLeg" , parent= "Torso" , child = "BackLeg" , type = "revolute", position = [x,y-0.5,z+0.5], jointAxis = "1 0 0")
     pyrosim.Send_Cube(name="BackLeg", pos=[x,y-0.5,z-0.5] , size=[length-0.8,width,height-0.8])
