@@ -122,7 +122,6 @@ class SOLUTION:
       time.sleep(0.1)
     
     f = open("fitness" + str(self.myID) + ".txt", "r")
-    print(self.myID)
     self.fitness = float(f.read())
     f.close()
     os.system("del fitness" + str(self.myID) + ".txt")
