@@ -28,7 +28,7 @@ class SOLUTION:
     #pyrosim.Start_SDF("world.sdf")#########
     pyrosim.Start_SDF("world" + str(self.myID) + ".sdf")
     os.system("del world" + str(self.myID) + ".sdf")
-    #pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z] , size=[length+10,width+2,height+5])
+    #pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z] , size=[length,width,height])
     pyrosim.End()
     
     #while not os.path.exists("world.sdf"):##########
