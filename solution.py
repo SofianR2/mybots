@@ -15,7 +15,7 @@ class SOLUTION:
     self.height = 1
     self.x=0
     self.y=0
-    self.z=0.5
+    self.z=0.5 +2
    
     
   def Create_World(self):
