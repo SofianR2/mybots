@@ -54,7 +54,7 @@ class ROBOT:
     
   def Get_Fitness(self):
     #stateOfLinkZero = p.getLinkState(self.robotId, 0)
-    basePositionAndOrientation = p.getBasePositionAndOrientation(self.robot)
+    basePositionAndOrientation = p.getBasePositionAndOrientation(self.robotId)
     #positionOfLinkZero = stateOfLinkZero[0]
     basePosition = basePositionAndOrientation[0]
     #xCoordinateOfLinkZero = positionOfLinkZero[0]
