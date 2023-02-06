@@ -27,7 +27,7 @@ class SOLUTION:
     z = self.z
     ###pyrosim.Start_SDF("world.sdf")#########
     pyrosim.Start_SDF("world" + str(self.myID) + ".sdf")
-    pyrosim.Send_Cube(name="Box", pos=[x-2,y+2,z+1] , size=[length+10,width+2,height+1])
+    pyrosim.Send_Cube(name="Box", pos=[x,y,z+1] , size=[length+10,width+2,height+1])
     os.system("del world" + str(self.myID) + ".sdf")
     pyrosim.End()
     
