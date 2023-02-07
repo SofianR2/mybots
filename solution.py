@@ -47,14 +47,14 @@ class SOLUTION:
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z+0.5+height_offset] , size=[length,width,height])
     pyrosim.Send_Joint(name = "Torso_RightLeg" , parent= "Torso" , child = "RightLeg" , type = "revolute", position = [x,y+0.4,z+height_offset], jointAxis = "0 1 0")
-    pyrosim.Send_Cube(name="RightLeg", pos=[x,y,z-1] , size=[length-0.4,width-0.4,height])
+    pyrosim.Send_Cube(name="RightLeg", pos=[x,y,z-1] , size=[length-0.6,width-0.6,height])
     pyrosim.Send_Joint(name = "Torso_LeftLeg" , parent= "Torso" , child = "LeftLeg" , type = "revolute", position = [x,y-0.4,z+height_offset], jointAxis = "0 1 0")
-    pyrosim.Send_Cube(name="LeftLeg", pos=[x,y,z-1] , size=[length-0.4,width-0.4,height])
+    pyrosim.Send_Cube(name="LeftLeg", pos=[x,y,z-1] , size=[length-0.6,width-0.6,height])
     
     pyrosim.Send_Joint(name = "RightLeg_RightLowerLeg" , parent= "RightLeg" , child = "RightLowerLeg" , type = "revolute", position = [x,y,z-1], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="RightLowerLeg", pos=[x,y,z-1.5] , size=[length-0.2,width-0.2,height])
     pyrosim.Send_Joint(name = "LeftLeg_LeftLowerLeg" , parent= "LeftLeg" , child = "LeftLowerLeg" , type = "revolute", position = [x,y,z-1], jointAxis = "0 1 0")
-    pyrosim.Send_Cube(name="LeftLowerLeg", pos=[x,y,z-1.5] , size=[length-0.2,width-0.2,height])
+    pyrosim.Send_Cube(name="LeftLowerLeg", pos=[x,y,z-1.5] , size=[length-0.6,width-0.6,height])
     
     pyrosim.Send_Joint(name = "Torso_RightArm" , parent= "Torso" , child = "RightArm" , type = "revolute", position = [x,y+0.5,z+height_offset], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="RightArm", pos=[x,y+0.1,z] , size=[length-0.8,width-0.8,height-0.5])
