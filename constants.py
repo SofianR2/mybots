@@ -1,7 +1,8 @@
 import numpy
 
 amplitude = numpy.pi/8
-frequency = 9
+#frequency = 9
+frequency = 20
 phaseOffset = 0
 numberOfGenerations = 10
 populationSize = 20
