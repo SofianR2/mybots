@@ -62,7 +62,7 @@ class ROBOT:
     zCoordinateOfLinkZero = basePosition[2]
     #print(xCoordinateOfLinkZero)
     f = open("tmp" + str(self.solutionID) + ".txt", "w")
-    f.write(str(xCoordinateOfLinkZero))
+    f.write(str(zCoordinateOfLinkZero))
     f.close()
     
     os.system("rename tmp" + str(self.solutionID) + ".txt " + "fitness" + str(self.solutionID) + ".txt")    
