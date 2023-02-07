@@ -27,7 +27,7 @@ class SOLUTION:
     z = self.z
     ###pyrosim.Start_SDF("world.sdf")#########
     pyrosim.Start_SDF("world" + str(self.myID) + ".sdf")
-    pyrosim.Send_Cube(name="Box", pos=[x,y,z+1] , size=[length+10,width+2,height])
+    pyrosim.Send_Cube(name="Box", pos=[x,y,z] , size=[length+10,width+2,height])
     os.system("del world" + str(self.myID) + ".sdf")
     pyrosim.End()
     
@@ -45,13 +45,13 @@ class SOLUTION:
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z+0.5+2] , size=[length,width,height])
-    pyrosim.Send_Joint(name = "Torso_BackLeg" , parent= "Torso" , child = "BackLeg" , type = "revolute", position = [x,y-0.5,z+0.5+2], jointAxis = "1 0 0")
+    pyrosim.Send_Joint(name = "Torso_BackLeg" , parent= "Torso" , child = "BackLeg" , type = "revolute", position = [x,y-0.5,z+0.5+1], jointAxis = "1 0 0")
     pyrosim.Send_Cube(name="BackLeg", pos=[x,y-0.5,z-0.5] , size=[length-0.8,width,height-0.8])
-    pyrosim.Send_Joint(name = "Torso_FrontLeg" , parent= "Torso" , child = "FrontLeg" , type = "revolute", position = [x,y+0.5,z+0.5+2], jointAxis = "1 0 0")
+    pyrosim.Send_Joint(name = "Torso_FrontLeg" , parent= "Torso" , child = "FrontLeg" , type = "revolute", position = [x,y+0.5,z+0.5+1], jointAxis = "1 0 0")
     pyrosim.Send_Cube(name="FrontLeg", pos=[x,y+0.5,z-0.5] , size=[length-0.8,width,height-0.8])
-    pyrosim.Send_Joint(name = "Torso_LeftLeg" , parent= "Torso" , child = "LeftLeg" , type = "revolute", position = [x-0.5,y,z+0.5+2], jointAxis = "0 1 0")
+    pyrosim.Send_Joint(name = "Torso_LeftLeg" , parent= "Torso" , child = "LeftLeg" , type = "revolute", position = [x-0.5,y,z+0.5+1], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="LeftLeg", pos=[x-0.5,y,z-0.5] , size=[length,width-0.8,height-0.8])
-    pyrosim.Send_Joint(name = "Torso_RightLeg" , parent= "Torso" , child = "RightLeg" , type = "revolute", position = [x+0.5,y,z+0.5+2], jointAxis = "0 1 0")
+    pyrosim.Send_Joint(name = "Torso_RightLeg" , parent= "Torso" , child = "RightLeg" , type = "revolute", position = [x+0.5,y,z+0.5+1], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="RightLeg", pos=[x+0.5,y,z-0.5] , size=[length,width-0.8,height-0.8])
     pyrosim.Send_Joint(name = "FrontLeg_FrontLowerLeg" , parent= "FrontLeg" , child = "FrontLowerLeg" , type = "revolute", position = [x,y+1,z-0.5], jointAxis = "1 0 0")
     pyrosim.Send_Cube(name="FrontLowerLeg", pos=[x,y,z-1] , size=[length-0.8,width-0.8,height])
