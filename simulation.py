@@ -50,7 +50,7 @@ class SIMULATION:
     frontTargetAngles = numpy.sin(frontTargetAngles) * c.frontAmplitude
     '''
     
-    for i in range(1000):
+    for i in range(5000):
       p.stepSimulation()
       self.robot.Sense(i)
       self.robot.Think()
