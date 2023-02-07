@@ -31,8 +31,8 @@ class PARALLEL_HILL_CLIMBER:
   
   def Select(self):
     for i in self.parents:
-      if (self.parents[i].fitness > self.children[i].fitness):
-      #if (self.parents[i].fitness < self.children[i].fitness):
+      #if (self.parents[i].fitness > self.children[i].fitness):
+      if (self.parents[i].fitness < self.children[i].fitness):
         self.parents[i] = self.children[i]
   
   def Evolve_For_One_Generation(self):
@@ -63,8 +63,8 @@ class PARALLEL_HILL_CLIMBER:
   def Show_Best(self):
     best = self.parents[0]
     for i in self.parents:
-      #if (self.parents[i].fitness < best.fitness):
-      if (self.parents[i].fitness > best.fitness):
+      if (self.parents[i].fitness < best.fitness):
+      #if (self.parents[i].fitness > best.fitness):
         best = self.parents[i]
     best.Start_Simulation("GUI")
   
