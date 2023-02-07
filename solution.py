@@ -48,8 +48,8 @@ class SOLUTION:
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z+0.5+height_offset] , size=[length,width,height])
     pyrosim.Send_Joint(name = "Torso_FrontLeg" , parent= "Torso" , child = "FrontLeg" , type = "revolute", position = [x,y+0.5,z+0.5+height_offset], jointAxis = "1 0 0")
     pyrosim.Send_Cube(name="FrontLeg", pos=[x,y+0.5,z-0.5] , size=[length-0.8,width,height-0.8])
-    pyrosim.Send_Joint(name = "Torso_LeftLeg" , parent= "Torso" , child = "LeftLeg" , type = "revolute", position = [x-0.5,y,z+0.5+height_offset], jointAxis = "0 1 0")
-    pyrosim.Send_Cube(name="LeftLeg", pos=[x-0.5,y,z-0.5] , size=[length,width-0.8,height-0.8])
+    pyrosim.Send_Joint(name = "Torso_BackLeg" , parent= "Torso" , child = "BackLeg" , type = "revolute", position = [x,y-0.5,z+0.5+height_offset], jointAxis = "1 0 0")
+    pyrosim.Send_Cube(name="BackLeg", pos=[x,y-0.5,z-0.5] , size=[length-0.8,width,height-0.8])
 
     '''
     pyrosim.Send_Joint(name = "Torso_BackLeg" , parent= "Torso" , child = "BackLeg" , type = "revolute", position = [x,y-0.5,z+0.5+height_offset], jointAxis = "1 0 0")
@@ -76,7 +76,7 @@ class SOLUTION:
     pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "Torso")
     
     pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "FrontLeg")
-    pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "LeftLeg")
+    pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "BackLeg")
     
 
     #pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "BackLeg")
@@ -89,7 +89,7 @@ class SOLUTION:
     #pyrosim.Send_Sensor_Neuron(name = 8 , linkName = "LeftLowerLeg")
 
     pyrosim.Send_Motor_Neuron( name = 3 , jointName = "Torso_FrontLeg")
-    pyrosim.Send_Motor_Neuron( name = 4 , jointName = "Torso_LeftLeg")
+    pyrosim.Send_Motor_Neuron( name = 4 , jointName = "Torso_BackLeg")
     #pyrosim.Send_Motor_Neuron( name = 6 , jointName = "Torso_BackLeg")
     #pyrosim.Send_Motor_Neuron( name = 7 , jointName = "Torso_FrontLeg")
     #pyrosim.Send_Motor_Neuron( name = 8 , jointName = "Torso_LeftLeg")
