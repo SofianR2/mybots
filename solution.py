@@ -147,8 +147,8 @@ class SOLUTION:
     pyrosim.Send_Motor_Neuron(name = 16 , jointName = "Torso_LeftArm")
     pyrosim.Send_Motor_Neuron(name = 17 , jointName = "RightArm_LowerRightArm")
     pyrosim.Send_Motor_Neuron(name = 18 , jointName = "LeftArm_LowerLeftArm")
-    pyrosim.Send_Motor_Neuron(name = 19 , jointName = "RightLowerLeg_RightShoe")
-    pyrosim.Send_Motor_Neuron(name = 20 , jointName = "LeftLowerLeg_LeftShoe")
+    #pyrosim.Send_Motor_Neuron(name = 19 , jointName = "RightLowerLeg_RightShoe")
+    #pyrosim.Send_Motor_Neuron(name = 20 , jointName = "LeftLowerLeg_LeftShoe")
 
     #pyrosim.Send_Motor_Neuron( name = 5 , jointName = "Torso_FrontLeg")
     #pyrosim.Send_Motor_Neuron( name = 6 , jointName = "Torso_BackLeg")
