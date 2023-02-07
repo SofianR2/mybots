@@ -56,6 +56,9 @@ class SOLUTION:
     pyrosim.Send_Joint(name = "LeftLeg_LeftLowerLeg" , parent= "LeftLeg" , child = "LeftLowerLeg" , type = "revolute", position = [x,y,z-1], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="LeftLowerLeg", pos=[x,y,z-1.5] , size=[length-0.2,width-0.2,height])
     
+    pyrosim.Send_Joint(name = "Torso_RightArm" , parent= "Torso" , child = "RightArm" , type = "revolute", position = [x,y+0.4,z-0.5+height_offset], jointAxis = "0 1 0")
+    pyrosim.Send_Cube(name="RightArm", pos=[x,y,z-1] , size=[length-0.4,width-0.4,height-0.5])
+    
     
     
     ''' long thing
@@ -102,6 +105,7 @@ class SOLUTION:
     pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "LeftLeg")
     pyrosim.Send_Sensor_Neuron(name = 3 , linkName = "RightLowerLeg")
     pyrosim.Send_Sensor_Neuron(name = 4 , linkName = "LeftLowerLeg")
+    pyrosim.Send_Sensor_Neuron(name = 5 , linkName = "RightArm")
     
     #pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "FrontLeg")
     #pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "BackLeg")
@@ -119,10 +123,11 @@ class SOLUTION:
     #pyrosim.Send_Sensor_Neuron(name = 7 , linkName = "RightLowerLeg")
     #pyrosim.Send_Sensor_Neuron(name = 8 , linkName = "LeftLowerLeg")
     
-    pyrosim.Send_Motor_Neuron(name = 5 , jointName = "Torso_RightLeg")
-    pyrosim.Send_Motor_Neuron(name = 6 , jointName = "Torso_LeftLeg")
-    pyrosim.Send_Motor_Neuron(name = 7 , jointName = "RightLeg_RightLowerLeg")
-    pyrosim.Send_Motor_Neuron(name = 8 , jointName = "LeftLeg_LeftLowerLeg")
+    pyrosim.Send_Motor_Neuron(name = 6 , jointName = "Torso_RightLeg")
+    pyrosim.Send_Motor_Neuron(name = 7 , jointName = "Torso_LeftLeg")
+    pyrosim.Send_Motor_Neuron(name = 8 , jointName = "RightLeg_RightLowerLeg")
+    pyrosim.Send_Motor_Neuron(name = 9 , jointName = "LeftLeg_LeftLowerLeg")
+    pyrosim.Send_Motor_Neuron(name = 10 , jointName = "Torso_RightArm")
 
     #pyrosim.Send_Motor_Neuron( name = 5 , jointName = "Torso_FrontLeg")
     #pyrosim.Send_Motor_Neuron( name = 6 , jointName = "Torso_BackLeg")
