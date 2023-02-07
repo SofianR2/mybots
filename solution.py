@@ -45,7 +45,7 @@ class SOLUTION:
     height_offset = 3
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
-    pyrosim.Send_Cube(name="Torso", pos=[x,y,z+0.5+height_offset] , size=[length,width,height+2])
+    pyrosim.Send_Cube(name="Torso", pos=[x,y,z+0.5+height_offset] , size=[length,width,height])
     pyrosim.Send_Joint(name = "Torso_RightLeg" , parent= "Torso" , child = "RightLeg" , type = "revolute", position = [x+0.5,y+0.75,z-1+height_offset], jointAxis = "0 1 0")
     pyrosim.Send_Cube(name="RightLeg", pos=[x,y-0.5,z-0.5] , size=[length-0.8,width-0.8,height+1])
     
