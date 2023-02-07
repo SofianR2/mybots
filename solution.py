@@ -52,9 +52,9 @@ class SOLUTION:
     pyrosim.Send_Cube(name="LeftLeg", pos=[x,y,z-1.5] , size=[length-0.4,width-0.4,height+1])
     
     pyrosim.Send_Joint(name = "RightLeg_RightLowerLeg" , parent= "RightLeg" , child = "RightLowerLeg" , type = "revolute", position = [x,y,z-1.5], jointAxis = "0 1 0")
-    pyrosim.Send_Cube(name="RightLowerLeg", pos=[x,y,z-1.2] , size=[length,width,height-0.8])
+    pyrosim.Send_Cube(name="RightLowerLeg", pos=[x,y,z-1.5] , size=[length,width,height-0.8])
     pyrosim.Send_Joint(name = "LeftLeg_LeftLowerLeg" , parent= "LeftLeg" , child = "LeftLowerLeg" , type = "revolute", position = [x,y,z-1.5], jointAxis = "0 1 0")
-    pyrosim.Send_Cube(name="LeftLowerLeg", pos=[x,y,z-1.2] , size=[length,width,height-0.8])
+    pyrosim.Send_Cube(name="LeftLowerLeg", pos=[x,y,z-1.5] , size=[length,width,height-0.8])
     
     
     
