@@ -53,7 +53,10 @@ class SOLUTION:
     
     
     for i in range(self.max):
-      pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[random.uniform(0.1, 2),random.uniform(0.1, 2),random.uniform(0.1, 2)])
+      length = random.uniform(0.1, 2)
+      width = random.uniform(0.1, 2)
+      height = random.uniform(0.1, 2)
+      pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
       if(i!=0):
         previous = i - 1
         current = i
