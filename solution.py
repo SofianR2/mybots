@@ -42,7 +42,7 @@ class SOLUTION:
     x = self.x
     y = self.y
     z = self.z
-    height_offset = 1
+    height_offset = 0
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     pyrosim.Send_Cube(name="Torso", pos=[x,y,z-0.5+height_offset] , size=[length,width,height])
