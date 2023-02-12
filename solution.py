@@ -17,7 +17,7 @@ class SOLUTION:
     self.y=0
     self.z=0.5
     self.max = 5
-    self.width_offset = 0
+    
    
     
   def Create_World(self):
@@ -46,6 +46,7 @@ class SOLUTION:
     z = self.z
     height_offset = 1
     joint_offset = 0
+    width_offset = 0
     
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
@@ -62,13 +63,12 @@ class SOLUTION:
 
       current = i
       nex = i + 1
-      pyrosim.Send_Cube(name= str(i), pos=[x+self.width_offset,y,z+height_offset] , size=[length, width, height])
+      pyrosim.Send_Cube(name= str(i), pos=[x+width_offset,y,z+height_offset] , size=[length, width, height])
       if(i!=self.max-1):
-        if(i > 0):
-          joint_offset = length/2
         pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+length/2+joint_offset,y,z+height_offset], jointAxis = "0 1 0")
         height_offset = -0.5
-        self.width_offset = length/2
+        width_offset = length/2
+        joint_offset = length/2
         
 
       
