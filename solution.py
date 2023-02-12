@@ -63,9 +63,9 @@ class SOLUTION:
 
   def Create_Brain(self):
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
-    pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "Torso")
+    pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "0")
     
-    pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "RightLeg")
+    pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "1")
     '''
     pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "LeftLeg")
     pyrosim.Send_Sensor_Neuron(name = 3 , linkName = "RightLowerLeg")
@@ -78,7 +78,7 @@ class SOLUTION:
     pyrosim.Send_Sensor_Neuron(name = 10 , linkName = "LeftShoe")
     '''
     
-    pyrosim.Send_Motor_Neuron(name = 2 , jointName = "Torso_RightLeg")
+    pyrosim.Send_Motor_Neuron(name = 2 , jointName = "0_1")
     '''
     pyrosim.Send_Motor_Neuron(name = 12 , jointName = "Torso_LeftLeg")
     pyrosim.Send_Motor_Neuron(name = 13 , jointName = "RightLeg_RightLowerLeg")
