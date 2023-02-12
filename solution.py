@@ -53,9 +53,9 @@ class SOLUTION:
     
     
     for i in range(self.max):
-      length = random.uniform(0.5, 2)
-      width = random.uniform(0.5, 2)
-      height = random.uniform(0.5, 2)
+      length = random.uniform(0.5, 1)
+      width = random.uniform(0.5, 1)
+      height = random.uniform(0.5, 1)
       current = i
       nex = i + 1
       pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
