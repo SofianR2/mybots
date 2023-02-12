@@ -16,7 +16,7 @@ class SOLUTION:
     self.x=0
     self.y=0
     self.z=0.5
-    self.max = 4
+    self.max = 10
    
     
   def Create_World(self):
