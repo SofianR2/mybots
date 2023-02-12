@@ -56,18 +56,31 @@ class SOLUTION:
       length = random.uniform(0.5, 2)
       width = random.uniform(0.5, 2)
       height = random.uniform(0.5, 2)
-      previous = i - 1
       current = i
+      nex = i + 1
+      
+      if(i == 0):
+        pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
+        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
+        
+      else:
+        pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
+        if( i != self.max)
+        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
+        
+      
+      '''
       pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
       #if i != self.max:
       #  pyrosim.Send_Joint(name = str(i) + "_" + str(i+1), parent= str(i) , child = str(i+1) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
+      
       if(i == 1):
                 pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
 
       if(i>1):
         
         pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
-
+      '''
     pyrosim.End()
 
   def Create_Brain(self):
