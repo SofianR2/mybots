@@ -53,11 +53,11 @@ class SOLUTION:
     
     
     for i in range(self.max):
-      pyrosim.Send_Cube(name= i, pos=[x,y,z+height_offset] , size=[random.uniform(0.1, 2),random.uniform(0.1, 2),random.uniform(0.1, 2)])
+      pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[random.uniform(0.1, 2),random.uniform(0.1, 2),random.uniform(0.1, 2)])
       if(i!=0):
         previous = i - 1
         current = i
-        pyrosim.Send_Joint(name = 1 + "_" + 2, parent= 1 , child = 2 , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
+        pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
     
     pyrosim.End()
 
