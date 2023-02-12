@@ -53,9 +53,9 @@ class SOLUTION:
     
     
     for i in range(self.max):
-      length = random.uniform(0.5, 1)
-      width = random.uniform(0.5, 1)
-      height = random.uniform(0.5, 1)
+      length = random.uniform(0.5, 1.5)
+      width = random.uniform(0.5, 1.5)
+      height = random.uniform(0.5, 1.5)
       relative_height = 0
       current = i
       nex = i + 1
