@@ -54,9 +54,9 @@ class SOLUTION:
     
     for i in range(self.max):
       pyrosim.Send_Cube(name= i, pos=[x,y,z+height_offset] , size=[random.uniform(0.1, 2),random.uniform(0.1, 2),random.uniform(0.1, 2)])
-        if(i!=0):
-          previous = i - 1
-          current = i
+      if(i!=0):
+        previous = i - 1
+        current = i
         pyrosim.Send_Joint(name = string(current) + "_" string(previous), parent= string(previous) , child = string(current) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
     
     pyrosim.End()
