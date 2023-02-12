@@ -57,7 +57,8 @@ class SOLUTION:
       width = random.uniform(0.1, 2)
       height = random.uniform(0.1, 2)
       pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
-      pyrosim.Send_Joint(name = str(i) + "_" + str(i+1), parent= str(i) , child = str(i+1) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
+      if i != self.max:
+        pyrosim.Send_Joint(name = str(i) + "_" + str(i+1), parent= str(i) , child = str(i+1) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
       '''
       if(i!=0):
         previous = i - 1
