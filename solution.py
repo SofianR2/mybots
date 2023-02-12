@@ -17,6 +17,7 @@ class SOLUTION:
     self.y=0
     self.z=0.5
     self.max = 10
+    self.width_offset = 0
    
     
   def Create_World(self):
@@ -57,16 +58,14 @@ class SOLUTION:
       width = random.uniform(0.5, 1.5)
       height = random.uniform(0.5, 1.5)
       relative_height = 0
-      width_offset = 0
-      width_offset2 = 0
+
       current = i
       nex = i + 1
-      pyrosim.Send_Cube(name= str(i), pos=[(x+width_offset2),y,z+height_offset-0.5] , size=[1, 1, 1])
+      pyrosim.Send_Cube(name= str(i), pos=[x+self.width_offset,y,z+height_offset-0.5] , size=[1, 1, 1])
       if(i!=self.max-1):
-        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+0.5+width_offset,y,z+height_offset], jointAxis = "0 1 0")
+        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+0.5+self.width_offset,y,z+height_offset], jointAxis = "0 1 0")
         height_offset = -0.5
-        width_offset = 0.5
-        width_offset2 = 5
+        self.width_offset = 0.5
 
       
       '''
