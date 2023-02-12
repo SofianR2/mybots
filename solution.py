@@ -63,7 +63,7 @@ class SOLUTION:
       if(i!=0):
         previous = i - 1
         current = i
-        pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
+        pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
 
     pyrosim.End()
 
