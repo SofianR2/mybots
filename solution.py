@@ -65,8 +65,8 @@ class SOLUTION:
         
       else:
         pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
-        if(i != self.max):
-          pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
+        #if(i != self.max):
+        #  pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
         
       
       '''
