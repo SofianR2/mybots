@@ -45,6 +45,8 @@ class SOLUTION:
     y = self.y
     z = self.z
     height_offset = 1
+    joint_offset = 0
+    
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     #pyrosim.Send_Cube(name="Torso", pos=[x,y,z+height_offset] , size=[length,width,height])
@@ -62,9 +64,10 @@ class SOLUTION:
       nex = i + 1
       pyrosim.Send_Cube(name= str(i), pos=[x+self.width_offset,y,z+height_offset] , size=[length, width, height])
       if(i!=self.max-1):
-        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+0.5+self.width_offset,y,z+height_offset], jointAxis = "0 1 0")
+        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+0.5+joint_offset,y,z+height_offset], jointAxis = "0 1 0")
         height_offset = -0.5
         self.width_offset = length/2
+        joint_offset = -0.5 + length
 
       
       '''
