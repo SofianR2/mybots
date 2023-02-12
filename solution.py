@@ -58,7 +58,7 @@ class SOLUTION:
       height = random.uniform(0.5, 1.5)
       relative_height = 0
       width_offset = 0
-      width_offset2
+      width_offset2 = 0
       current = i
       nex = i + 1
       pyrosim.Send_Cube(name= str(i), pos=[x+width_offset2,y,z+height_offset-0.5] , size=[1, 1, 1])
