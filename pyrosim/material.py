@@ -6,7 +6,7 @@ class MATERIAL:
 
         self.depth  = 3
 
-        self.string1 = '<material name=' + material_name+ '>'
+        self.string1 = '<material name=' + material_name + '>'
 
         self.string2 = color
 
