@@ -95,7 +95,7 @@ class SOLUTION:
   def Create_Brain(self):
     sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
-    for index, item in self.get_sensor:
+    for index, item in enumerate(self.get_sensor):
       if item == 1:
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(index))
         print("name = " + str(sensor_number) + " " + "linkName = " + str(index))
