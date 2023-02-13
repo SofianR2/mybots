@@ -7,5 +7,5 @@ phaseOffset = 0
 numberOfGenerations = 1
 populationSize = 1
 numSensorNeurons = 10
-numMotorNeurons = 10
+numMotorNeurons = 9
 motorJointRange = 0.2
