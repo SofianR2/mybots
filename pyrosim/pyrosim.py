@@ -137,7 +137,7 @@ def Send_Link(name, pos, size, objectType, color):
 
     availableLinkIndex = availableLinkIndex + 1
     
-def Send_Cube(name="default",pos=[0,0,0],size=[1,1,1], color):
+def Send_Cube(name="default",pos=[0,0,0],size=[1,1,1], color='    <color rgba="0 1.0 1.0 1.0"/>'):
 
     Send_Link(name,pos,size,"box", color)
 
