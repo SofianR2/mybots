@@ -64,11 +64,11 @@ class SOLUTION:
       current = i
       nex = i + 1
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', material_name="Blue")
         self.get_sensor.append(1)
         print("blue")
       else: #no sensor, makes green
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>' material_name="Green")
         self.get_sensor.append(0)
         print("green")
       if(i!=self.max-1):
