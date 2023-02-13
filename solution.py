@@ -68,7 +68,7 @@ class SOLUTION:
         self.get_sensor.append(1)
         print("blue")
       else: #no sensor, makes green
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="200.0 0.0 0.0 1.0"/>')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>')
         self.get_sensor.append(0)
         print("green")
       if(i!=self.max-1):
