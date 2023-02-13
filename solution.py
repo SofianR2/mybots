@@ -142,7 +142,7 @@ class SOLUTION:
     pyrosim.Send_Motor_Neuron(name = 18 , jointName = "LeftArm_LowerLeftArm")
     '''
     
-    for currentRow in range(0, self.num_sensors):
+    for currentRow in range(0, c.numSensorNeurons):
       for currentColumn in range(0, c.numMotorNeurons):
         pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons , weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
@@ -184,7 +184,7 @@ class SOLUTION:
     
     
   def Mutate(self):
-    randomRow = random.randint(0, self.num_sensors-1)
+    randomRow = random.randint(0, c.numSensorNeurons-1)
     print(self.num_sensors)
     print(randomRow)
     randomColumn = random.randint(0, c.numMotorNeurons-1)
