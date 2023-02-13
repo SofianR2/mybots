@@ -128,17 +128,17 @@ class SOLUTION:
     '''
     
     pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = "0_1")
-    print(sensor_number)
+    print(name)
     pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = "1_2")
-    print(sensor_number)
+    print(name)
     pyrosim.Send_Motor_Neuron(name = sensor_number+3, jointName = "2_3")
-    print(sensor_number)
+    print(name)
     pyrosim.Send_Motor_Neuron(name = sensor_number+4, jointName = "3_4")
-    print(sensor_number)
+    print(name)
     pyrosim.Send_Motor_Neuron(name = sensor_number+5, jointName = "4_5")
-    print(sensor_number)
+    print(name)
     pyrosim.Send_Motor_Neuron(name = sensor_number+6, jointName = "5_6")
-    print(sensor_number)
+    print(name)
     '''
     pyrosim.Send_Motor_Neuron(name = 12 , jointName = "Torso_LeftLeg")
     pyrosim.Send_Motor_Neuron(name = 13 , jointName = "RightLeg_RightLowerLeg")
