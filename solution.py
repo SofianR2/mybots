@@ -100,7 +100,7 @@ class SOLUTION:
       #if self.get_sensor[i] == 1:
       pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
       sensor_number = sensor_number + 1
-      self.num_sensors = sensor_number
+      self.num_sensors = self.num_sensors + 1
     
     
     '''
