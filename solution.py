@@ -71,7 +71,7 @@ class SOLUTION:
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>', cname = '<material name="Green">')
         self.get_sensor.append(0)
       if(i!=self.max-1):
-        print(str(current) + " " + str(nex))
+        #print(str(current) + " " + str(nex))
         pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
         height_offset = -0.5
         width_offset = 1
@@ -96,7 +96,9 @@ class SOLUTION:
   def Create_Brain(self):
     sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
+    
     for index, item in enumerate(self.get_sensor):
+      print(self.get_sensor)
       if item == 1:
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(index))
         print("name = " + str(sensor_number) + " " + "linkName = " + str(index))
