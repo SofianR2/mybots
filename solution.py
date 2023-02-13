@@ -90,7 +90,7 @@ class SOLUTION:
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
     for i in range(self.max):
       if(random.randrange(0,10) < 5):
-        print("sending sensor to " + 
+        print("sending sensor to " + i)
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
         sensor_number = sensor_number + 1
       
