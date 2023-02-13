@@ -111,6 +111,7 @@ class SOLUTION:
     '''
     
     pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = "0_1")
+    print(str(sensor_number+1))
     pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = "1_2")
     pyrosim.Send_Motor_Neuron(name = sensor_number+3, jointName = "2_3")
     pyrosim.Send_Motor_Neuron(name = sensor_number+4, jointName = "3_4")
