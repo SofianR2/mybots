@@ -102,7 +102,7 @@ class SOLUTION:
         sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
     print(self.num_sensors)
-    self.weights = numpy.random.rand(self.num_sensors, c.numMotorNeurons)
+    self.weights = numpy.random.rand(self.num_sensors-1, c.numMotorNeurons)
     self.weights = self.weights * 2 - 1
     
     
