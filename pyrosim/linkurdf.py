@@ -12,7 +12,7 @@ from pyrosim.commonFunctions import Save_Whitespace
 
 class LINK_URDF:
 
-    def __init__(self,name,pos,size,color):
+    def __init__(self,name,pos,size,color,cname):
 
         self.name = name
 
@@ -24,7 +24,7 @@ class LINK_URDF:
 
         self.geometry = GEOMETRY_URDF(size)
 
-        self.visual    = VISUAL_URDF(self.origin , self.geometry, color)
+        self.visual    = VISUAL_URDF(self.origin , self.geometry, color,cname)
 
         self.collision = COLLISION_URDF(self.origin , self.geometry)
 
