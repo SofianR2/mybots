@@ -60,8 +60,6 @@ class SOLUTION:
       length = random.uniform(0.5, 1.5)
       width = random.uniform(0.5, 1.5)
       height = random.uniform(0.5, 1.5)
-      if(i != 0):
-
       current = i
       nex = i + 1
       pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height])
