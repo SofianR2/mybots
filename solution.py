@@ -91,7 +91,7 @@ class SOLUTION:
     for i in range(self.max):
       if(random.rand(0,10) < 5):
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(sensor_number))
-        sensor_number++
+        sensor_number = sensor_number + 1
       
     
     #pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "0")
