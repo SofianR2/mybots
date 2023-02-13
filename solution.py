@@ -57,7 +57,7 @@ class SOLUTION:
     #pyrosim.Send_Cube(name="RightLeg", pos=[x+0.5,y,z-0.5] , size=[random.uniform(0.1, 2),random.uniform(0.1, 2),random.uniform(0.1, 2)])
     
     
-    
+    self.get_sensor = []
     for i in range(self.max):
       length = random.uniform(0.2, 1.5)
       width = random.uniform(0.2, 1.5)
