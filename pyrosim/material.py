@@ -2,7 +2,7 @@ from pyrosim.commonFunctions import Save_Whitespace
 
 class MATERIAL: 
 
-    def __init__(self,color,material_name):
+    def __init__(self,color):
 
         self.depth  = 3
 
