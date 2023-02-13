@@ -62,7 +62,7 @@ class SOLUTION:
       height = random.uniform(0.2, 1.5)
       current = i
       nex = i + 1
-      pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0 1.0 255.0 1.0"/>')
+      pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0 200.0 1.0 1.0"/>')
       if(i!=self.max-1):
         pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
         print(str(current) + "_" + str(nex))
