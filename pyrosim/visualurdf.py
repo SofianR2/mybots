@@ -10,7 +10,7 @@ class VISUAL_URDF:
 
         self.geometry = geometry 
 
-        self.material = MATERIAL(color, material_name)
+        self.material = MATERIAL(color)
 
         self.depth = 2
 
