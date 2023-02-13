@@ -18,6 +18,7 @@ class SOLUTION:
     self.z=0.5
     self.max = 7
     self.get_sensor = []
+    self.num_sensors = 0
     
    
     
@@ -99,6 +100,7 @@ class SOLUTION:
       #if self.get_sensor[i] == 1:
       pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
       sensor_number = sensor_number + 1
+      self.num_sensors = sensor_numer
     
     
     '''
@@ -183,7 +185,7 @@ class SOLUTION:
     
     
   def Mutate(self):
-    randomRow = random.randint(0, c.numSensorNeurons-1)
+    randomRow = random.randint(0, self.num_sensors-1)
     randomColumn = random.randint(0, c.numMotorNeurons-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
