@@ -6,6 +6,6 @@ frequency = 10
 phaseOffset = 0
 numberOfGenerations = 10
 populationSize = 10
-numSensorNeurons = 3
+numSensorNeurons = 7
 numMotorNeurons = 6
 motorJointRange = 0.2
