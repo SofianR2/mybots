@@ -96,9 +96,9 @@ class SOLUTION:
     sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
     for i in self.get_sensor:
-      if self.get_sensor[i] == 1 || self.get_sensor[i] == 0:
-        pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
-        sensor_number = sensor_number + 1
+      #if self.get_sensor[i] == 1:
+      pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
+      sensor_number = sensor_number + 1
     
     
     '''
