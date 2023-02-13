@@ -17,6 +17,7 @@ class SOLUTION:
     self.y=0
     self.z=0.5
     self.max = 7
+    self.get_sensor = []
     
    
     
@@ -57,12 +58,17 @@ class SOLUTION:
     
     
     for i in range(self.max):
+      flip = random.randrange(0,10)
       length = random.uniform(0.2, 1.5)
       width = random.uniform(0.2, 1.5)
       height = random.uniform(0.2, 1.5)
       current = i
       nex = i + 1
-      pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0 200.0 1.0 1.0"/>')
+      if(flip < 5): #sends sensor, makes blue
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0 0 200.0 1.0"/>')
+        self.get_sensor.append(1)
+      else: #no sensor, makes green
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0 200.0 0 1.0"/>')
       if(i!=self.max-1):
         pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
         print(str(current) + "_" + str(nex))
