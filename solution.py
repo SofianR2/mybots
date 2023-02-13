@@ -186,6 +186,7 @@ class SOLUTION:
     
   def Mutate(self):
     randomRow = random.randint(0, self.num_sensors-1)
+    print(self.num_sensors)
     print(randomRow)
     randomColumn = random.randint(0, c.numMotorNeurons-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
