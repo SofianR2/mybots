@@ -65,10 +65,10 @@ class SOLUTION:
       current = i
       nex = i + 1
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="1.0 1.0 100.0 1.0"/>')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>')
         self.get_sensor.append(1)
       else: #no sensor, makes green
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="100.0 1.0 1.0 1.0"/>')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="200.0 0.0 0.0 1.0"/>')
       if(i!=self.max-1):
         pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
         print(str(current) + "_" + str(nex))
