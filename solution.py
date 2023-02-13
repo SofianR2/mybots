@@ -86,10 +86,17 @@ class SOLUTION:
     pyrosim.End()
 
   def Create_Brain(self):
+    sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
-    pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "0")
+    for i in range(self.max):
+      if(random.rand(0,10) < 5):
+        pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(sensor_number))
+        sensor_number++
+      
     
-    pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "1")
+    #pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "0")
+    
+    #pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "1")
     '''
     pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "LeftLeg")
     pyrosim.Send_Sensor_Neuron(name = 3 , linkName = "RightLowerLeg")
@@ -102,7 +109,12 @@ class SOLUTION:
     pyrosim.Send_Sensor_Neuron(name = 10 , linkName = "LeftShoe")
     '''
     
-    pyrosim.Send_Motor_Neuron(name = 2 , jointName = "0_1")
+    pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = str(sensor_number+1) + "_" + 1)
+    pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = str(sensor_number+2) + "_" + 1)
+    pyrosim.Send_Motor_Neuron(name = sensor_number+3, jointName = str(sensor_number+3) + "_" + 1)
+    pyrosim.Send_Motor_Neuron(name = sensor_number+4, jointName = str(sensor_number+4) + "_" + 1)
+    pyrosim.Send_Motor_Neuron(name = sensor_number+5, jointName = str(sensor_number+5) + "_" + 1)
+    pyrosim.Send_Motor_Neuron(name = sensor_number+6, jointName = str(sensor_number+6) + "_" + 1)
     '''
     pyrosim.Send_Motor_Neuron(name = 12 , jointName = "Torso_LeftLeg")
     pyrosim.Send_Motor_Neuron(name = 13 , jointName = "RightLeg_RightLowerLeg")
