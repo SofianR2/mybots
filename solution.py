@@ -101,8 +101,6 @@ class SOLUTION:
         sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
     print(self.num_sensors)
-    self.weights = numpy.random.rand(c.numMotorNeurons, c.numMotorNeurons)
-    self.weights = self.weights * 2 - 1
     
     
     '''
@@ -147,7 +145,7 @@ class SOLUTION:
     
     for currentRow in range(0, c.numSensorNeurons):
       for currentColumn in range(0, c.numMotorNeurons):
-        pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])
+        pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
     
   def Evaluate(self, directOrGUI):
