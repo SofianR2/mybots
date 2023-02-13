@@ -16,7 +16,7 @@ class SOLUTION:
     self.x=0
     self.y=0
     self.z=0.5
-    self.max = 10
+    self.max = 6
     
    
     
@@ -109,12 +109,12 @@ class SOLUTION:
     pyrosim.Send_Sensor_Neuron(name = 10 , linkName = "LeftShoe")
     '''
     
-    pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = str(sensor_number+1) + "_" + 1)
-    pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = str(sensor_number+2) + "_" + 1)
-    pyrosim.Send_Motor_Neuron(name = sensor_number+3, jointName = str(sensor_number+3) + "_" + 1)
-    pyrosim.Send_Motor_Neuron(name = sensor_number+4, jointName = str(sensor_number+4) + "_" + 1)
-    pyrosim.Send_Motor_Neuron(name = sensor_number+5, jointName = str(sensor_number+5) + "_" + 1)
-    pyrosim.Send_Motor_Neuron(name = sensor_number+6, jointName = str(sensor_number+6) + "_" + 1)
+    pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = "0_1")
+    pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = "1_2")
+    pyrosim.Send_Motor_Neuron(name = sensor_number+3, jointName = "2_3")
+    pyrosim.Send_Motor_Neuron(name = sensor_number+4, jointName = "3_4")
+    pyrosim.Send_Motor_Neuron(name = sensor_number+5, jointName = "4_5")
+    pyrosim.Send_Motor_Neuron(name = sensor_number+6, jointName = "5_6")
     '''
     pyrosim.Send_Motor_Neuron(name = 12 , jointName = "Torso_LeftLeg")
     pyrosim.Send_Motor_Neuron(name = 13 , jointName = "RightLeg_RightLowerLeg")
