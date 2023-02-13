@@ -100,6 +100,7 @@ class SOLUTION:
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
         sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
+    print(self.num_sensors)
     
     
     '''
