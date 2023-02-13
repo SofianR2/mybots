@@ -64,7 +64,7 @@ class SOLUTION:
       height = random.uniform(0.2, 1.5)
       current = i
       nex = i + 1
-      if(flip < 5): #sends sensor, makes blue
+      if(random.randrange(0,10) < 5): #sends sensor, makes blue
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0 0 200.0 1.0"/>')
         self.get_sensor.append(1)
       else: #no sensor, makes green
