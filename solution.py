@@ -8,8 +8,9 @@ import constants as c
 class SOLUTION:
   def __init__(self, nextAvailableID):
     self.myID = nextAvailableID
-    self.weights = numpy.random.rand(c.numSensorNeurons, c.numMotorNeurons)
-    self.weights = self.weights * 2 - 1
+    #self.weights = numpy.random.rand(c.numSensorNeurons, c.numMotorNeurons)
+    #self.weights = self.weights * 2 - 1
+    self.weights = 0
     self.length = 1
     self.width = 1
     self.height = 1
@@ -101,6 +102,8 @@ class SOLUTION:
         sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
     print(self.num_sensors)
+    self.weights = numpy.random.rand(self.num_sensors, c.numMotorNeurons)
+    self.weights = self.weights * 2 - 1
     
     
     '''
@@ -143,9 +146,9 @@ class SOLUTION:
     pyrosim.Send_Motor_Neuron(name = 18 , jointName = "LeftArm_LowerLeftArm")
     '''
     
-    for currentRow in range(0, c.numSensorNeurons):
+    for currentRow in range(0, self.num_sensors):
       for currentColumn in range(0, c.numMotorNeurons):
-        pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons , weight = self.weights[currentRow][currentColumn])
+        pyrosim.Send_Synapse( sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors , weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
     
   def Evaluate(self, directOrGUI):
@@ -185,7 +188,7 @@ class SOLUTION:
     
     
   def Mutate(self):
-    randomRow = random.randint(0, c.numSensorNeurons-1)
+    randomRow = random.randint(0, self.num_sensors-1)
     print(self.num_sensors)
     print(randomRow)
     randomColumn = random.randint(0, c.numMotorNeurons-1)
