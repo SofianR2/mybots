@@ -74,7 +74,7 @@ class NEURON:
         for i in synapses:
             if(self.Get_Name() == i[1]):
                 print(i)##################################################################################################################
-                print(synapses)
+                print(neurons)
                 self.Allow_Presynaptic_Neuron_To_Influence_Me(synapses[i].Get_Weight(), neurons[i[0]].Get_Value())
         self.Threshold()
                 
