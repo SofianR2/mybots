@@ -133,7 +133,7 @@ class SOLUTION:
           width_offset = 1
           length_offset = 0
           joint_offset = 2
-          previous_direction = 1
+          previous_direction = 2
         
 
       
