@@ -45,6 +45,7 @@ class SOLUTION:
       time.sleep(0.01)
 
   def Create_Body(self):
+    self.link_list = []
     length = self.length
     width = self.width
     height = self.height
