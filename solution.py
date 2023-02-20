@@ -73,7 +73,7 @@ class SOLUTION:
         self.get_sensor.append(0)
       if(i!=self.max-1):
         print(str(current) + " " + str(nex))
-        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
+        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y+x+(width/2*joint_offset),z+height_offset], jointAxis = "0 1 0")
         height_offset = -0.5
         width_offset = 1
         joint_offset = 2
