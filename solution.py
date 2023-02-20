@@ -67,7 +67,7 @@ class SOLUTION:
       height = random.uniform(0.2, 1)
       current = i
       nex = i + 1
-      direction = random.randint(0,1)
+      direction = random.randint(0,2)
       #direction = 1
 
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
@@ -85,7 +85,7 @@ class SOLUTION:
           elif(previous_direction == 1):
             joint_offset = 1
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y+(length/2),z+height_offset], jointAxis = "1 0 0")
-          elif(previous_direction == 3):
+          elif(previous_direction == 2):
             joint_offset = 1
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset+(height/2)], jointAxis = "1 0 0")
           else:
@@ -104,7 +104,7 @@ class SOLUTION:
           elif(previous_direction == 0):
             joint_offset = 1
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y+(width/2*joint_offset),z+height_offset], jointAxis = "0 1 0")
-          elif(previous_direction == 3):
+          elif(previous_direction == 2):
             joint_offset = 1
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset+(height/2)], jointAxis = "0 1 0")
           else:
@@ -116,8 +116,8 @@ class SOLUTION:
           joint_offset = 2
           previous_direction = 1
           
-        if(direction == 3): #z direction
-          if(previous_direction == 3):
+        if(direction == 2): #z direction
+          if(previous_direction == 2):
             joint_offset = 2
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y,z+height_offset+(height/2*joint_offset)], jointAxis = "1 0 0")
           elif(previous_direction == 0):
