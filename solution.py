@@ -65,7 +65,7 @@ class SOLUTION:
       link_list.append(LINK())
       
     for i, link in enumerate(link_list):
-      if(index == 0):
+      if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         added_links.append(i)
       else:
