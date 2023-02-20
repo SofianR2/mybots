@@ -78,7 +78,7 @@ class SOLUTION:
     
         
     ##############################################
-        
+    '''    
     self.get_sensor = []
     for i in range(self.max):
       length = random.uniform(0.2, 1)
@@ -156,7 +156,7 @@ class SOLUTION:
           z_offset = 1
           joint_offset = 2
           previous_direction = 2
-        
+      '''  
 
       
       '''
