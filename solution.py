@@ -63,8 +63,8 @@ class SOLUTION:
     self.get_sensor = []
     for i in range(self.max):
       length = random.uniform(0.2, 12.5)
-      width = random.uniform(0.2, 12.5)
-      height = random.uniform(0.2, 12.5)
+      width = random.uniform(0.2, 1.5)
+      height = random.uniform(0.2, 1.5)
       current = i
       nex = i + 1
       direction = random.randint(0,1)
