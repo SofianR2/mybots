@@ -71,6 +71,7 @@ def Prepare_Link_Dictionary(bodyID):
     for jointIndex in range( 0 , p.getNumJoints(bodyID) ):
 
         jointInfo = p.getJointInfo( bodyID , jointIndex )
+        print(jointInfo)
 
         jointName = jointInfo[1]
 
