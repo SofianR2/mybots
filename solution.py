@@ -50,6 +50,7 @@ class SOLUTION:
     height_offset = 1
     joint_offset = 1
     width_offset = 0
+    length_offset = 0
     
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
