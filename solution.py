@@ -67,7 +67,7 @@ class SOLUTION:
       current = i
       nex = i + 1
       #direction = random.randint(0,1)
-      direction = 0
+      direction = 1
 
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
