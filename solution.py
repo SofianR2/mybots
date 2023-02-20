@@ -82,11 +82,13 @@ class SOLUTION:
           pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+((length/2*joint_offset)),y,z+height_offset], jointAxis = "0 1 0")
           height_offset = -0.5
           length_offset = 1
+          width_offset = 0
           joint_offset = 2
         if(direction == 1):
           pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+((width/2*joint_offset)),z+height_offset], jointAxis = "0 1 0")
           height_offset = -0.5
           width_offset = 1
+          length_offset = 0
           joint_offset = 2
         
 
