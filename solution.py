@@ -62,7 +62,7 @@ class SOLUTION:
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     ##############################################
     
-    for i in range(self.max-1):
+    for i in range(self.max):
       self.link_list.append(LINK())
       
     for i, link in enumerate(self.link_list):
