@@ -156,10 +156,8 @@ class SOLUTION:
           z_offset = 1
           joint_offset = 2
           previous_direction = 2
-      '''  
-
+            
       
-      '''
       pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
       #if i != self.max:
       #  pyrosim.Send_Joint(name = str(i) + "_" + str(i+1), parent= str(i) , child = str(i+1) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
