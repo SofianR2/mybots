@@ -142,7 +142,7 @@ class SOLUTION:
           joint_offset = 2
           previous_direction = 2
           
-         if(direction == -1): #-y direction
+        if(direction == -1): #-y direction
           while(previous_direction == 1):
             previous_direction == random.randint(-2,2)
           elif(previous_direction == -1):#-y, -y
