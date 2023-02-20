@@ -190,6 +190,7 @@ class SOLUTION:
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
       #print("name = " + str(sensor_number) + " jointName = " + str(joint))
       sensor_number = sensor_number + 1
+    self.num_sensors = numpy.sum(self.get_sensor)
 
       
     '''
