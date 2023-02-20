@@ -4,6 +4,7 @@ import os
 import random
 import time
 import constants as c
+from link import LINK
 
 class SOLUTION:
   def __init__(self, nextAvailableID):
