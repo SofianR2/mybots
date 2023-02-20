@@ -55,15 +55,9 @@ class SOLUTION:
     #pyrosim.Send_Cube(name="Torso", pos=[x,y,z+height_offset] , size=[length,width,height])
     #pyrosim.Send_Joint(name = "Torso_RightLeg" , parent= "Torso" , child = "RightLeg" , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
     #pyrosim.Send_Cube(name="RightLeg", pos=[x+0.5,y,z-0.5] , size=[random.uniform(0.1, 2),random.uniform(0.1, 2),random.uniform(0.1, 2)])
-    
-    if(random.randrange(0,10) < 5): #sends sensor, makes blue
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
-        self.get_sensor.append(1)
-    else: #no sensor, makes green
-      pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>', cname = '<material name="Green">')
-      self.get_sensor.append(0)
-    
-    '''
+    pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
+      
+'''
     self.get_sensor = []
     for i in range(self.max):
       length = random.uniform(0.2, 1.5)
@@ -83,7 +77,7 @@ class SOLUTION:
         height_offset = -0.5
         width_offset = 1
         joint_offset = 2
-    '''
+'''
         
 
       
@@ -102,6 +96,8 @@ class SOLUTION:
     pyrosim.End()
 
   def Create_Brain(self):
+    
+  '''
     sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
     
@@ -112,6 +108,7 @@ class SOLUTION:
         ###print("name = " + str(sensor_number) + " " + "linkName = " + str(index))
         sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
+  '''
     
     
     '''
@@ -121,23 +118,8 @@ class SOLUTION:
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
         sensor_number = sensor_number + 1
     '''
-      
-    
-    #pyrosim.Send_Sensor_Neuron(name = 0 , linkName = "0")
-    
-    #pyrosim.Send_Sensor_Neuron(name = 1 , linkName = "1")
+
     '''
-    pyrosim.Send_Sensor_Neuron(name = 2 , linkName = "LeftLeg")
-    pyrosim.Send_Sensor_Neuron(name = 3 , linkName = "RightLowerLeg")
-    pyrosim.Send_Sensor_Neuron(name = 4 , linkName = "LeftLowerLeg")
-    pyrosim.Send_Sensor_Neuron(name = 5 , linkName = "RightArm")
-    pyrosim.Send_Sensor_Neuron(name = 6 , linkName = "LeftArm")
-    pyrosim.Send_Sensor_Neuron(name = 7 , linkName = "LowerRightArm")
-    pyrosim.Send_Sensor_Neuron(name = 8 , linkName = "LowerLeftArm")
-    pyrosim.Send_Sensor_Neuron(name = 9 , linkName = "RightShoe")
-    pyrosim.Send_Sensor_Neuron(name = 10 , linkName = "LeftShoe")
-    '''
-    
     pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = "0_1")
     #print("name = " + str(sensor_number+1) + " " + "linkName = 0_1")
     pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = "1_2")
@@ -150,14 +132,6 @@ class SOLUTION:
     #print("name = " + str(sensor_number+5) + " " + "linkName = 4_5")
     pyrosim.Send_Motor_Neuron(name = sensor_number+6, jointName = "5_6")
     #print("name = " + str(sensor_number+6) + " " + "linkName = 5_6")
-    '''
-    pyrosim.Send_Motor_Neuron(name = 12 , jointName = "Torso_LeftLeg")
-    pyrosim.Send_Motor_Neuron(name = 13 , jointName = "RightLeg_RightLowerLeg")
-    pyrosim.Send_Motor_Neuron(name = 14 , jointName = "LeftLeg_LeftLowerLeg")
-    pyrosim.Send_Motor_Neuron(name = 15 , jointName = "Torso_RightArm")
-    pyrosim.Send_Motor_Neuron(name = 16 , jointName = "Torso_LeftArm")
-    pyrosim.Send_Motor_Neuron(name = 17 , jointName = "RightArm_LowerRightArm")
-    pyrosim.Send_Motor_Neuron(name = 18 , jointName = "LeftArm_LowerLeftArm")
     '''
     
     #for currentRow in range(0, c.numSensorNeurons):##################
