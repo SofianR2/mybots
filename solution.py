@@ -145,7 +145,7 @@ class SOLUTION:
         if(direction == -1): #-y direction
           while(previous_direction == 1):
             previous_direction == random.randint(-2,2)
-          elif(previous_direction == -1):#-y, -y
+          if(previous_direction == -1):#-y, -y
             joint_offset = 2
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y-(width/2*joint_offset),z+height_offset], jointAxis = "0 1 0")
           elif(previous_direction == 0):#-y, x
