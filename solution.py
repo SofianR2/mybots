@@ -180,6 +180,7 @@ class SOLUTION:
     for i, link in enumerate(self.link_list):
       if(link.has_link == 1):
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
+        print("name = " + str(sensor_number) + " linkName = " + str(i))
         sensor_number = sensor_number + 1
         
     for i, joint in enumerate(self.joint_list):
