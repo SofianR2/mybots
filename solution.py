@@ -66,7 +66,7 @@ class SOLUTION:
       length = random.uniform(0.2, 1)
       width = random.uniform(0.2, 1)
       height = random.uniform(0.2, 1)
-      current = 0
+      current = i
       nex = i + 1
       direction = random.randint(0,2)
       #direction = 2
