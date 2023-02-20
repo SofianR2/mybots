@@ -69,7 +69,7 @@ class SOLUTION:
       current = i
       nex = i + 1
       #direction = random.randint(0,2)
-      direction = 1
+      direction = -1
       #if(direction < 0):
       #  sign = -1
       #else:
