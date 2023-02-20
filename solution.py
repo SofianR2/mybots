@@ -65,7 +65,7 @@ class SOLUTION:
     
     for i in range(self.max):
       self.link_list.append(LINK())
-      print(len(self.link_list))
+      #print(len(self.link_list))
       
     for i, link in enumerate(self.link_list):
       if(i == 0):
@@ -193,7 +193,7 @@ class SOLUTION:
         
     for i, joint in enumerate(self.joint_list):
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
-      #print("name = " + str(sensor_number) + " jointName = " + str(joint))
+      print("name = " + str(sensor_number) + " jointName = " + str(joint))
       sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
 
