@@ -1,17 +1,9 @@
-Yellowdemon2
-#7050
-
-Yellowdemon2 — Today at 4:37 PM
 import numpy
 import pyrosim.pyrosim as pyrosim
 import os
 import random
 import time
 import constants as c
-Expand
-3d.txt
-13 KB
-﻿
 import numpy
 import pyrosim.pyrosim as pyrosim
 import os
@@ -273,6 +265,3 @@ class SOLUTION:
     
   def Set_ID(self, nextAvailableID):
     self.myID = nextAvailableID
-    
-3d.txt
-13 KB
