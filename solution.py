@@ -92,8 +92,6 @@ class SOLUTION:
     if(i>1):
       pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
 '''
-    
-
   def Create_Brain(self):
     
   '''
