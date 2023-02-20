@@ -64,7 +64,7 @@ class SOLUTION:
     
     for i in range(self.max):
       self.link_list.append(LINK())
-      print(self.link_list.len())
+      print(len(self.link_list))
       
     for i, link in enumerate(self.link_list):
       if(i == 0):
