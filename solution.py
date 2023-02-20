@@ -56,7 +56,14 @@ class SOLUTION:
     #pyrosim.Send_Joint(name = "Torso_RightLeg" , parent= "Torso" , child = "RightLeg" , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
     #pyrosim.Send_Cube(name="RightLeg", pos=[x+0.5,y,z-0.5] , size=[random.uniform(0.1, 2),random.uniform(0.1, 2),random.uniform(0.1, 2)])
     
+    if(random.randrange(0,10) < 5): #sends sensor, makes blue
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
+        self.get_sensor.append(1)
+      else: #no sensor, makes green
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>', cname = '<material name="Green">')
+        self.get_sensor.append(0)
     
+    '''
     self.get_sensor = []
     for i in range(self.max):
       length = random.uniform(0.2, 1.5)
@@ -76,6 +83,7 @@ class SOLUTION:
         height_offset = -0.5
         width_offset = 1
         joint_offset = 2
+      '''
         
 
       
