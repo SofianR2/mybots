@@ -178,22 +178,29 @@ class SOLUTION:
     
     for i, link in enumerate(link_list):
       if(link.has_link == 1):
-        pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(index))
+        pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
+        sensor_number = sensor_number + 1
+        
+    for i, joint in enumerate(joint_list):
+      pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
+      sensor_number = sensor_number + 1
+
       
-    
+    '''
     for index, item in enumerate(self.get_sensor):
       print(self.get_sensor)
       if item == 1:
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(index))
         sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
-    
+    ###################################################################
     pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = "0_1")
     pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = "1_2")
     pyrosim.Send_Motor_Neuron(name = sensor_number+3, jointName = "2_3")
     pyrosim.Send_Motor_Neuron(name = sensor_number+4, jointName = "3_4")
     pyrosim.Send_Motor_Neuron(name = sensor_number+5, jointName = "4_5")
     pyrosim.Send_Motor_Neuron(name = sensor_number+6, jointName = "5_6")
+    '''
     
 
     
