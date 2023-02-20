@@ -62,7 +62,7 @@ class SOLUTION:
     
     self.get_sensor = []
     for i in range(self.max):
-      length = random.uniform(0.2, 12.5)
+      length = random.uniform(0.2, 1.5)
       width = random.uniform(0.2, 1.5)
       height = random.uniform(0.2, 1.5)
       current = i
