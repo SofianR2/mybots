@@ -21,6 +21,9 @@ class SOLUTION:
     self.get_sensor = []
     self.num_sensors = 0
     self.coordinates = []
+    self.link_list = []
+    self.added_links = []
+    self.joint_list = []
     
    
     
@@ -54,27 +57,25 @@ class SOLUTION:
     length_offset = 0
     z_offset = 0
     previous_direction = 99
-    link_list = []
-    added_links = []
-    joint_list = []
+
     
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     ##############################################
     
     for i in range(self.max):
-      link_list.append(LINK())
+      self.link_list.append(LINK())
       
-    for i, link in enumerate(link_list):
+    for i, link in enumerate(self.link_list):
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-        added_links.append(i)
+        self.added_links.append(i)
       else:
-        p = random.choice(added_links)
+        p = random.choice(self.added_links)
         new_joint_name = str(p) + "_" + str(i)
         pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")
-        joint_list.append(new_joint_name)
+        self.joint_list.append(new_joint_name)
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-        added_links.append(i)
+        self.added_links.append(i)
 
     
         
@@ -176,12 +177,12 @@ class SOLUTION:
     sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
     
-    for i, link in enumerate(link_list):
+    for i, link in enumerate(self.link_list):
       if(link.has_link == 1):
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(i))
         sensor_number = sensor_number + 1
         
-    for i, joint in enumerate(joint_list):
+    for i, joint in enumerate(self.joint_list):
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
       sensor_number = sensor_number + 1
 
