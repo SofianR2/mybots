@@ -184,7 +184,7 @@ class SOLUTION:
         
     for i, joint in enumerate(self.joint_list):
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
-      print("name = " + sensor_number + " jointName = " + joint)
+      print("name = " + str(sensor_number) + " jointName = " + str(joint))
       sensor_number = sensor_number + 1
 
       
