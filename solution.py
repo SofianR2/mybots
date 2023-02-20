@@ -69,10 +69,10 @@ class SOLUTION:
       direction = 0
 
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
         self.get_sensor.append(1)
       else: #no sensor, makes green
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>', cname = '<material name="Green">')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 200.0 0.0 1.0"/>', cname = '<material name="Green">')
         self.get_sensor.append(0)
       if(i!=self.max-1):
         if (direction == 0):
@@ -80,7 +80,7 @@ class SOLUTION:
           print(str(current) + " " + str(nex))
           pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+((length/2*joint_offset)),y,z+height_offset], jointAxis = "0 1 0")
           height_offset = -0.5
-          width_offset = 1
+          length_offset = 1
           joint_offset = 2
         if(direction == 1):
           pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+((width/2*joint_offset)),z+height_offset], jointAxis = "0 1 0")
