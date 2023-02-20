@@ -101,7 +101,7 @@ class SOLUTION:
       print(self.get_sensor)
       if item == 1:
         pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(index))
-        print("name = " + str(sensor_number) + " " + "linkName = " + str(index))
+        ###print("name = " + str(sensor_number) + " " + "linkName = " + str(index))
         sensor_number = sensor_number + 1
     self.num_sensors = numpy.sum(self.get_sensor)
     
