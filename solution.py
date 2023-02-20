@@ -71,8 +71,8 @@ class SOLUTION:
       else:
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         p = random.choice(added_links)
-        pyrosim.Send_Joint(name = , parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")
         new_joint_name = str(p) + "_" + str(i)
+        pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")
         added_links.append(i)
         joint_list.append(new_joint_name)
     
