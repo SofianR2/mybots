@@ -69,18 +69,18 @@ class SOLUTION:
       current = i
       nex = i + 1
       direction = random.randint(0,2)
-      legs = random.randint(0,1)
-      set_legs = 0
+      #legs = random.randint(0,1)
+      #set_legs = 0
       #direction = 2
-      if(set_legs == 0):
+      #if(set_legs == 0):
         if(random.randrange(0,10) < 5): #sends sensor, makes blue
           pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 50.0 1.0"/>', cname = '<material name="Blue">')
           self.get_sensor.append(1)
         else: #no sensor, makes green
           pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 50.0 0.0 1.0"/>', cname = '<material name="Green">')
           self.get_sensor.append(0)
-      else:
-          pyrosim.Send_Cube(name= str(i), pos=[x,y,z] , size=[1, 1, 0.2], color='    <color rgba="0.0 0.0 50.0 1.0"/>', cname = '<material name="Blue">')
+      #else:
+          #pyrosim.Send_Cube(name= str(i), pos=[x,y,z] , size=[1, 1, 0.2], color='    <color rgba="0.0 0.0 50.0 1.0"/>', cname = '<material name="Blue">')
 
       #if(i!=self.max-1):
       #  if(i > 0 and legs == 1):
