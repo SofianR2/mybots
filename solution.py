@@ -69,9 +69,12 @@ class SOLUTION:
       skip = 0
 
       print("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-      if(makeArm == 1):
+      if(makeArm > 0):
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y+(width/2),z+height_offset] , size=[0.2, 2, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
         print("making arm")
+        if(makeArm == 2):
+          arms = 1
+        
         
       if(makeArm == 0):  #if no arms, regularly make cube
         if(random.randrange(0,10) < 5): #sends sensor, makes blue
@@ -82,15 +85,17 @@ class SOLUTION:
           print("making green cube")
           pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
           self.get_sensor.append(0)
-          
-      makeArm = 0    
+      
+      if(makeArm > 0):
+        makeArm = makeArm - 1    
       
       if(i!=self.max-1):
         print(str(current) + " " + str(nex))
         if(i > 0 and arms == 1):
           print("making arm joint")
           pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x-(length/2*joint_offset),y+(length/2),z+height_offset], jointAxis = "0 1 0")
-          makeArm = 1
+          if(makeArm == 0):
+            makeArm = 2
           
         else:
           print("making joint")
