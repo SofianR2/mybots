@@ -101,12 +101,13 @@ class SOLUTION:
         
         if(i > 0 and arms == 1):
           print("making arm joint")
+          if(makeArm == 0):
+            makeArm = 2
           if(makeArm == 2):    
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y+(length/2),z+height_offset], jointAxis = "0 1 0")
           if(makeArm == 1):
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y-(length/2),z+height_offset], jointAxis = "0 1 0")
-          if(makeArm == 0):
-            makeArm = 2
+
           
         else:
           print("making joint")
