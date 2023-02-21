@@ -70,9 +70,9 @@ class SOLUTION:
 
       print("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
       if(makeArm > 0):
+        print("making arm")
         if(makeArm == 2):
           pyrosim.Send_Cube(name= str(i), pos=[x,y+(width/2),z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
-          print("making arm")
         if(makeArm == 1):
           pyrosim.Send_Cube(name= str(i), pos=[x,y-(width/2),z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
 
@@ -95,13 +95,13 @@ class SOLUTION:
       
       if(i!=self.max-1):
         print(str(current) + " " + str(nex))
+        
         if(i > 0 and arms == 1):
           print("making arm joint")
           if(makeArm == 2):    
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y+(length/2),z+height_offset], jointAxis = "0 1 0")
           if(makeArm == 1):
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y-(length/2),z+height_offset], jointAxis = "0 1 0")
-
           if(makeArm == 0):
             makeArm = 2
           
