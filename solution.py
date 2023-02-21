@@ -69,13 +69,25 @@ class SOLUTION:
       current = i
       nex = i + 1
       direction = random.randint(0,2)
+      legs = random.randrange(0,2)
+      
       if(random.randrange(0, 2) == 0):
         jointRotation = "1 0 0"
       else:
         jointRotation = "0 1 0"
       print(jointRotation)
       #direction = 2
+      
+      if(legs == 1):
+        pyrosim.Send_Cube(name= str(i), pos=[x, y, z] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
+        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = jointRotation)
+        pyrosim.Send_Cube(name= str(i+1), pos=[x, y , z] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
+        continue
 
+
+        
+        
+      
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
         self.get_sensor.append(1)
