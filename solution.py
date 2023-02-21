@@ -70,19 +70,23 @@ class SOLUTION:
       nex = i + 1
       direction = random.randint(0,2)
       legs = random.randint(0,1)
+      set_legs == 0:
       #direction = 2
+      if(set_legs == 0):
+        if(random.randrange(0,10) < 5): #sends sensor, makes blue
+          pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
+          self.get_sensor.append(1)
+        else: #no sensor, makes green
+          pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 100.0 0.0 1.0"/>', cname = '<material name="Green">')
+          self.get_sensor.append(0)
+      else:
+          pyrosim.Send_Cube(name= str(i), pos=[x,y,z] , size=[1, 1, 0.2], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
 
-      if(random.randrange(0,10) < 5): #sends sensor, makes blue
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
-        self.get_sensor.append(1)
-      else: #no sensor, makes green
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 100.0 0.0 1.0"/>', cname = '<material name="Green">')
-        self.get_sensor.append(0)
-
-        
-        
-        
       if(i!=self.max-1):
+        if(i > 0 and legs == 1):
+          set_legs = 1
+          
+          
         if (direction == 0): #x direction
           #random_multiplier = numpy.random.rand(0, 1) * 2 - 1
           if(previous_direction == 0): #x direction
@@ -143,6 +147,8 @@ class SOLUTION:
           z_offset = 1
           joint_offset = 2
           previous_direction = 2
+          
+
           
           
         
