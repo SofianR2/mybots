@@ -88,13 +88,14 @@ class SOLUTION:
       if(makeArm == 0):  #if no arms, regularly make cube
         if(random.randrange(0,10) < 5): #sends sensor, makes blue
           print("making blue cube")
-          pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset)+armoffset,y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
+          pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
           self.get_sensor.append(1)
         else: #no sensor, makes green
           print("making green cube")
-          pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset)+armoffset,y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
+          pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
           self.get_sensor.append(0)
       armoffset = 0
+      armoffset2 = 0
       if(makeArm > 0):
         makeArm = makeArm - 1    
       
@@ -110,11 +111,12 @@ class SOLUTION:
           if(makeArm == 1):
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y-(length/2),z+height_offset], jointAxis = "0 1 0")
             armoffset = length/2
+            armoffset2 = width/2
 
           
         else:
           print("making joint")
-          pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset)-armoffset,y,z+height_offset], jointAxis = "0 1 0")
+          pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset)-armoffset,y+armoffset2,z+height_offset], jointAxis = "0 1 0")
           height_offset = -0.5
           width_offset = 1
           joint_offset = 2
