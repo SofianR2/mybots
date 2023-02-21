@@ -82,7 +82,7 @@ class SOLUTION:
       #direction = 2
       
       if(createLegs == 1):
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[2, 2, 2], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[5, 5, 5], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
         createLegs = 0
       elif(random.randrange(0,10) < 5): #sends sensor, makes blue
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
