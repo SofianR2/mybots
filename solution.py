@@ -75,7 +75,7 @@ class SOLUTION:
         if(makeArm == 2):
           pyrosim.Send_Cube(name= str(i), pos=[x,y+(width/2),z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
         if(makeArm == 1):
-          pyrosim.Send_Cube(name= str(i), pos=[x,y-(width/2),z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
+          pyrosim.Send_Cube(name= str(i), pos=[x,y-width,z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
 
         if(makeArm == 2):
           arms = 1
