@@ -69,7 +69,7 @@ class SOLUTION:
       current = i
       nex = i + 1
       direction = random.randint(0,2)
-      if(random.randrange(0, 1) == 0):
+      if(random.randrange(0, 2) == 0):
         jointRotation = "1 0 0"
       else:
         jointRotation = "0 1 0"
