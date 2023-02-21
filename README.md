@@ -1,3 +1,5 @@
+Fitness Function: The fitness function simply has the robot move in the x direction. 
+
 Steps to run the program: 
 Open Command Prompt/Git Bash and move to a local directory where you want to add the git repo using the cd command. 
 cd (insert directory name here)
