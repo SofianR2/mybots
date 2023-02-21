@@ -78,21 +78,21 @@ class SOLUTION:
           #pyrosim.Send_Cube(name= str(i), pos=[x,y+(width/2),z+height_offset] , size=[0.2, 1.5, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
           if(random.randrange(0,10) < 5): #sends sensor, makes blue
             print("making blue cube")
-            pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
+            pyrosim.Send_Cube(name= str(i), pos=[x,y+(width/2),z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
             self.get_sensor.append(1)
           else: #no sensor, makes green
             print("making green cube")
-            pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
+            pyrosim.Send_Cube(name= str(i), pos=[x,y+(width/2),z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
             self.get_sensor.append(0)
         if(makeArm == 1):
           #pyrosim.Send_Cube(name= str(i), pos=[x,y-width,z+height_offset] , size=[0.2, 1.5, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
           if(random.randrange(0,10) < 5): #sends sensor, makes blue
             print("making blue cube")
-            pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
+            pyrosim.Send_Cube(name= str(i), pos=[x,y-width,z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
             self.get_sensor.append(1)
           else: #no sensor, makes green
             print("making green cube")
-            pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y,z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
+            pyrosim.Send_Cube(name= str(i), pos=[x,y-width,z+height_offset] , size=[0.2, 1, 0.2], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
             self.get_sensor.append(0)
         if(makeArm == 2):
           arms = 1
