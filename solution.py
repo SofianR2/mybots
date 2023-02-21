@@ -49,6 +49,7 @@ class SOLUTION:
     height_offset = 1
     joint_offset = 1
     width_offset = 0
+    makeArm = 0
     
     ##############pyrosim.Start_URDF("body.urdf")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
@@ -65,7 +66,6 @@ class SOLUTION:
       current = i
       nex = i + 1
       arms = random.randrange(0, 2)
-      makeArm = 0
       skip = 0
 
       print("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
