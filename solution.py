@@ -78,6 +78,8 @@ class SOLUTION:
 
         if(makeArm == 2):
           arms = 1
+        if(makeArm == 1):
+          arms = 0
         
         
       if(makeArm == 0):  #if no arms, regularly make cube
