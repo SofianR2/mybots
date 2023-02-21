@@ -70,7 +70,7 @@ class SOLUTION:
       nex = i + 1
       direction = random.randint(0,2)
       legs = random.randint(0,1)
-      set_legs == 0:
+      set_legs == 0
       #direction = 2
       if(set_legs == 0):
         if(random.randrange(0,10) < 5): #sends sensor, makes blue
