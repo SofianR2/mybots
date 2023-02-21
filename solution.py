@@ -70,7 +70,8 @@ class SOLUTION:
       nex = i + 1
       legs = random.randrange(0,2)
       createLegs = 0
-      direction = random.randint(0,2)
+      #direction = random.randint(0,2)
+      direction = 0
 
       
       if(random.randrange(0, 2) == 0):
