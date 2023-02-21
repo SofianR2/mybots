@@ -82,7 +82,7 @@ class SOLUTION:
       if(legs == 1 and i > 0):
         print("hello")
         
-        pyrosim.Send_Cube(name= Test, pos=[x,y,z] , size=[1, 1, 1], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
+        pyrosim.Send_Cube(name= "test", pos=[x,y,z] , size=[1, 1, 1], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
 
         
         
