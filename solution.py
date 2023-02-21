@@ -93,6 +93,9 @@ class SOLUTION:
           elif(previous_direction == 2):
             joint_offset = 1
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset+(height/2)], jointAxis = "1 0 0")
+          elif(previous_direction == -1):
+            joint_offset = 1
+            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y-(length/2),z+height_offset], jointAxis = "1 0 0")
           else:
             joint_offset = 0
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
@@ -104,6 +107,8 @@ class SOLUTION:
           previous_direction = 0
           
         if(direction == 1): #y direction
+          while(previous_direction == -1):
+            previous_direction == random.randint(-2,2)  
           if(previous_direction == 1):
             joint_offset = 2
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = "1 0 0")
