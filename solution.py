@@ -95,67 +95,67 @@ class SOLUTION:
           joint_offset = 1
           pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
 
-        
-        if (direction == 0): #x direction
-          #random_multiplier = numpy.random.rand(0, 1) * 2 - 1
-          if(previous_direction == 0): #x direction
+        if(legs != 1):
+          if (direction == 0): #x direction
+            #random_multiplier = numpy.random.rand(0, 1) * 2 - 1
+            if(previous_direction == 0): #x direction
+              joint_offset = 2
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = jointRotation)
+            elif(previous_direction == 1):
+              joint_offset = 1
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y+(length/2),z+height_offset], jointAxis = jointRotation)
+            elif(previous_direction == 2):
+              joint_offset = 1
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset+(height/2)], jointAxis = jointRotation)
+            else:
+              joint_offset = 0
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = jointRotation)
+            height_offset = -0.5
+            length_offset = 1
+            width_offset = 0
+            z_offset = 0
+            #joint_offset = 2
+            previous_direction = 0
+
+          if(direction == 1): #y direction
+            if(previous_direction == 1):
+              joint_offset = 2
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
+            elif(previous_direction == 0):
+              joint_offset = 1
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
+            elif(previous_direction == 2):
+              joint_offset = 1
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset+(height/2)], jointAxis = jointRotation)
+            else:
+              joint_offset = 0
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
+            height_offset = -0.5
+            width_offset = 1
+            length_offset = 0
+            z_offset = 0
             joint_offset = 2
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = jointRotation)
-          elif(previous_direction == 1):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y+(length/2),z+height_offset], jointAxis = jointRotation)
-          elif(previous_direction == 2):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset+(height/2)], jointAxis = jointRotation)
-          else:
-            joint_offset = 0
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = jointRotation)
-          height_offset = -0.5
-          length_offset = 1
-          width_offset = 0
-          z_offset = 0
-          #joint_offset = 2
-          previous_direction = 0
-          
-        if(direction == 1): #y direction
-          if(previous_direction == 1):
+            previous_direction = 1
+
+          if(direction == 2): #z direction
+            if(previous_direction == 2):
+              joint_offset = 2
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y,z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
+            elif(previous_direction == 0):
+              joint_offset = 1
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y,z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
+            elif(previous_direction == 1):
+              joint_offset = 1
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2),z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
+            else:
+              joint_offset = 0
+              pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y,z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
+            height_offset = -0.5
+            width_offset = 0
+            length_offset = 0
+            z_offset = 1
             joint_offset = 2
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
-          elif(previous_direction == 0):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
-          elif(previous_direction == 2):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset+(height/2)], jointAxis = jointRotation)
-          else:
-            joint_offset = 0
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
-          height_offset = -0.5
-          width_offset = 1
-          length_offset = 0
-          z_offset = 0
-          joint_offset = 2
-          previous_direction = 1
-          
-        if(direction == 2): #z direction
-          if(previous_direction == 2):
-            joint_offset = 2
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y,z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
-          elif(previous_direction == 0):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y,z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
-          elif(previous_direction == 1):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2),z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
-          else:
-            joint_offset = 0
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y,z+height_offset+(height/2*joint_offset)], jointAxis = jointRotation)
-          height_offset = -0.5
-          width_offset = 0
-          length_offset = 0
-          z_offset = 1
-          joint_offset = 2
-          previous_direction = 2
+            previous_direction = 2
         
 
       
