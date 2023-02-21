@@ -68,8 +68,10 @@ class SOLUTION:
       height = random.uniform(0.2, 1)
       current = i
       nex = i + 1
-      direction = random.randint(0,2)
       legs = random.randrange(0,2)
+      createLegs = 0
+      direction = random.randint(0,2)
+
       
       if(random.randrange(0, 2) == 0):
         jointRotation = "1 0 0"
@@ -78,23 +80,22 @@ class SOLUTION:
       print(jointRotation)
       #direction = 2
       
-      if(legs == 1):
-        pyrosim.Send_Cube(name= str(i), pos=[x, y, z] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
-        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = jointRotation)
-        pyrosim.Send_Cube(name= str(i+1), pos=[x, y , z] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
-        continue
-
-
-        
-        
-      
-      if(random.randrange(0,10) < 5): #sends sensor, makes blue
+      if(createLegs == 1):
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[2, 2, 2], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')    
+      elif(random.randrange(0,10) < 5): #sends sensor, makes blue
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 1.0 1.0"/>', cname = '<material name="Blue">')
         self.get_sensor.append(1)
       else: #no sensor, makes green
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 1.0 0.0 1.0"/>', cname = '<material name="Green">')
         self.get_sensor.append(0)
       if(i!=self.max-1):
+        
+        if(i > 0 and legs == 1):
+          createLegs = 1
+          joint_offset = 1
+          pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = jointRotation)
+
+        
         if (direction == 0): #x direction
           #random_multiplier = numpy.random.rand(0, 1) * 2 - 1
           if(previous_direction == 0): #x direction
