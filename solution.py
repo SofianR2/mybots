@@ -172,6 +172,33 @@ class SOLUTION:
           z_offset = 0
           joint_offset = 2
           previous_direction = -1
+          
+       if(direction == -2): #-x direction
+          #random_multiplier = numpy.random.rand(0, 1) * 2 - 1
+          while(previous_direction == 0):
+            previous_direction == random.randint(-2,2) 
+          if(previous_direction == -2):
+            joint_offset = 2
+            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x-(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
+          if(previous_direction == 1):
+            joint_offset = 1
+            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x-(length/2*joint_offset),y+(length/2),z+height_offset], jointAxis = "1 0 0")
+          elif(previous_direction == 2):
+            joint_offset = 1
+            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x-(length/2*joint_offset),y,z+height_offset+(height/2)], jointAxis = "1 0 0")
+          elif(previous_direction == -1):
+            joint_offset = 1
+            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x-(length/2*joint_offset),y-(length/2),z+height_offset], jointAxis = "1 0 0")
+          else:
+            joint_offset = 0
+            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x-(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
+          height_offset = -0.5
+          length_offset = 1
+          width_offset = 0
+          z_offset = 0
+          #joint_offset = 2
+          previous_direction = -2
+      
         
 
       
