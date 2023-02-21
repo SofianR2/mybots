@@ -81,7 +81,8 @@ class SOLUTION:
         
       if(legs == 1 and i > 0):
         print("hello")
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
+        
+        pyrosim.Send_Cube(name= str(i), pos=[x,y,z] , size=[1, 1, 1], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
 
         
         
