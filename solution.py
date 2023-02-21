@@ -69,7 +69,7 @@ class SOLUTION:
       current = i
       nex = i + 1
       direction = random.randint(0,2)
-      jointRotation = str(random.randint(0, 1)) + " " + str(0) + " " + str(0)
+      jointRotation = "1 0 0"
       print(jointRotation)
       #direction = 2
 
