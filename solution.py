@@ -66,7 +66,7 @@ class SOLUTION:
       height = random.uniform(0.2, 1.5)
       current = i
       nex = i + 1
-      arms = random.randrange(0, 2)
+      arms = random.randrange(0, 5)
       skip = 0
       
       print("New Iteration")
