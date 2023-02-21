@@ -72,6 +72,7 @@ class SOLUTION:
       if(makeArm == 1):
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y+(width/2),z+height_offset] , size=[0.2, 2, 0.2], color='    <color rgba="1.0 0.0 0.0 1.0"/>', cname = '<material name="Red">')
         print("making arm")
+        makeArm = 0
         
       if(makeArm == 0):  #if no arms, regularly make cube
         if(random.randrange(0,10) < 5): #sends sensor, makes blue
