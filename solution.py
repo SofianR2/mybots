@@ -70,7 +70,7 @@ class SOLUTION:
       nex = i + 1
       direction = random.randint(0,2)
       jointRotation = str(random.randint(0, 1)) + " " + str(random.randint(0, 1)) + " " + str(0)
-      print(joint_rotation)
+      print(jointRotation)
       #direction = 2
 
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
