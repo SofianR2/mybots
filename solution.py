@@ -105,7 +105,7 @@ class SOLUTION:
           if(makeArm == 0):
             makeArm = 2
           if(makeArm == 2):    
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y+(length/2),z+height_offset], jointAxis = "0 1 0")
+            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2)-(armoffset),y+(length/2),z+height_offset], jointAxis = "0 1 0")
           if(makeArm == 1):
             pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y-(length/2),z+height_offset], jointAxis = "0 1 0")
             armoffset = 0.5
