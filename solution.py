@@ -67,8 +67,7 @@ class SOLUTION:
       nex = i + 1
       arms = random.randrange(0, 2)
       skip = 0
-
-      print("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+      
       if(makeArm > 0):
         print("making arm")
         if(makeArm == 2):
