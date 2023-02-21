@@ -4,7 +4,8 @@ Morphospace: This body creates shapes by extending in either the x, y, or z dire
 
 With regards to brains, the links start at one end and are connected to the next like a chain, and the sensors attatched to a link affect that link. 
 
-The bodies are generated based on the direction the last body was generated, as it affects how the next joints need to be lined up. For instance, if moving in the same direction, the next joint will be offset by the full length of the body in that direction, while when changing directions, the next joint will be offset by the dimensions of the new link in the old direction plus the dimensions of the new link in the new direction (ex. offset x by x/2 when coming from the x direction and y by y/2 when going to the y direction). This will be more clearly shown in the diagram. 
+The bodies are generated based on the direction the last body was generated, as it affects how the next joints need to be lined up. For instance, if moving in the same direction, the next joint will be offset by the full length of the body in that direction, while when changing directions, the next joint will be offset by the dimensions of the new link in the old direction plus the dimensions of the new link in the new direction (ex. offset x by x/2 when coming from the x direction and y by y/2 when going to the y direction). This will be more clearly shown in the diagram here: ![image](https://user-images.githubusercontent.com/103147652/220257987-cc9a6c74-843f-4bcf-ada3-b5479f41f96d.png)
+
 
 Sensors are generated/assigned by keeping track of which links need sensors, in an list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question.
 
