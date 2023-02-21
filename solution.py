@@ -69,6 +69,7 @@ class SOLUTION:
       current = i
       nex = i + 1
       direction = random.randint(0,2)
+      legs = random.randint(0,1)
       #direction = 2
 
       if(random.randrange(0,10) < 5): #sends sensor, makes blue
@@ -77,6 +78,17 @@ class SOLUTION:
       else: #no sensor, makes green
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 100.0 0.0 1.0"/>', cname = '<material name="Green">')
         self.get_sensor.append(0)
+        
+      if(legs = 1):
+        i = i + 1
+        if(random.randrange(0,10) < 5): #sends sensor, makes blue
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[1, 0.2, 0.2], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
+        self.get_sensor.append(1)
+        else: #no sensor, makes green
+          pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[1, 0.2, 0.2], color='    <color rgba="0.0 100.0 0.0 1.0"/>', cname = '<material name="Green">')
+          self.get_sensor.append(0)
+        
+        
       if(i!=self.max-1):
         if (direction == 0): #x direction
           #random_multiplier = numpy.random.rand(0, 1) * 2 - 1
@@ -138,6 +150,8 @@ class SOLUTION:
           z_offset = 1
           joint_offset = 2
           previous_direction = 2
+          
+          
         
 
       
