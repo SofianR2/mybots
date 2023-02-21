@@ -78,11 +78,6 @@ class SOLUTION:
       else: #no sensor, makes green
         pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 100.0 0.0 1.0"/>', cname = '<material name="Green">')
         self.get_sensor.append(0)
-        
-      if(legs == 1 and i > 0):
-        print("hello")
-        
-        pyrosim.Send_Cube(name= "test", pos=[x,y,z] , size=[1, 1, 1], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
 
         
         
