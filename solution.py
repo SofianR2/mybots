@@ -113,8 +113,8 @@ class SOLUTION:
           
         else:
           print("making joint")
-          pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset)-armoffset,y,z+height_offset]+armoffset, jointAxis = "0 1 0")
-          armoffset = 0
+          pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset)-armoffset,y,z+height_offset], jointAxis = "0 1 0")
+          #armoffset = 0
           height_offset = -0.5
           width_offset = 1
           joint_offset = 2
