@@ -68,6 +68,8 @@ class SOLUTION:
       arms = random.randrange(0, 2)
       skip = 0
       
+      print("New Iteration")
+      
       if(makeArm > 0):
         print("making arm")
         if(makeArm == 2):
