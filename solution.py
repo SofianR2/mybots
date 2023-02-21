@@ -70,7 +70,7 @@ class SOLUTION:
 
       print("AAAAAAAAAAAAAAAAAAAAAAAAAAAA")
       if(makeArm == 1):
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y+(width/2),z+height_offset] , size=[length, width, height], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
+        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*width_offset),y+(width/2),z+height_offset] , size=[0.2, 2, 0.2], color='    <color rgba="0.0 0.0 200.0 1.0"/>', cname = '<material name="Blue">')
         print("making arm")
         
       if(makeArm == 0):  #if no arms, regularly make cube
