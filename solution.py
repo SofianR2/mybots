@@ -79,6 +79,7 @@ class SOLUTION:
 
         self.added_links.append(i)
       else:
+        print("running else")
         p = random.choice(self.added_links)
         new_joint_name = str(p) + "_" + str(i)
         #new_joint_name = str(p) + str(i)
