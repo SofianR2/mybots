@@ -89,7 +89,7 @@ class SOLUTION:
         else:
           self.get_sensor.append(0)
         self.added_links.append(i)
-        print(joint_list)
+        print(self.joint_list)
 
     
         
