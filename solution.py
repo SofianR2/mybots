@@ -69,6 +69,7 @@ class SOLUTION:
       #print(len(self.link_list))
       
     for i, link in enumerate(self.link_list):
+      print(i)
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
