@@ -222,7 +222,7 @@ class SOLUTION:
     
     #for currentRow in range(0, c.numSensorNeurons):##################
     for currentRow in range(0, self.num_sensors):
-      for currentColumn in range(0, c.numMotorNeurons):
+      for currentColumn in range(0, self.num_motors):
         #pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])#######
         pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow-1][currentColumn])
     pyrosim.End()
@@ -266,7 +266,7 @@ class SOLUTION:
   def Mutate(self):
     #randomRow = random.randint(0, c.numSensorNeurons-1)
     randomRow = random.randint(0, self.num_sensors-1)
-    randomColumn = random.randint(0, c.numMotorNeurons-1)
+    randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
   def Set_ID(self, nextAvailableID):
