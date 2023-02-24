@@ -85,7 +85,7 @@ class SOLUTION:
         #new_joint_name = str(p) + str(i)
         pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")
         print(self.joint_list)
-        print("adding " + "new_joint_name")
+        print("adding " + new_joint_name)
         self.joint_list.append(new_joint_name)
         print(self.joint_list)
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
