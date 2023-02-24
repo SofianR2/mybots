@@ -227,6 +227,8 @@ class SOLUTION:
         print(self.weights)
         print(currentRow)
         print(currentColumn)
+        print(self.num_sensors)
+        print(self.num_motors)
         pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
     
