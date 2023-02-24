@@ -89,6 +89,7 @@ class SOLUTION:
         else:
           self.get_sensor.append(0)
         self.added_links.append(i)
+        print(joint_list)
 
     
         
@@ -224,11 +225,11 @@ class SOLUTION:
     for currentRow in range(0, self.num_sensors-1):
       for currentColumn in range(0, self.num_motors-1):
         #pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])#######
-        print(self.weights)
-        print(currentRow)
-        print(currentColumn)
-        print(self.num_sensors)
-        print(self.num_motors)
+        #print(self.weights)
+        #print(currentRow)
+        #print(currentColumn)
+        #print(self.num_sensors)
+        #print(self.num_motors)
         pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
     
