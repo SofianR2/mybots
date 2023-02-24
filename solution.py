@@ -17,7 +17,7 @@ class SOLUTION:
     self.x=0
     self.y=0
     self.z=0.5
-    self.max = 10
+    self.max = 3
     self.get_sensor = []
     self.num_sensors = 0
     self.coordinates = []
