@@ -64,6 +64,7 @@ class SOLUTION:
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     ##############################################
     self.get_sensor = []
+    print("MAX = " + str(self.max))
     for j in range(self.max):
       self.link_list.append(LINK())
       #print(len(self.link_list))
