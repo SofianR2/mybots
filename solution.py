@@ -69,7 +69,7 @@ class SOLUTION:
       #print(len(self.link_list))
     
     self.joint_list = []  
-    print("LOOK AT THIS --> " + len(self.link_list))
+    print("LOOK AT THIS --> " + str(len(self.link_list)))
     for i, link in enumerate(self.link_list):
       print(i)
       if(i == 0):
