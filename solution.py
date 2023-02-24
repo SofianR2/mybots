@@ -195,11 +195,11 @@ class SOLUTION:
         print("name = " + str(sensor_number) + " linkName = " + str(i))
         sensor_number = sensor_number + 1
         
-    for i, joint in enumerate(self.joint_list):
-      pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
-      print("name = " + str(sensor_number) + " jointName = " + str(joint))
-      sensor_number = sensor_number + 1
-    self.num_sensors = numpy.sum(self.get_sensor)
+    #for i, joint in enumerate(self.joint_list):
+    #  pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
+    #  print("name = " + str(sensor_number) + " jointName = " + str(joint))
+    #  sensor_number = sensor_number + 1
+    #self.num_sensors = numpy.sum(self.get_sensor)
 
       
     '''
