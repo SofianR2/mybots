@@ -67,7 +67,8 @@ class SOLUTION:
     for j in range(self.max):
       self.link_list.append(LINK())
       #print(len(self.link_list))
-      
+    
+    self.joint_list = []  
     for i, link in enumerate(self.link_list):
       print(i)
       if(i == 0):
