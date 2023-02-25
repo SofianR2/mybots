@@ -16,7 +16,7 @@ class SOLUTION:
     self.height = 1
     self.x=0
     self.y=0
-    self.z=0.5
+    self.z=0
     self.max = 2
     self.get_sensor = []
     self.num_sensors = 0
@@ -126,7 +126,6 @@ class SOLUTION:
         new_joint_name = str(p) + "_" + str(i)
         if(i == 1):
           jointTrueOffset = length/2 - length
-          height_offset = height_offset + 0.5
         pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z + height_offset], jointAxis = "0 1 0")  
         self.joint_list.append(new_joint_name)
         height_offset = -0.5
