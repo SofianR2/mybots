@@ -103,7 +103,7 @@ class SOLUTION:
     for i, link in enumerate(self.link_list):
       length = link.x
       width = link.y
-      height - link.z
+      height = link.z
       #direction = random.randint(0,2)
       direction = 1###
       jointTrueOffset = 0
