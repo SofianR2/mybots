@@ -100,7 +100,7 @@ class SOLUTION:
         print("adding " + new_joint_name)
         self.joint_list.append(new_joint_name)
         print(self.joint_list)
-        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+        pyrosim.Send_Cube(name = str(i), pos = [x + 2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
         else:
