@@ -118,8 +118,6 @@ class SOLUTION:
         p = random.choice(self.added_links)
         #add and store newest link
         self.added_links.append(i)
-        
-        print(current)
         length = link.x
         width = link.y
         height = link.z
