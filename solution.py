@@ -112,7 +112,7 @@ class SOLUTION:
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z + height_offset], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-        print("cube located at: " + str(x) + " " + str(y) + " " + str(z + height_offset)j)
+        print("cube located at: " + str(x) + " " + str(y) + " " + str(z + height_offset))
         #add sensors based on color
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
