@@ -51,7 +51,7 @@ class SOLUTION:
       #move in direction
       pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")  
       self.joint_list.append(new_joint_name)
-      pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+      pyrosim.Send_Cube(name = str(i), pos = [x + length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
       if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
         self.get_sensor.append(1)
       else:
