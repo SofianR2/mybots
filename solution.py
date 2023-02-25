@@ -45,7 +45,25 @@ class SOLUTION:
     while not os.path.exists("world" + str(self.myID) + ".sdf"):
       time.sleep(0.01)
   
-  #def Joint_Cube(self):
+  def Directional_Cube(self, direction):
+    if(direction = 1):
+      #check that we're not going back in the same direction
+      #move in direction
+      pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")  
+        self.joint_list.append(new_joint_name)
+        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+        if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
+          self.get_sensor.append(1)
+        else:
+          self.get_sensor.append(0)
+        self.added_links.append(i)
+      
+    if(direction = 2):
+      pass
+    if(direction = 3):
+      pass
+   
+
     
   
   def Create_Body(self):
@@ -61,34 +79,34 @@ class SOLUTION:
     length = self.length
     width = self.width
     height = self.height
+    height_offset = 1
     x = self.x
     y = self.y
-    z = self.z
-    height_offset = 1
+    z = self.z + height_offset
     joint_offset = 1
     width_offset = 0
     length_offset = 0
     z_offset = 0
     previous_direction = 99
+    direction
 
     
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+    
     ##############################################
     self.get_sensor = []
     self.link_list = []
-    print("MAX = " + str(self.max))
     for j in range(self.max):
       self.link_list.append(LINK())
-      #print(len(self.link_list))
     
     self.joint_list = []  
-    print("LOOK AT THIS --> " + str(len(self.link_list)))
+
     for i, link in enumerate(self.link_list):
-      print(i)
+      direction = random.randint(0,2)
+      
       #initial cube
       if(i == 0):
-        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z+height_offset], color = link.color, cname = link.color_name)
-        
+        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         #add sensors based on color
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
@@ -97,9 +115,12 @@ class SOLUTION:
 
         self.added_links.append(i)
       else:
-        print("running else")
         #choose random parent link and add joint and link
         p = random.choice(self.added_links)
+        #add and store newest link
+        self.added_links.append(i)
+        current_link = self.added_links[len(self.added_links) - 1]
+        #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")  
         self.joint_list.append(new_joint_name)
@@ -108,11 +129,8 @@ class SOLUTION:
           self.get_sensor.append(1)
         else:
           self.get_sensor.append(0)
-        self.added_links.append(i)
-        
-
-    
-        
+        #self.added_links.append(i)
+          
     ##############################################
     '''    
     self.get_sensor = []
