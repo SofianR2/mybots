@@ -88,7 +88,6 @@ class SOLUTION:
     length_offset = 0
     z_offset = 0
     previous_direction = 99
-    direction
 
     
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
