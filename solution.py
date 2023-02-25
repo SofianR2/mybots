@@ -130,7 +130,7 @@ class SOLUTION:
         #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         if(i == 1):
-          jointTrueOffset = previouszx/2 - previousx
+          jointTrueOffset = previousx/2 - previousx
         pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z + height_offset], jointAxis = "0 1 0")  
         self.joint_list.append(new_joint_name)
         height_offset = 0
