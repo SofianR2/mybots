@@ -119,9 +119,10 @@ class SOLUTION:
         #add and store newest link
         self.added_links.append(i)
         current_link = self.added_links[(len(self.added_links) - 1)]
-        length = current_link.x
-        width = current_link.y
-        height = current_link.z
+        print(current_link)
+        #length = current_link.x
+        #width = current_link.y
+        #height = current_link.z
         #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")  
