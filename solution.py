@@ -44,7 +44,10 @@ class SOLUTION:
     #while not os.path.exists("world.sdf"):##########
     while not os.path.exists("world" + str(self.myID) + ".sdf"):
       time.sleep(0.01)
-
+  
+  #def Joint_Cube(self):
+    
+  
   def Create_Body(self):
     self.get_sensor = []
     self.num_sensors = 0
@@ -82,8 +85,11 @@ class SOLUTION:
     print("LOOK AT THIS --> " + str(len(self.link_list)))
     for i, link in enumerate(self.link_list):
       print(i)
+      #initial cube
       if(i == 0):
-        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z+height_offset], color = link.color, cname = link.color_name)
+        
+        #add sensors based on color
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
         else:
@@ -92,15 +98,12 @@ class SOLUTION:
         self.added_links.append(i)
       else:
         print("running else")
+        #choose random parent link and add joint and link
         p = random.choice(self.added_links)
         new_joint_name = str(p) + "_" + str(i)
-        #new_joint_name = str(p) + str(i)
-        pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x+1, y, z], jointAxis = "0 1 0")
-        print(self.joint_list)
-        print("adding " + new_joint_name)
+        pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")  
         self.joint_list.append(new_joint_name)
-        print(self.joint_list)
-        pyrosim.Send_Cube(name = str(i), pos = [x + 2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
         else:
