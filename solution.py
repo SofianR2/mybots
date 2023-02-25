@@ -46,7 +46,7 @@ class SOLUTION:
       time.sleep(0.01)
   
   def Directional_Cube(self, direction):
-    if(direction = 1):
+    if(direction == 1):
       #check that we're not going back in the same direction
       #move in direction
       pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")  
@@ -58,9 +58,9 @@ class SOLUTION:
           self.get_sensor.append(0)
         self.added_links.append(i)
       
-    if(direction = 2):
+    if(direction == 2):
       pass
-    if(direction = 3):
+    if(direction == 3):
       pass
    
 
