@@ -119,7 +119,7 @@ class SOLUTION:
       self.added_links.append(i)
       
     if(i!=self.max-1):
-      if(direction = 1):
+      if(direction == 1):
         joint_offset = 2
         pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
         
