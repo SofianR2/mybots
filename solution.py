@@ -107,30 +107,11 @@ class SOLUTION:
       #direction = random.randint(0,2)
       direction = 1###
       jointTrueOffset = 0
-      
-      pyrosim.Send_Cube(name = str(i), pos = [x+(length/2*joint_offset), y, z+height_offset], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-      print(str(z + height_offset))
-      #add sensors based on color
-      if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
-        self.get_sensor.append(1)
-      else:
-        self.get_sensor.append(0)
+  
 
-      self.added_links.append(i)
-      
-    if(i!=self.max-1):
-      if(direction == 1):
-        joint_offset = 2
-        pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
-        
-
-
-      
-      '''
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z + height_offset], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-        print(str(z + height_offset))
         #add sensors based on color
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
@@ -151,7 +132,6 @@ class SOLUTION:
         if(i == 1):
           jointTrueOffset = length/2 - length
         pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z + height_offset], jointAxis = "0 1 0")  
-        print(str(z + height_offset))
         self.joint_list.append(new_joint_name)
         height_offset = 0
         pyrosim.Send_Cube(name = str(i), pos = [x + length/2, y, z + height_offset], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
@@ -161,7 +141,7 @@ class SOLUTION:
           self.get_sensor.append(0)
           
     ##############################################
-    ###  
+    ''' 
     self.get_sensor = []
     for i in range(self.max):
       length = random.uniform(0.2, 1)
