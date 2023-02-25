@@ -120,6 +120,8 @@ class SOLUTION:
         self.added_links.append(i)
         current_link = self.added_links[(len(self.added_links) - 1)]
         print(current_link)
+        current = link
+        print(current)
         #length = current_link.x
         #width = current_link.y
         #height = current_link.z
