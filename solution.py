@@ -83,7 +83,7 @@ class SOLUTION:
     for i, link in enumerate(self.link_list):
       print(i)
       if(i == 0):
-        pyrosim.Send_Cube(name = str(i), pos = [x, y, z+2], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
         else:
@@ -95,7 +95,7 @@ class SOLUTION:
         p = random.choice(self.added_links)
         new_joint_name = str(p) + "_" + str(i)
         #new_joint_name = str(p) + str(i)
-        pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z], jointAxis = "0 1 0")
+        pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x+1, y, z], jointAxis = "0 1 0")
         print(self.joint_list)
         print("adding " + new_joint_name)
         self.joint_list.append(new_joint_name)
