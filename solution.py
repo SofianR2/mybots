@@ -128,10 +128,10 @@ class SOLUTION:
         new_joint_name = str(p) + "_" + str(i)
         if(i == 1):
           jointTrueOffset = previousx/2 - length
-        pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length*2 + jointTrueOffset, y, z], jointAxis = "0 1 0")  
+        pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z], jointAxis = "0 1 0")  
         self.joint_list.append(new_joint_name)
         height_offset = 0
-        pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+        pyrosim.Send_Cube(name = str(i), pos = [x+length, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
           self.get_sensor.append(1)
         else:
