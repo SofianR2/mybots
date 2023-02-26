@@ -91,7 +91,7 @@ class SOLUTION:
     width_offset = 0
     length_offset = 0
     z_offset = 0
-    previous_direction = 99
+    previous_direction = 0
 
     
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
@@ -138,7 +138,7 @@ class SOLUTION:
           if(p == 0):
             jointTrueOffset = previousx/2 - length
             z = 1
-          if(previous_direction == 1 or previous_direction == 99):#coming from x
+          if(previous_direction == 1 or previous_direction == 0):#coming from x
             pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z], jointAxis = "0 1 0")  
             self.joint_list.append(new_joint_name)
             z = 0
@@ -155,7 +155,7 @@ class SOLUTION:
           if(p == 0):
             jointTrueOffset = previousy/2 - width
             z = 1
-          if(previous_direction == 2 or previous_direction == 99):#coming from y
+          if(previous_direction == 2 or previous_direction == 0)#coming from y
             pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y + width + jointTrueOffset, z], jointAxis = "0 1 0")  
             self.joint_list.append(new_joint_name)
             z = 0
