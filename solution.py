@@ -142,7 +142,7 @@ class SOLUTION:
           self.joint_list.append(new_joint_name)
           z = 0
           pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-          self.SendSensor(self)
+          self.SendSensor()
       previousx = link.x
       previousy = link.y
       previousz = link.z
