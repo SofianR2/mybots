@@ -169,6 +169,7 @@ class SOLUTION:
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x, y+width/2, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           previous_direction == 2
+          print("TEST" + str(previous_direction)
           self.SendSensor(link)
           
         if(direction == 3):#z direction
