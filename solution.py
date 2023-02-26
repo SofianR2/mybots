@@ -45,7 +45,7 @@ class SOLUTION:
     while not os.path.exists("world" + str(self.myID) + ".sdf"):
       time.sleep(0.01)
   
-  def Directional_Cube(self, direction):
+  def Directional_Cube(self, direction, new_joint_name):
     if(direction == 1):
       #check that we're not going back in the same direction
       #move in direction
@@ -133,7 +133,7 @@ class SOLUTION:
         if(i == 1):
           jointTrueOffset = previousx/2 - length
           z = 1
-        self.Directional_Cube(direction)
+        self.Directional_Cube(direction, new_joint_name)
         #pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z], jointAxis = "0 1 0")  
         #self.joint_list.append(new_joint_name)
         #z = 0
