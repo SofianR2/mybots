@@ -109,7 +109,7 @@ class SOLUTION:
       width = link.y
       height = link.z
       #direction = random.randint(0,2)
-      direction = 3###
+      direction = 2###
       jointTrueOffset = 0
   
 
@@ -134,7 +134,8 @@ class SOLUTION:
         #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         z = 0
-        if(direction == 1):
+        
+        if(direction == 1):#x direction
           if(i == 1):
             jointTrueOffset = previousx/2 - length
             z = 1
@@ -143,16 +144,18 @@ class SOLUTION:
           z = 0
           pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           self.SendSensor(link)
-        #if(direction == 2):
-        #  if(i == 1):
-        #    jointTrueOffset = previousx/2 - length
-        #    z = 1
-        #  pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z], jointAxis = "0 1 0")  
-        #  self.joint_list.append(new_joint_name)
-        #  z = 0
-        #  pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-        #  self.SendSensor(link)
-        if(direction == 3):
+          
+        if(direction == 2):#y direction
+          if(i == 1):
+            jointTrueOffset = previousy/2 - width
+            z = 1
+          pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y + width + jointTrueOffset, z], jointAxis = "0 1 0")  
+          self.joint_list.append(new_joint_name)
+          z = 0
+          pyrosim.Send_Cube(name = str(i), pos = [x, y+width/2, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+          self.SendSensor(link)
+          
+        if(direction == 3):#z direction
           if(i == 1):
             jointTrueOffset = previousz/2 - height
             z = 1
@@ -161,6 +164,7 @@ class SOLUTION:
           z = 0
           pyrosim.Send_Cube(name = str(i), pos = [x, y, z+height/2], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           self.SendSensor(link)
+          
       previousx = link.x
       previousy = link.y
       previousz = link.z
