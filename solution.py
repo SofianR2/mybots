@@ -113,6 +113,8 @@ class SOLUTION:
       direction = random.randint(1,2)
       print("Direction: " + str(direction))
       jointTrueOffset = 0
+      otherOffset = 0
+      otherOffset2 = 0
   
 
       #initial cube
