@@ -111,7 +111,7 @@ class SOLUTION:
       width = link.y
       height = link.z
       direction = random.randint(1,2)
-      print(print("Direction: " + str(previous_direction))
+      print("Direction: " + str(previous_direction))
       jointTrueOffset = 0
   
 
