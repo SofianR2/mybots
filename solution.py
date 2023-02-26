@@ -108,8 +108,7 @@ class SOLUTION:
       length = link.x
       width = link.y
       height = link.z
-      #direction = random.randint(0,2)
-      direction = 1###
+      direction = random.randint(1,3)
       jointTrueOffset = 0
   
 
