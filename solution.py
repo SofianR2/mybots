@@ -91,7 +91,6 @@ class SOLUTION:
     width_offset = 0
     length_offset = 0
     z_offset = 0
-    previous_direction = 0
 
     
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
@@ -105,6 +104,7 @@ class SOLUTION:
     self.joint_list = []  
 
     for i, link in enumerate(self.link_list):
+      previous_direction = 0
       print("Previous Direction: " + str(previous_direction))
       length = link.x
       width = link.y
