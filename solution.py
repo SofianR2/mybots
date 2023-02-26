@@ -109,7 +109,7 @@ class SOLUTION:
       width = link.y
       height = link.z
       #direction = random.randint(0,2)
-      direction = 2###
+      direction = 3###
       jointTrueOffset = 0
   
 
@@ -136,7 +136,7 @@ class SOLUTION:
         z = 0
         
         if(direction == 1):#x direction
-          if(i == 1):
+          if(p == 0):
             jointTrueOffset = previousx/2 - length
             z = 1
           pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z], jointAxis = "0 1 0")  
@@ -156,7 +156,7 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 3):#z direction
-          if(i == 1):
+          if(p == 0):
             jointTrueOffset = previousz/2 - height
             z = 1
           pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y, z + height + jointTrueOffset], jointAxis = "0 1 0")  
