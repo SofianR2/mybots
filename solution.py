@@ -151,7 +151,7 @@ class SOLUTION:
             self.joint_list.append(new_joint_name)
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-          previous_direction == 1
+          previous_direction = 1
           self.SendSensor(link)
           
         if(direction == 2):#y direction
@@ -168,7 +168,7 @@ class SOLUTION:
             self.joint_list.append(new_joint_name)
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x, y+width/2, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-          previous_direction == 2
+          previous_direction = 2
           print("TEST" + str(previous_direction))
           self.SendSensor(link)
           
