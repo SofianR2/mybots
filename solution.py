@@ -64,7 +64,7 @@ class SOLUTION:
       pass
    
 
-  def SendSensor(self):
+  def SendSensor(self, link):
     if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
       self.get_sensor.append(1)
     else:
@@ -142,7 +142,7 @@ class SOLUTION:
           self.joint_list.append(new_joint_name)
           z = 0
           pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-          self.SendSensor()
+          self.SendSensor(link)
       previousx = link.x
       previousy = link.y
       previousz = link.z
