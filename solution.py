@@ -155,7 +155,7 @@ class SOLUTION:
           if(p == 0):
             jointTrueOffset = previousy/2 - width
             z = 1
-          if(previous_direction == 2 or previous_direction == 0)#coming from y
+          if(previous_direction == 2 or previous_direction == 0):#coming from y
             pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y + width + jointTrueOffset, z], jointAxis = "0 1 0")  
             self.joint_list.append(new_joint_name)
             z = 0
