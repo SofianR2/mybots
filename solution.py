@@ -105,7 +105,7 @@ class SOLUTION:
     self.joint_list = []  
 
     for i, link in enumerate(self.link_list):
-      print("Previous Direction: " + previous_direction)
+      print("Previous Direction: " + str(previous_direction))
       length = link.x
       width = link.y
       height = link.z
