@@ -146,7 +146,7 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          if(i == 1):
+          if(p == 0):
             jointTrueOffset = previousy/2 - width
             z = 1
           pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y + width + jointTrueOffset, z], jointAxis = "0 1 0")  
