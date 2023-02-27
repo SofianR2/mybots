@@ -150,8 +150,8 @@ class SOLUTION:
         z = 0
         
 
-        #print("Previous Direction: " + str(previous_direction))
-        #print("Direction: " + str(direction))
+        print("Previous Direction: " + str(previous_direction))
+        print("Direction: " + str(direction))
         #########
         if(direction == 1):#x direction
           if(previous_direction == 2):
