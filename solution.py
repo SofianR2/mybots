@@ -151,6 +151,7 @@ class SOLUTION:
 
         print("Previous Direction: " + str(previous_direction))
         print("Direction: " + str(direction))
+        print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p)
         if(direction == 1):#x direction
           if(previous_parent == p):
             previous_direction = 0
