@@ -170,7 +170,7 @@ class SOLUTION:
           
         if(direction == 2):#y direction
           if(p == 0):
-            jointTrueOffset = previousy/2 - width
+            jointTrueOffset = parenty/2 - parenty
             otherOffset = length/2
             otherOffset2 = width/2
             z = 1
