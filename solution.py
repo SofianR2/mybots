@@ -24,9 +24,7 @@ class SOLUTION:
     self.coordinates = []
     self.link_list = []
     self.added_links = []
-    self.joint_list = []
-    
-   
+    self.joint_list = []   
     
   def Create_World(self):
     length = self.length
@@ -44,6 +42,7 @@ class SOLUTION:
     #while not os.path.exists("world.sdf"):##########
     while not os.path.exists("world" + str(self.myID) + ".sdf"):
       time.sleep(0.01)
+      
   '''
   def Directional_Cube(self, direction, new_joint_name, p, i):
     if(direction == 1):
@@ -82,7 +81,6 @@ class SOLUTION:
     for l in self.link_list:
       print(l)
       #l.occupied = [0, 0, 0]
-
     height_offset = 1
     x = self.x
     y = self.y
@@ -92,7 +90,6 @@ class SOLUTION:
     length_offset = 0
     z_offset = 0
 
-    
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
     ##############################################
@@ -120,7 +117,6 @@ class SOLUTION:
       otherOffset = 0
       otherOffset2 = 0
   
-
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
@@ -200,98 +196,6 @@ class SOLUTION:
       previousy = link.y
       previousz = link.z
           
-    ##############################################
-    ''' 
-    self.get_sensor = []
-    for i in range(self.max):
-      length = random.uniform(0.2, 1)
-      width = random.uniform(0.2, 1)
-      height = random.uniform(0.2, 1)
-      current = i
-      nex = i + 1
-      direction = random.randint(0,2)
-      #direction = 2
-
-      if(random.randrange(0,10) < 5): #sends sensor, makes blue
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 0.0 100.0 1.0"/>', cname = '<material name="Blue">')
-        self.get_sensor.append(1)
-      else: #no sensor, makes green
-        pyrosim.Send_Cube(name= str(i), pos=[x+(length/2*length_offset),y+(width/2*width_offset),z+height_offset+(height/2*z_offset)] , size=[length, width, height], color='    <color rgba="0.0 100.0 0.0 1.0"/>', cname = '<material name="Green">')
-        self.get_sensor.append(0)
-      if(i!=self.max-1):
-        if (direction == 0): #x direction
-          #random_multiplier = numpy.random.rand(0, 1) * 2 - 1
-          if(previous_direction == 0): #x direction
-            joint_offset = 2
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
-          elif(previous_direction == 1):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y+(length/2),z+height_offset], jointAxis = "1 0 0")
-          elif(previous_direction == 2):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset+(height/2)], jointAxis = "1 0 0")
-          else:
-            joint_offset = 0
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2*joint_offset),y,z+height_offset], jointAxis = "0 1 0")
-          height_offset = -0.5
-          length_offset = 1
-          width_offset = 0
-          z_offset = 0
-          #joint_offset = 2
-          previous_direction = 0
-          
-        if(direction == 1): #y direction
-          if(previous_direction == 1):
-            joint_offset = 2
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = "1 0 0")
-          elif(previous_direction == 0):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y+(width/2*joint_offset),z+height_offset], jointAxis = "0 1 0")
-          elif(previous_direction == 2):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset+(height/2)], jointAxis = "0 1 0")
-          else:
-            joint_offset = 0
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2*joint_offset),z+height_offset], jointAxis = "1 0 0")
-          height_offset = -0.5
-          width_offset = 1
-          length_offset = 0
-          z_offset = 0
-          joint_offset = 2
-          previous_direction = 1
-          
-        if(direction == 2): #z direction
-          if(previous_direction == 2):
-            joint_offset = 2
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y,z+height_offset+(height/2*joint_offset)], jointAxis = "1 0 0")
-          elif(previous_direction == 0):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x+(length/2),y,z+height_offset+(height/2*joint_offset)], jointAxis = "0 1 0")
-          elif(previous_direction == 1):
-            joint_offset = 1
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y+(width/2),z+height_offset+(height/2*joint_offset)], jointAxis = "0 1 0")
-          else:
-            joint_offset = 0
-            pyrosim.Send_Joint(name = str(current) + "_" + str(nex), parent= str(current) , child = str(nex) , type = "revolute", position = [x,y,z+height_offset+(height/2*joint_offset)], jointAxis = "1 0 0")
-          height_offset = -0.5
-          width_offset = 0
-          length_offset = 0
-          z_offset = 1
-          joint_offset = 2
-          previous_direction = 2
-            
-      ################################################################################################################################################################
-      pyrosim.Send_Cube(name= str(i), pos=[x,y,z+height_offset] , size=[length, width, height])
-      #if i != self.max:
-      #  pyrosim.Send_Joint(name = str(i) + "_" + str(i+1), parent= str(i) , child = str(i+1) , type = "revolute", position = [x+0.5,y,z+height_offset], jointAxis = "0 1 0")
-      
-      if(i == 1):
-                pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
-
-      if(i>1):
-        
-        pyrosim.Send_Joint(name = str(previous) + "_" + str(current), parent= str(previous) , child = str(current) , type = "revolute", position = [x+(width/2),y,z+height_offset], jointAxis = "0 1 0")
-      '''
     pyrosim.End()
 
   def Create_Brain(self):
@@ -312,21 +216,7 @@ class SOLUTION:
     self.num_motors = len(self.joint_list)
 
       
-    '''
-    for index, item in enumerate(self.get_sensor):
-      print(self.get_sensor)
-      if item == 1:
-        pyrosim.Send_Sensor_Neuron(name = sensor_number, linkName = str(index))
-        sensor_number = sensor_number + 1
-    self.num_sensors = numpy.sum(self.get_sensor)
-    ###################################################################
-    pyrosim.Send_Motor_Neuron(name = sensor_number+1, jointName = "0_1")
-    pyrosim.Send_Motor_Neuron(name = sensor_number+2, jointName = "1_2")
-    pyrosim.Send_Motor_Neuron(name = sensor_number+3, jointName = "2_3")
-    pyrosim.Send_Motor_Neuron(name = sensor_number+4, jointName = "3_4")
-    pyrosim.Send_Motor_Neuron(name = sensor_number+5, jointName = "4_5")
-    pyrosim.Send_Motor_Neuron(name = sensor_number+6, jointName = "5_6")
-    '''
+
     
     #for currentRow in range(0, c.numSensorNeurons):##################
     for currentRow in range(0, self.num_sensors-1):
