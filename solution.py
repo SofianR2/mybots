@@ -146,6 +146,7 @@ class SOLUTION:
         
         while(self.link_list[p].occupied[direction-1] != 0):
           direction = random.randint(1,2)
+        self.link_list[p].occupied[direction-1] = 1
         
         if(direction == 1):#x direction
           if(p == 0):
