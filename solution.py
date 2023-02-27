@@ -98,7 +98,7 @@ class SOLUTION:
       self.link_list.append(LINK())
       
     for i, l in enumerate(self.link_list):
-      l.occupied = [0, 0, 0]
+      l.occupied = [0, 0, 0, 0, 0, 0]
     
     self.joint_list = []  
 
