@@ -124,6 +124,7 @@ class SOLUTION:
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         #add sensors based on color
         self.SendSensor(link)
+        self.added_links.append(i)
       else:
         #choose random parent link and add joint and link
         p = random.choice(self.added_links)
