@@ -123,12 +123,7 @@ class SOLUTION:
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         #add sensors based on color
-        if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
-          self.get_sensor.append(1)
-        else:
-          self.get_sensor.append(0)
-
-        self.added_links.append(i)
+        self.SendSensor(link)
       else:
         #choose random parent link and add joint and link
         p = random.choice(self.added_links)
@@ -150,18 +145,18 @@ class SOLUTION:
         z = 0
         
 
-        print("Previous Direction: " + str(previous_direction))
-        print("Direction: " + str(direction))
-        print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p))
+        #print("Previous Direction: " + str(previous_direction))
+        #print("Direction: " + str(direction))
+        #print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p))
         if(direction == 1):#x direction
-          if(previous_parent == p and p!=0):
-            previous_direction = 0
+          #if(previous_parent == p and p!=0):
+            #previous_direction = 0
             #print(str(p) + " is already occupied")
             #print(self.link_list[p].occupied)
             #previous_direction = 0
-            print("New Previous Direction: " + str(previous_direction))   
-          print("Previous Direction: " + str(previous_direction))
-          print("Direction: " + str(direction))
+            #print("New Previous Direction: " + str(previous_direction))   
+          #print("Previous Direction: " + str(previous_direction))
+          #print("Direction: " + str(direction))
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
             otherOffset = parentx/2
@@ -190,8 +185,8 @@ class SOLUTION:
               #print("New Previous Direction: " + str(previous_direction))
           #  otherOffset = parentx/2
           #  otherOffset2 = parenty/2
-          print("Previous Direction: " + str(previous_direction))
-          print("Direction: " + str(direction))
+          #print("Previous Direction: " + str(previous_direction))
+          #print("Direction: " + str(direction))
           if(p == 0):
             jointTrueOffset = parenty/2 - parenty
             otherOffset = parentx/2
@@ -219,8 +214,8 @@ class SOLUTION:
           z = 0
           pyrosim.Send_Cube(name = str(i), pos = [x, y, z+height/2], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           self.SendSensor(link)
-      if(i > 0):    
-        previous_parent = p
+      #if(i > 0):    
+        #previous_parent = p
       previousx = link.x
       previousy = link.y
       previousz = link.z
