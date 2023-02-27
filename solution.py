@@ -208,7 +208,7 @@ class SOLUTION:
             jointTrueOffset = parenty/2 - parenty
             otherOffset = parentx/2
             otherOffset2 = parenty/2
-            otherOffset3 = parentz/2
+            otherOffset3 = -parentz/2
             z = 1
           if(previous_direction == 2 or previous_direction == 0):#coming from y
             pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y+parenty+jointTrueOffset, z], jointAxis = "0 1 0")  
