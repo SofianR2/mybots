@@ -149,12 +149,11 @@ class SOLUTION:
 
         
         if(direction == 1):#x direction
-          if(p != 0):
-            if(sum(self.link_list[p].occupied) != 0):
+          if(p+1 != i):
               print(str(p) + " is already occupied")
               print(self.link_list[p].occupied)
               print(sum(self.link_list[p].occupied))
-              previous_direction = 1
+              previous_direction = 0
               print("New Previous Direction: " + str(previous_direction))
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
@@ -175,7 +174,7 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          if(p != 0):
+          if(p+1 != i):
             if(sum(self.link_list[p].occupied) != 0):
               print(str(p) + " is already occupied")
               print(self.link_list[p].occupied)
