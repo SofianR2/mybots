@@ -90,6 +90,7 @@ class SOLUTION:
     width_offset = 0
     length_offset = 0
     z_offset = 0
+    print("TESTTTTTTTTTTTTTTTTTTTT")
 
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
