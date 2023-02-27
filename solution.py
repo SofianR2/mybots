@@ -44,7 +44,7 @@ class SOLUTION:
     #while not os.path.exists("world.sdf"):##########
     while not os.path.exists("world" + str(self.myID) + ".sdf"):
       time.sleep(0.01)
-  
+  '''
   def Directional_Cube(self, direction, new_joint_name, p, i):
     if(direction == 1):
       #check that we're not going back in the same direction
@@ -61,7 +61,8 @@ class SOLUTION:
     if(direction == 2):
       pass
     if(direction == 3):
-      pass
+      pass    
+   '''
    
 
   def SendSensor(self, link):
