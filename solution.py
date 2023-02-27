@@ -168,7 +168,10 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          #if(p == 0 or sum(self.link_list[p].occupied) != 0):
+          if(sum(self.link_list[p].occupied) != 0):
+            print(p)
+            print(self.link_list[p].occupied)
+            print(sum(self.link_list[p].occupied))
           #  otherOffset = parentx/2
           #  otherOffset2 = parenty/2
           if(p == 0):
