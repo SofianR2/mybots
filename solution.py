@@ -153,11 +153,11 @@ class SOLUTION:
         #print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p))
         #########
         if(direction == 1):#x direction
-        #  if(previous_direction == 2):
-        #    if(self.link_list[i].occupied[4] == 0 and i != 0):
+          if(previous_direction == 2):
+            if(self.link_list[p].occupied[4] == 0 and i != 0):
         #      previous_direction = 0
-        #      otherOffset = parentx/2
-        #      otherOffset2 = parenty/2
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
         #########
           #if(previous_parent == p and p!=0):
             #previous_direction = 0
@@ -179,6 +179,8 @@ class SOLUTION:
             pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           if(previous_direction == 2):#coming from y
             print("jointoffset = " + str(jointTrueOffset) + " otheroffset = " + str(otherOffset) + "otheroffset2 = " + str(otherOffset2))
+            #if(self.link_list[p].occupied[4] == 0 and i != 0):
+            #  pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x+parentx, y, z], jointAxis = "0 1 0")  
             pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x+parentx/2 + jointTrueOffset + otherOffset, y+parenty/2 - otherOffset2, z], jointAxis = "0 1 0")  
             self.joint_list.append(new_joint_name)
             z = 0
@@ -188,11 +190,11 @@ class SOLUTION:
           
         if(direction == 2):#y direction
           ####################
-          #if(previous_direction == 1):
-          #  if(self.link_list[i].occupied[3] == 0 and i != 0):
+          if(previous_direction == 1):
+            if(self.link_list[p].occupied[3] == 0 and i != 0):
           #    previous_direction = 0
-          #    otherOffset = parentx/2
-          #    otherOffset2 = parenty/2
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
           ####################
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
