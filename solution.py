@@ -78,9 +78,7 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []
-    for i, l in enumerate(self.link_list):
-      print(l.occupied)
-      l.occupied = [0, 0, 0]
+
       print(l.occupied)
     height_offset = 1
     x = self.x
@@ -90,8 +88,6 @@ class SOLUTION:
     width_offset = 0
     length_offset = 0
     z_offset = 0
-    print("TESTTTTTTTTTTTTTTTTTTTT")
-    print(self.link_list[1].occupied)
 
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
@@ -100,6 +96,11 @@ class SOLUTION:
     self.link_list = []
     for j in range(self.max):
       self.link_list.append(LINK())
+      
+    for i, l in enumerate(self.link_list):
+      print(l.occupied)
+      l.occupied = [0, 0, 0]
+      print(l.occupied)
     
     self.joint_list = []  
 
