@@ -228,8 +228,8 @@ class SOLUTION:
             self.joint_list.append(new_joint_name)
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x, y+width/2, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-          if(previous_direction == 3):#coming from x
-            pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2 - otherOffset3], jointAxis = "0 1 0")  
+          if(previous_direction == 3):#coming from z
+            pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2], jointAxis = "0 1 0")  
             self.joint_list.append(new_joint_name)
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x, y+width/2, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
