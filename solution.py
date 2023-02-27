@@ -149,12 +149,11 @@ class SOLUTION:
 
         
         if(direction == 1):#x direction
-          if(p+1 != i):
-              print(str(p) + " is already occupied")
-              print(self.link_list[p].occupied)
-              print(sum(self.link_list[p].occupied))
-              previous_direction = 0
-              print("New Previous Direction: " + str(previous_direction))
+          #if(p+1 != i):
+              #print(str(p) + " is already occupied")
+              #print(self.link_list[p].occupied)
+              #previous_direction = 0
+              #print("New Previous Direction: " + str(previous_direction))
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
             otherOffset = parentx/2
@@ -175,11 +174,11 @@ class SOLUTION:
           
         if(direction == 2):#y direction
           if(p+1 != i):
-              print(str(p) + " is already occupied")
-              print(self.link_list[p].occupied)
-              print(sum(self.link_list[p].occupied))
-              previous_direction = 0
-              print("New Previous Direction: " + str(previous_direction))
+              #print(str(p) + " is already occupied")
+              #print(self.link_list[p].occupied)
+              #print(sum(self.link_list[p].occupied))
+              #previous_direction = 0
+              #print("New Previous Direction: " + str(previous_direction))
           #  otherOffset = parentx/2
           #  otherOffset2 = parenty/2
           if(p == 0):
