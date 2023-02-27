@@ -154,7 +154,7 @@ class SOLUTION:
         #########
         if(direction == 1):#x direction
           if(previous_direction == 2):
-            if(self.link_list[p].occupied[4] == 0 and i != 0):
+            if(self.link_list[p].occupied[4] == 0):
         #      previous_direction = 0
               otherOffset = parentx/2
               otherOffset2 = parenty/2
@@ -191,7 +191,7 @@ class SOLUTION:
         if(direction == 2):#y direction
           ####################
           if(previous_direction == 1):
-            if(self.link_list[p].occupied[3] == 0 and i != 0):
+            if(self.link_list[p].occupied[3] == 0):
           #    previous_direction = 0
               otherOffset = parentx/2
               otherOffset2 = parenty/2
