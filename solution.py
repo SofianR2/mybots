@@ -143,8 +143,8 @@ class SOLUTION:
         new_joint_name = str(p) + "_" + str(i)
         z = 0
         
-        while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
-          direction = random.randint(1,2)
+        #while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
+        #  direction = random.randint(1,2)
         self.link_list[p].occupied[direction-1] = 1
         
         if(direction == 1):#x direction
