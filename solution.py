@@ -235,9 +235,9 @@ class SOLUTION:
         if(direction == 3):#z direction
           if(previous_direction == 1):
             if(self.link_list[p].occupied[3] == 0):
-              otherOffset = parentx/2
-              otherOffset2 = parenty/2
-              otherOffset3 = parentz/2
+              otherOffset = 1.5
+              otherOffset2 = 1.5
+              otherOffset3 = 1.5
           if(previous_direction == 2):
             if(self.link_list[p].occupied[4] == 0):
               otherOffset = parentx/2
