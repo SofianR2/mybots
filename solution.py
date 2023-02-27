@@ -112,11 +112,10 @@ class SOLUTION:
       height = link.z
       direction = random.randint(1,2)
       #direction = 1
-      print("Direction: " + str(direction))
+
       jointTrueOffset = 0
       otherOffset = 0
-      otherOffset2 = 0
-  
+      otherOffset2 = 0  
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
@@ -136,6 +135,7 @@ class SOLUTION:
         while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
           direction = random.randint(1,2)
         self.link_list[p].occupied[direction-1] = 1
+        print("Direction: " + str(direction))
           
         parentx = self.link_list[p].x
         parenty = self.link_list[p].y
