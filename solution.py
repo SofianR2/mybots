@@ -136,7 +136,7 @@ class SOLUTION:
         p = random.choice(self.added_links)
         parentx = link_list[p].x
         parenty = link_list[p].y
-        parent z = link_list[p].z
+        parentz = link_list[p].z
         #add and store newest link
         self.added_links.append(i)
         #make new joint and link
