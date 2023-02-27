@@ -154,7 +154,7 @@ class SOLUTION:
         print("Previous Direction: " + str(previous_direction))
         print("Direction: " + str(direction))
         #########
-        if(i > 0):
+        if(i > 0 and p!= 0):
           previous_direction = self.link_list[p].previous
           
         if(direction == 1):#x direction
