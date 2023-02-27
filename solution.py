@@ -149,8 +149,6 @@ class SOLUTION:
 
         
         if(direction == 1):#x direction
-          if(sum(self.link_list[p].occupied) != 0):
-            previous_direction == 0
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
             otherOffset = parentx/2
@@ -173,8 +171,6 @@ class SOLUTION:
           #if(p == 0 or sum(self.link_list[p].occupied) != 0):
           #  otherOffset = parentx/2
           #  otherOffset2 = parenty/2
-          if(sum(self.link_list[p].occupied) != 0):
-            previous_direction == 0
           if(p == 0):
             jointTrueOffset = parenty/2 - parenty
             otherOffset = parentx/2
