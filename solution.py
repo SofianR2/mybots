@@ -86,6 +86,8 @@ class SOLUTION:
     width_offset = 0
     length_offset = 0
     z_offset = 0
+    previous_parent = 99
+
 
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
@@ -116,7 +118,6 @@ class SOLUTION:
       jointTrueOffset = 0
       otherOffset = 0
       otherOffset2 = 0  
-      previous_parent = 99
       
       #initial cube
       if(i == 0):
