@@ -91,7 +91,7 @@ class SOLUTION:
     length_offset = 0
     z_offset = 0
     print("TESTTTTTTTTTTTTTTTTTTTT")
-    print(self.link_list[0].occupied)
+    print(self.link_list[1].occupied)
 
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
