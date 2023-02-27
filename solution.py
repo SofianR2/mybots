@@ -149,18 +149,15 @@ class SOLUTION:
         z = 0
         
 
-        
+        print("Previous Direction: " + str(previous_direction))
+        print("Direction: " + str(direction))
         if(direction == 1):#x direction
           if(previous_parent == p):
             previous_direction = 0
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
               #previous_direction = 0
-              #print("New Previous Direction: " + str(previous_direction))
-              
-        print("Previous Direction: " + str(previous_direction))
-        print("Direction: " + str(direction))
-        
+              print("New Previous Direction: " + str(previous_direction))   
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
             otherOffset = parentx/2
@@ -189,8 +186,6 @@ class SOLUTION:
               #print("New Previous Direction: " + str(previous_direction))
           #  otherOffset = parentx/2
           #  otherOffset2 = parenty/2
-        print("Previous Direction: " + str(previous_direction))
-        print("Direction: " + str(direction))
           if(p == 0):
             jointTrueOffset = parenty/2 - parenty
             otherOffset = parentx/2
