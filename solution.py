@@ -96,9 +96,7 @@ class SOLUTION:
       self.link_list.append(LINK())
       
     for i, l in enumerate(self.link_list):
-      print(l.occupied)
       l.occupied = [0, 0, 0]
-      print(l.occupied)
     
     self.joint_list = []  
 
@@ -132,6 +130,13 @@ class SOLUTION:
       else:
         #choose random parent link and add joint and link
         p = random.choice(self.added_links)
+        
+        while(sum(self.link_list[p].occupied) == 2):
+          p = random.choice(self.added_links)
+        while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
+          direction = random.randint(1,2)
+        self.link_list[p].occupied[direction-1] = 1
+          
         parentx = self.link_list[p].x
         parenty = self.link_list[p].y
         parentz = self.link_list[p].z
@@ -141,9 +146,7 @@ class SOLUTION:
         new_joint_name = str(p) + "_" + str(i)
         z = 0
         
-        while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
-          direction = random.randint(1,2)
-        self.link_list[p].occupied[direction-1] = 1
+
         
         if(direction == 1):#x direction
           if(p == 0):
