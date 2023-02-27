@@ -134,6 +134,7 @@ class SOLUTION:
         while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
           direction = random.randint(1,2)
         self.link_list[p].occupied[direction-1] = 1
+        self.link_list[i].occupied[direction+2] = 1
         #print("Direction: " + str(direction))
           
         parentx = self.link_list[p].x
@@ -150,6 +151,9 @@ class SOLUTION:
         #print("Direction: " + str(direction))
         #print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p))
         if(direction == 1):#x direction
+          if(previous_direction = 2):
+            if(self.link_list[i].occupied[4] == 0):
+              previous_direction = 0
           #if(previous_parent == p and p!=0):
             #previous_direction = 0
             #print(str(p) + " is already occupied")
@@ -177,8 +181,9 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          if(previous_parent == p and p!=0):
-            previous_direction = 0
+          if(previous_direction = 1):
+            if(self.link_list[i].occupied[3] == 0):
+              previous_direction = 0
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
               #print(sum(self.link_list[p].occupied))
