@@ -143,6 +143,8 @@ class SOLUTION:
         #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         z = 0
+        while(p.occupied[direction] != 0):
+          direction = random.randint(1,2)
         
         if(direction == 1):#x direction
           if(p == 0):
