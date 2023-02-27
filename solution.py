@@ -173,7 +173,7 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          if(p+1 != i):
+          #if(p+1 != i):
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
               #print(sum(self.link_list[p].occupied))
