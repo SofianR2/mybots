@@ -239,7 +239,7 @@ class SOLUTION:
           previous_direction = 2
           self.SendSensor(link)
           
-        #if(direction == 3):#z direction
+      if(direction == 3):#z direction
         if(previous_child != p):
           previous_direction = 0
           #if(previous_direction == 1):
