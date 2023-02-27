@@ -195,19 +195,21 @@ class SOLUTION:
             pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           previous_direction = 1
           self.SendSensor(link)
-          
+        
         if(direction == 2):#y direction
+          if(previous_child != p):
+          previous_direction == 0:
           ####################
-          if(previous_direction == 1):
-            if(self.link_list[p].occupied[3] == 0):
-              otherOffset = parentx/2
-              otherOffset2 = parenty/2
-              otherOffset3 = parentz/2
-          if(previous_direction == 3):
-            if(self.link_list[p].occupied[5] == 0):
-              otherOffset = parentx/2
-              otherOffset2 = parenty/2
-              otherOffset3 = parentz/2
+          #if(previous_direction == 1):
+            #if(self.link_list[p].occupied[3] == 0):
+              #otherOffset = parentx/2
+              #otherOffset2 = parenty/2
+              #otherOffset3 = parentz/2
+          #if(previous_direction == 3):
+            #if(self.link_list[p].occupied[5] == 0):
+              #otherOffset = parentx/2
+              #otherOffset2 = parenty/2
+              #otherOffset3 = parentz/2
           ####################
 
           if(p == 0):
@@ -235,17 +237,19 @@ class SOLUTION:
           previous_direction = 2
           self.SendSensor(link)
           
-        if(direction == 3):#z direction
-          if(previous_direction == 1):
-            if(self.link_list[p].occupied[3] == 0):
-              otherOffset = 1.5
-              otherOffset2 = 1.5
-              otherOffset3 = 1.5
-          if(previous_direction == 2):
-            if(self.link_list[p].occupied[4] == 0):
-              otherOffset = parentx/2
-              otherOffset2 = parenty/2
-              otherOffset3 = parentz/2
+        #if(direction == 3):#z direction
+        if(previous_child != p):
+          previous_direction == 0:
+          #if(previous_direction == 1):
+            #if(self.link_list[p].occupied[3] == 0):
+              #otherOffset = 1.5
+              #otherOffset2 = 1.5
+              #otherOffset3 = 1.5
+          #if(previous_direction == 2):
+            #if(self.link_list[p].occupied[4] == 0):
+              #otherOffset = parentx/2
+              #otherOffset2 = parenty/2
+              #otherOffset3 = parentz/2
           if(p == 0):
             jointTrueOffset = parentz/2 - parentz
             otherOffset = parentx/2
@@ -276,8 +280,8 @@ class SOLUTION:
           previous_direction = 3
           self.SendSensor(link)
           
-      #if(i > 0):    
-        #previous_parent = p
+      if(i > 0):    
+        previous_child = i
       previousx = link.x
       previousy = link.y
       previousz = link.z
