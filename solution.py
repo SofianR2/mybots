@@ -107,6 +107,9 @@ class SOLUTION:
     for i, link in enumerate(self.link_list):
       if(i == 0):
         previous_direction = 0
+        parentx = link.x
+        parenty = link.y
+        parentz = link.z
       print("Previous Direction: " + str(previous_direction))
       length = link.x
       width = link.y
@@ -122,9 +125,6 @@ class SOLUTION:
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-        #print(str(z))
-        #print(str(height_offset))
-        #print("cube located at: " + str(x) + " " + str(y) + " " + str(z))
         #add sensors based on color
         if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
           self.get_sensor.append(1)
@@ -146,7 +146,8 @@ class SOLUTION:
         
         if(direction == 1):#x direction
           if(p == 0):
-            jointTrueOffset = previousx/2 - parentx
+            jointTrueOffset = parentx/2 - parentx
+            InitialOffsety = parenty/2 - parenty
             otherOffset = parentx/2
             otherOffset2 = parenty/2
             z = 1
