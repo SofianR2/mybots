@@ -134,6 +134,7 @@ class SOLUTION:
         while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
           direction = random.randint(1,2)
         self.link_list[p].occupied[direction-1] = 1
+        print(self.link_list[i].occupied)
         self.link_list[i].occupied[direction+2] = 1
         #print("Direction: " + str(direction))
           
