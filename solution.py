@@ -157,8 +157,10 @@ class SOLUTION:
               #print(self.link_list[p].occupied)
               #previous_direction = 0
               #print("New Previous Direction: " + str(previous_direction))
+              
         print("Previous Direction: " + str(previous_direction))
         print("Direction: " + str(direction))
+        
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
             otherOffset = parentx/2
