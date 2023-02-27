@@ -279,8 +279,8 @@ class SOLUTION:
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x, y, z+height/2], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
 
-        previous_direction = 3
-        self.SendSensor(link)
+          previous_direction = 3
+          self.SendSensor(link)
           
       if(i > 0):    
         previous_child = i
