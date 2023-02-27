@@ -154,7 +154,7 @@ class SOLUTION:
         print("Direction: " + str(direction))
         print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p))
         if(direction == 1):#x direction
-          if(previous_parent == p):
+          if(previous_parent == p and p!=0):
             previous_direction = 0
             #print(str(p) + " is already occupied")
             #print(self.link_list[p].occupied)
@@ -181,7 +181,7 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          if(previous_parent == p):
+          if(previous_parent == p and p!=0):
             previous_direction = 0
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
