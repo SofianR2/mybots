@@ -152,7 +152,7 @@ class SOLUTION:
         print("Direction: " + str(direction))
         #print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p))
         #########
-        #if(direction == 1):#x direction
+        if(direction == 1):#x direction
         #  if(previous_direction == 2):
         #    if(self.link_list[i].occupied[4] == 0 and i != 0):
         #      previous_direction = 0
