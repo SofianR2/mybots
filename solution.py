@@ -80,6 +80,7 @@ class SOLUTION:
     self.added_links = []
     self.joint_list = []
     for l in self.link_list:
+      print(l)
       l.occupied = [0, 0, 0]
 
     height_offset = 1
