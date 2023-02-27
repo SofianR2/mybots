@@ -150,23 +150,19 @@ class SOLUTION:
 
         print("Previous Direction: " + str(previous_direction))
         print("Direction: " + str(direction))
-        #print("Previous Parent: " + str(previous_parent) + " " + "Current Parent: " + str(p))
         #########
         if(direction == 1):#x direction
           if(previous_direction == 2):
             if(self.link_list[p].occupied[4] == 0):
-        #      previous_direction = 0
               otherOffset = parentx/2
               otherOffset2 = parenty/2
+              otherOffset3 = parentz/2
+          if(previous_direction == 3):
+            if(self.link_list[p].occupied[5] == 0):
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
+              otherOffset3 = parentz/2
         #########
-          #if(previous_parent == p and p!=0):
-            #previous_direction = 0
-            #print(str(p) + " is already occupied")
-            #print(self.link_list[p].occupied)
-            #previous_direction = 0
-            #print("New Previous Direction: " + str(previous_direction))   
-          #print("Previous Direction: " + str(previous_direction))
-          #print("Direction: " + str(direction))
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
             otherOffset = parentx/2
@@ -198,19 +194,16 @@ class SOLUTION:
           ####################
           if(previous_direction == 1):
             if(self.link_list[p].occupied[3] == 0):
-          #    previous_direction = 0
               otherOffset = parentx/2
               otherOffset2 = parenty/2
+              otherOffset3 = parentz/2
+          if(previous_direction == 3):
+            if(self.link_list[p].occupied[5] == 0):
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
+              otherOffset3 = parentz/2
           ####################
-              #print(str(p) + " is already occupied")
-              #print(self.link_list[p].occupied)
-              #print(sum(self.link_list[p].occupied))
-              #previous_direction = 0
-              #print("New Previous Direction: " + str(previous_direction))
-          #  otherOffset = parentx/2
-          #  otherOffset2 = parenty/2
-          #print("Previous Direction: " + str(previous_direction))
-          #print("Direction: " + str(direction))
+
           if(p == 0):
             jointTrueOffset = parenty/2 - parenty
             otherOffset = parentx/2
@@ -237,6 +230,16 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 3):#z direction
+          if(previous_direction == 1):
+            if(self.link_list[p].occupied[3] == 0):
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
+              otherOffset3 = parentz/2
+          if(previous_direction == 2):
+            if(self.link_list[p].occupied[4] == 0):
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
+              otherOffset3 = parentz/2
           if(p == 0):
             jointTrueOffset = parentz/2 - parentz
             otherOffset = parentx/2
