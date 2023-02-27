@@ -154,7 +154,7 @@ class SOLUTION:
               print(str(p) + " is already occupied")
               print(self.link_list[p].occupied)
               print(sum(self.link_list[p].occupied))
-              previous_direction = 0
+              previous_direction = 1
               print("New Previous Direction: " + str(previous_direction))
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
@@ -180,7 +180,7 @@ class SOLUTION:
               print(str(p) + " is already occupied")
               print(self.link_list[p].occupied)
               print(sum(self.link_list[p].occupied))
-              previous_direction = 0
+              previous_direction = 2
           #  otherOffset = parentx/2
           #  otherOffset2 = parenty/2
           if(p == 0):
