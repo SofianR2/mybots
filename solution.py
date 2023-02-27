@@ -155,6 +155,8 @@ class SOLUTION:
           if(previous_direction == 2):
             if(self.link_list[i].occupied[4] == 0):
               previous_direction = 0
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
           #if(previous_parent == p and p!=0):
             #previous_direction = 0
             #print(str(p) + " is already occupied")
@@ -186,6 +188,8 @@ class SOLUTION:
           if(previous_direction == 1):
             if(self.link_list[i].occupied[3] == 0):
               previous_direction = 0
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
               #print(sum(self.link_list[p].occupied))
