@@ -198,7 +198,7 @@ class SOLUTION:
         
         if(direction == 2):#y direction
           if(previous_child != p):
-          previous_direction == 0:
+            previous_direction == 0:
           ####################
           #if(previous_direction == 1):
             #if(self.link_list[p].occupied[3] == 0):
