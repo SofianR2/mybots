@@ -86,7 +86,7 @@ class SOLUTION:
     width_offset = 0
     length_offset = 0
     z_offset = 0
-    previous_parent = 99
+    previous_child = 99
 
 
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
