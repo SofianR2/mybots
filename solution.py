@@ -129,7 +129,7 @@ class SOLUTION:
         #choose random parent link and add joint and link
         p = random.choice(self.added_links)
         
-        while(sum(self.link_list[p].occupied) == 2):
+        while(sum(self.link_list[p].occupied) == 3):
           p = random.choice(self.added_links)
         while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
           direction = random.randint(1,2)
@@ -248,9 +248,10 @@ class SOLUTION:
             self.joint_list.append(new_joint_name)
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x, y, z+width/2], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+          '''
           previous_direction = 3
           self.SendSensor(link)
-          '''
+          
       #if(i > 0):    
         #previous_parent = p
       previousx = link.x
