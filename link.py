@@ -22,3 +22,4 @@ class LINK:
     self.y = 1
     self.z= 1
     self.occupied = [0, 0, 0, 0, 0, 0]
+    self.previous = 99
