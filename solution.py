@@ -169,7 +169,7 @@ class SOLUTION:
           
         if(direction == 2):#y direction
           if(sum(self.link_list[p].occupied) != 0):
-            print("{p} is already occupied")
+            print(str(p) + " is already occupied")
             print(self.link_list[p].occupied)
             print(sum(self.link_list[p].occupied))
           #  otherOffset = parentx/2
