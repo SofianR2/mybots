@@ -154,9 +154,12 @@ class SOLUTION:
         print("Previous Direction: " + str(previous_direction))
         print("Direction: " + str(direction))
         #########
+        if(i > 0):
+          previous_direction = self.link_list[p].previous
+          
         if(direction == 1):#x direction
-          if(previous_child != p and i > 0):
-            previous_direction = 0
+          #if(previous_child != p and i > 0):
+            #previous_direction = 0
           #if(previous_direction == 2):
             #if(self.link_list[p].occupied[4] == 0):
               #otherOffset = parentx/2
@@ -196,6 +199,7 @@ class SOLUTION:
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           previous_direction = 1
+          self.link_list[i].previous = 1
           self.SendSensor(link)
         
         if(direction == 2):#y direction
@@ -237,6 +241,7 @@ class SOLUTION:
             z = 0
             pyrosim.Send_Cube(name = str(i), pos = [x, y+width/2, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           previous_direction = 2
+          self.link_list[i].previous = 2
           self.SendSensor(link)
           
         if(direction == 3):#z direction
@@ -280,6 +285,7 @@ class SOLUTION:
             pyrosim.Send_Cube(name = str(i), pos = [x, y, z+height/2], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
 
           previous_direction = 3
+          self.link_list[i].previous = 3
           self.SendSensor(link)
           
       if(i > 0):    
