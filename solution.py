@@ -118,6 +118,7 @@ class SOLUTION:
       jointTrueOffset = 0
       otherOffset = 0
       otherOffset2 = 0  
+      otherOffset3 = 0
       
       #initial cube
       if(i == 0):
