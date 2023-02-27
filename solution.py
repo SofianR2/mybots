@@ -132,7 +132,7 @@ class SOLUTION:
         while(sum(self.link_list[p].occupied) == 2):
           p = random.choice(self.added_links)
         while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
-          direction = random.randint(1,2)
+          direction = random.randint(2,3)
         self.link_list[p].occupied[direction-1] = 1
         print(self.link_list[i].occupied)
         self.link_list[i].occupied[direction+2] = 1
