@@ -17,7 +17,7 @@ class SOLUTION:
     self.x=0
     self.y=0
     self.z=0
-    self.max = 30
+    self.max = 7
     self.get_sensor = []
     self.num_sensors = 0
     self.num_motors = 0
