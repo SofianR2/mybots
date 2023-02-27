@@ -21,3 +21,4 @@ class LINK:
     #self.x = 1
     #self.y = 1
     #self.z= 1
+    occupied = [0 0 0]
