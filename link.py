@@ -15,10 +15,10 @@ class LINK:
       self.color = '    <color rgba="0.0 1.0 0.0 1.0"/>'
       self.color_name =  '<material name="Green">'
       self.has_link = 0
-    #self.x = random.uniform(0.2, 1)
-    #self.y = random.uniform(0.2, 1)
-    #self.z= random.uniform(0.2, 1)
-    self.x = 1
-    self.y = 1
-    self.z= 1
+    self.x = random.uniform(0.2, 1)
+    self.y = random.uniform(0.2, 1)
+    self.z= random.uniform(0.2, 1)
+    #self.x = 1
+    #self.y = 1
+    #self.z= 1
     self.occupied = [0, 0, 0]
