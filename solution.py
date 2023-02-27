@@ -155,7 +155,7 @@ class SOLUTION:
         print("Direction: " + str(direction))
         #########
         if(direction == 1):#x direction
-          if(previous_child != p):
+          if(previous_child != p and i > 0):
             previous_direction = 0
           #if(previous_direction == 2):
             #if(self.link_list[p].occupied[4] == 0):
@@ -199,7 +199,7 @@ class SOLUTION:
           self.SendSensor(link)
         
         if(direction == 2):#y direction
-          if(previous_child != p):
+          if(previous_child != p and i > 0):
             previous_direction = 0
           ####################
           #if(previous_direction == 1):
@@ -240,7 +240,7 @@ class SOLUTION:
           self.SendSensor(link)
           
       if(direction == 3):#z direction
-        if(previous_child != p):
+        if(previous_child != p and i > 0):
           previous_direction = 0
           #if(previous_direction == 1):
             #if(self.link_list[p].occupied[3] == 0):
