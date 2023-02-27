@@ -113,7 +113,7 @@ class SOLUTION:
       width = link.y
       height = link.z
       #direction = random.randint(1,3)
-      direction = random.choice([1, 3])
+      direction = random.choice([1, 2])
       #direction = 3
 
       jointTrueOffset = 0
@@ -135,7 +135,7 @@ class SOLUTION:
           p = random.choice(self.added_links)
         while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
           #direction = random.randint(1,3)
-          direction = random.choice([1, 3])
+          direction = random.choice([1, 2])
         self.link_list[p].occupied[direction-1] = 1
         #print(self.link_list[i].occupied)
         self.link_list[i].occupied[direction+2] = 1
