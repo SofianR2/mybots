@@ -81,7 +81,7 @@ class SOLUTION:
     self.joint_list = []
     for l in self.link_list:
       print(l)
-      l.occupied = [0, 0, 0]
+      #l.occupied = [0, 0, 0]
 
     height_offset = 1
     x = self.x
