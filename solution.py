@@ -113,7 +113,8 @@ class SOLUTION:
       width = link.y
       height = link.z
       #direction = random.randint(1,3)
-      direction = 3
+      direction = random.choice([1, 3])
+      #direction = 3
 
       jointTrueOffset = 0
       otherOffset = 0
