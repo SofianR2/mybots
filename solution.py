@@ -101,7 +101,7 @@ class SOLUTION:
     self.joint_list = []  
 
     for i, link in enumerate(self.link_list):
-      if(i == 0):
+      if(i == 0 or sum(self.link_list[p].occupied) != 0):
         previous_direction = 0
         parentx = link.x
         parenty = link.y
