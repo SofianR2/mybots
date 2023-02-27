@@ -149,7 +149,7 @@ class SOLUTION:
 
         
         if(direction == 1):#x direction
-          if(p == 0 or self.link_list[p].occupied):
+          if(p == 0 or sum(self.link_list[p].occupied) != 0):
             otherOffset = parentx/2
             otherOffset2 = parenty/2
           if(p == 0):
@@ -171,7 +171,7 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          if(p == 0 or self.link_list[p].occupied):
+          if(p == 0 or sum(self.link_list[p].occupied) != 0):
             otherOffset = parentx/2
             otherOffset2 = parenty/2
           if(p == 0):
