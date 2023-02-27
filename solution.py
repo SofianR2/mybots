@@ -53,7 +53,7 @@ class SOLUTION:
       self.joint_list.append(new_joint_name)
       z = 0
       pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-      if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
+      if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
         self.get_sensor.append(1)
       else:
         self.get_sensor.append(0)
@@ -65,7 +65,7 @@ class SOLUTION:
    
 
   def SendSensor(self, link):
-    if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
+    if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
       self.get_sensor.append(1)
     else:
       self.get_sensor.append(0)
@@ -125,7 +125,7 @@ class SOLUTION:
         #print(str(height_offset))
         #print("cube located at: " + str(x) + " " + str(y) + " " + str(z))
         #add sensors based on color
-        if(link.color ==  '    <color rgba="0.0 0.0 100.0 1.0"/>'):
+        if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
           self.get_sensor.append(1)
         else:
           self.get_sensor.append(0)
