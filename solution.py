@@ -203,8 +203,8 @@ class SOLUTION:
           self.SendSensor(link)
         
         if(direction == 2):#y direction
-          if(previous_child != p and i > 0):
-            previous_direction = 0
+          #if(previous_child != p and i > 0):
+            #previous_direction = 0
           ####################
           #if(previous_direction == 1):
             #if(self.link_list[p].occupied[3] == 0):
@@ -245,8 +245,8 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 3):#z direction
-          if(previous_child != p and i > 0):
-            previous_direction = 0
+          #if(previous_child != p and i > 0):
+            #previous_direction = 0
             #if(previous_direction == 1):
               #if(self.link_list[p].occupied[3] == 0):
                 #otherOffset = 1.5
