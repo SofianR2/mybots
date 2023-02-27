@@ -116,6 +116,8 @@ class SOLUTION:
       jointTrueOffset = 0
       otherOffset = 0
       otherOffset2 = 0  
+      previous_parent = 99
+      
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
@@ -149,7 +151,8 @@ class SOLUTION:
 
         
         if(direction == 1):#x direction
-          #if(p+1 != i):
+          if(previous_parent == p):
+            previous_direction = 0
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
               #previous_direction = 0
@@ -173,7 +176,8 @@ class SOLUTION:
           self.SendSensor(link)
           
         if(direction == 2):#y direction
-          #if(p+1 != i):
+          if(previous_parent == p):
+            previous_direction = 0
               #print(str(p) + " is already occupied")
               #print(self.link_list[p].occupied)
               #print(sum(self.link_list[p].occupied))
@@ -209,6 +213,7 @@ class SOLUTION:
           pyrosim.Send_Cube(name = str(i), pos = [x, y, z+height/2], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           self.SendSensor(link)
           
+      previous_parent = p
       previousx = link.x
       previousy = link.y
       previousz = link.z
