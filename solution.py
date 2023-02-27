@@ -112,7 +112,7 @@ class SOLUTION:
       length = link.x
       width = link.y
       height = link.z
-      direction = random.randint(2,3)
+      direction = random.randint(1,3)
       #direction = 3
 
       jointTrueOffset = 0
@@ -129,10 +129,10 @@ class SOLUTION:
         #choose random parent link and add joint and link
         p = random.choice(self.added_links)
         
-        while(sum(self.link_list[p].occupied) == 2):
+        while(sum(self.link_list[p].occupied) == 3):
           p = random.choice(self.added_links)
         while(self.link_list[p].occupied[direction-1] != 0):#MIGHT TIME OUT IF ALL OF OCCUPIED IS FULL
-          direction = random.randint(2,3)
+          direction = random.randint(1,3)
         self.link_list[p].occupied[direction-1] = 1
         print(self.link_list[i].occupied)
         self.link_list[i].occupied[direction+2] = 1
