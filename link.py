@@ -21,4 +21,4 @@ class LINK:
     self.x = 1
     self.y = 1
     self.z= 1
-    self.occupied = [0, 0, 0]
+    self.occupied = [0, 0, 0, 0, 0, 0]
