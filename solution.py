@@ -201,7 +201,7 @@ class SOLUTION:
             if(self.link_list[p].occupied[5] == 0):
               otherOffset = parentx/2
               otherOffset2 = parenty/2
-              otherOffset3 = -parentz/2
+              otherOffset3 = parentz/2
           ####################
 
           if(p == 0):
