@@ -80,7 +80,7 @@ class PARALLEL_HILL_CLIMBER:
   def Evolve(self):
     self.Evaluate(self.parents)
     self.AddBest()
-    self.currentGeneration -= 1
+    self.currentgeneration -= 1
       
     for currentGeneration in range(c.numberOfGenerations):
       self.Evolve_For_One_Generation()  
