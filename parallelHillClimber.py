@@ -11,7 +11,7 @@ class PARALLEL_HILL_CLIMBER:
     os.system("del fitness*.txt")
     self.parents = {}
     self.nextAvailableID = 0
-    self.fitness = numpy.empty((c.numberOfGenerations, c.populationSize))###########one generation
+    self.fitness = numpy.empty((c.numberOfGenerations+1, c.populationSize))###########one generation
     self.max = []########### stores max of generations
     self.currentgeneration = 0
     for i in range(0, (c.populationSize)):
@@ -39,9 +39,9 @@ class PARALLEL_HILL_CLIMBER:
       if (self.parents[i].fitness > self.children[i].fitness):
         self.parents[i] = self.children[i]
   
-  def AddBest(self, currentgeneration):###############################################
+  def AddBest(self):###############################################
     for i in self.parents:
-      self.fitness[currentgeneration][i] = -self.parents[i].fitness
+      self.fitness[self.currentgeneration][i] = -self.parents[i].fitness
     self.currentgeneration = self.currentgeneration + 1
     
     #for i in self.parents:
@@ -56,8 +56,8 @@ class PARALLEL_HILL_CLIMBER:
     #for j in range(c.numberofGenerations):
     #  self.max.append(self.fitness[j][0])
     print(self.fitness)
-    plt.plot(range(1, c.numberOfGenerations+1), self.fitness)
-    plt.xticks(range(1, c.numberOfGenerations+1))
+    plt.plot(range(0, c.numberOfGenerations+1), self.fitness)
+    plt.xticks(range(0, c.numberOfGenerations+1))
     plt.xlabel("Generation")
     plt.ylabel("Fitness")
     plt.title("Fitness Evolution")
@@ -79,6 +79,8 @@ class PARALLEL_HILL_CLIMBER:
     
   def Evolve(self):
     self.Evaluate(self.parents)
+    self.AddBest()
+    self.currentGeneration -= 1
       
     for currentGeneration in range(c.numberOfGenerations):
       self.Evolve_For_One_Generation()  
