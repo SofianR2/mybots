@@ -27,6 +27,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 phc.Show_Best()
 phc.GraphBest()
+graph3 = phc.max
 
 np.random.seed(4)
 random.seed(4)
@@ -34,6 +35,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 phc.Show_Best()
 phc.GraphBest()
+grpah4 = phc.max
 
 np.random.seed(5)
 random.seed(5)
@@ -41,9 +43,14 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 phc.Show_Best()
 phc.GraphBest()
+graph5 = phc.max
 
 plt.plot(graph1)
 plt.plot(graph2)
+plt.plot(graph3)
+plt.plot(graph4)
+plt.plot(graph5)
+
 plt.xticks(range(0, c.numberOfGenerations+1))
 plt.xlabel("Generation")
 plt.ylabel("Fitness")
