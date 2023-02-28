@@ -370,6 +370,11 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
+    mutation = random.choice(self.link_list)
+    mutation.x += 0.5
+    mutation.y += 0.5
+    mutation.z += 0.5
+    
   def Set_ID(self, nextAvailableID):
     self.myID = nextAvailableID
     
