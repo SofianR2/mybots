@@ -51,8 +51,8 @@ class PARALLEL_HILL_CLIMBER:
     self.max.append(-best.fitness)
     
   def GraphBest(self):#############################################
-    for i in self.fitness
-      for j in range(c.numberofGenerations)
+    for i in self.fitness:
+      for j in range(c.numberofGenerations):
         self.max[i].append(self.fitness[j][i])
       plt.plot(self.max,label='PHC')
       self.max = []
