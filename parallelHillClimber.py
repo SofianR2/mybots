@@ -43,7 +43,7 @@ class PARALLEL_HILL_CLIMBER:
     for i in self.parents:
       if (self.parents[i].fitness < best.fitness):
         best = self.parents[i]
-    self.max.append(best.fitness)
+    self.max.append(-best.fitness)
     
   def GraphBest(self):#############################################
      plt.plot(self.max,label='PHC')
@@ -70,11 +70,12 @@ class PARALLEL_HILL_CLIMBER:
       #self.parents[i].Start_Simulation("GUI")
       #self.parent.Evaluate("GUI")
 
-  def Print(self):
+  def Print(self):################################## CHANGE THIS TO PRINT FITNESS
     for i in self.parents:
-      print()
-      print(self.parents[i].fitness, self.children[i].fitness)
-      print()
+      pass
+      #print()
+      #print(self.parents[i].fitness, self.children[i].fitness)
+      #print()
       
   def Show_Best(self):
     best = self.parents[0]
