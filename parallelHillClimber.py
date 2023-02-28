@@ -3,6 +3,7 @@ import constants as c
 import copy
 import os
 import matplotlib.pyplot as plt
+import numpy
 
 class PARALLEL_HILL_CLIMBER:
   def __init__(self):
