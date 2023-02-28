@@ -35,7 +35,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 phc.Show_Best()
 phc.GraphBest()
-grpah4 = phc.max
+graph4 = phc.max
 
 np.random.seed(5)
 random.seed(5)
