@@ -45,7 +45,7 @@ class PARALLEL_HILL_CLIMBER:
         best = self.parents[i]
     self.max.append(best)
     
-  def GraphBest(self):
+  def GraphBest(self):#############################################
      plt.plot(self.max,label='PHC')
       
   
