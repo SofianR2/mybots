@@ -10,8 +10,9 @@ class PARALLEL_HILL_CLIMBER:
     os.system("del fitness*.txt")
     self.parents = {}
     self.nextAvailableID = 0
-    #self.fitness = numpy.zeros(c.numberofGenerations+1, c.populationSize)###########one generation
+    self.fitness = numpy.zeros(c.numberofGenerations, c.populationSize)###########one generation
     self.max = []########### stores max of generations
+    self.currentgeneration = 0
     for i in range(0, (c.populationSize)):
       self.parents[i] = SOLUTION(self.nextAvailableID)
       self.nextAvailableID += 1
@@ -37,7 +38,11 @@ class PARALLEL_HILL_CLIMBER:
       if (self.parents[i].fitness > self.children[i].fitness):
         self.parents[i] = self.children[i]
   
-  def AddBest(self):###############################################
+  def AddBest(self, currentgeneration):###############################################
+    for i in self.parents:
+      self.fitness[currentgeneration][i]
+    self.currentgeneration = self.currentgeneration + 1
+    
     for i in self.parents:
       best = self.parents[0]
     for i in self.parents:
@@ -56,7 +61,7 @@ class PARALLEL_HILL_CLIMBER:
     self.Evaluate(self.children)
     self.Print()
     self.Select()
-    self.AddBest()
+    self.AddBest(self.currentgeneration)
     
   def Evolve(self):
     self.Evaluate(self.parents)
