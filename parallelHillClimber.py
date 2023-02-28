@@ -57,6 +57,15 @@ class PARALLEL_HILL_CLIMBER:
     #  self.max.append(self.fitness[j][0])
     print(self.fitness)
     plt.plot(self.fitness,label='PHC')
+    plt.xlabel("Generation")
+    plt.ylabel("Fitness")
+    plt.title("Fitness Evolution")
+    
+    labels = []
+    for i in range(c.populationSize):
+      labels.append("Seed " + str(i + 1))
+    plt.legend(labels)
+    
     plt.show()      
   
   def Evolve_For_One_Generation(self):
