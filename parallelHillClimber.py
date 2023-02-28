@@ -16,7 +16,7 @@ class PARALLEL_HILL_CLIMBER:
     self.currentgeneration = 0
     for i in range(0, (c.populationSize)):
       self.parents[i] = SOLUTION(self.nextAvailableID)
-      if(i = 0):
+      if(i == 0):
         self.parents[0].Start_Simulation("GUI")
       self.nextAvailableID += 1
     
