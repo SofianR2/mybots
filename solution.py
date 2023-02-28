@@ -313,7 +313,7 @@ class SOLUTION:
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
       #print("name = " + str(sensor_number) + " jointName = " + str(joint))
       sensor_number = sensor_number + 1
-    self.num_sensors = numpy.sum(self.get_sensor)
+    self.num_sensors = int(numpy.sum(self.get_sensor))
     self.num_motors = len(self.joint_list)
 
       
@@ -321,7 +321,7 @@ class SOLUTION:
     
     #for currentRow in range(0, c.numSensorNeurons):##################
     print(self.num_sensors)
-    for currentRow in range(0, self.num_sensors+1):
+    for currentRow in range(0, self.num_sensors-1):
       for currentColumn in range(0, self.num_motors-1):
         #pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])#######
         #print(self.weights)
