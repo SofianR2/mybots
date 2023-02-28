@@ -93,6 +93,7 @@ class SOLUTION:
 
     print("TESTSTSTSTST")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+    print(self.link_list)
     
     ##############################################
     #self.get_sensor = []
