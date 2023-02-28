@@ -51,8 +51,12 @@ class PARALLEL_HILL_CLIMBER:
     self.max.append(-best.fitness)
     
   def GraphBest(self):#############################################
-     plt.plot(self.max,label='PHC')
-     plt.show()
+    for i in self.fitness
+      for j in range(c.numberofGenerations)
+        self.max[i].append(self.fitness[j][i])
+      plt.plot(self.max,label='PHC')
+      self.max = []
+    plt.show()
       
   
   def Evolve_For_One_Generation(self):
