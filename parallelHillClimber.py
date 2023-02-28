@@ -75,7 +75,7 @@ class PARALLEL_HILL_CLIMBER:
     self.Evaluate(self.children)
     self.Print()
     self.Select()
-    self.AddBest(self.currentgeneration)
+    self.AddBest()
     
   def Evolve(self):
     self.Evaluate(self.parents)
