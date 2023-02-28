@@ -78,7 +78,7 @@ class SOLUTION:
     self.num_sensors = 0
     self.num_motors = 0
     self.coordinates = []
-    self.link_list = []
+    #self.link_list = []
     self.added_links = []
     self.joint_list = []
     height_offset = 1
