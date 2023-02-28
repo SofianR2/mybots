@@ -47,6 +47,7 @@ class PARALLEL_HILL_CLIMBER:
     
   def GraphBest(self):#############################################
      plt.plot(self.max,label='PHC')
+     plt.show()
       
   
   def Evolve_For_One_Generation(self):
