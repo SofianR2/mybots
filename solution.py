@@ -91,7 +91,7 @@ class SOLUTION:
     z_offset = 0
     previous_child = 99
 
-
+    print("TESTSTSTSTST")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
     ##############################################
