@@ -373,8 +373,6 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    self.x += 10
-    
     #random.choice(self.link_list).x += 5
     #self.max += 1
     #c.numSensorNeurons += 1
