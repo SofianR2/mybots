@@ -370,7 +370,7 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    mutation = random.choice(self.link_list)
+    rndom.choice(self.link_list).x += 5
     mutation.x += 10
     mutation.y += 10
     mutation.z += 10
