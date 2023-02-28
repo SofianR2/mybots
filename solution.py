@@ -371,9 +371,9 @@ class SOLUTION:
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     mutation = random.choice(self.link_list)
-    mutation.x += 2
-    mutation.y += 2
-    mutation.z += 2
+    mutation.x += 10
+    mutation.y += 10
+    mutation.z += 10
     
   def Set_ID(self, nextAvailableID):
     self.myID = nextAvailableID
