@@ -74,7 +74,7 @@ class SOLUTION:
       self.get_sensor.append(0)
   
   def Create_Body(self):
-    self.get_sensor = []
+    #self.get_sensor = []
     self.num_sensors = 0
     self.num_motors = 0
     self.coordinates = []
@@ -95,7 +95,7 @@ class SOLUTION:
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
     ##############################################
-    self.get_sensor = []
+    #self.get_sensor = []
     #self.link_list = []
     #for j in range(self.max):
     #  self.link_list.append(LINK())
