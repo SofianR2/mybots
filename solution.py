@@ -95,10 +95,10 @@ class SOLUTION:
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
     ##############################################
-    self.get_sensor = []
-    self.link_list = []
-    for j in range(self.max):
-      self.link_list.append(LINK())
+    #self.get_sensor = []
+    #self.link_list = []
+    #for j in range(self.max):
+    #  self.link_list.append(LINK())
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
