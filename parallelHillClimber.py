@@ -55,6 +55,7 @@ class PARALLEL_HILL_CLIMBER:
     #for i in self.fitness:
     #for j in range(c.numberofGenerations):
     #  self.max.append(self.fitness[j][0])
+    print(self.fitness)
     plt.plot(self.fitness,label='PHC')
     plt.show()      
   
