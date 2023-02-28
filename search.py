@@ -2,6 +2,7 @@ from parallelHillClimber import PARALLEL_HILL_CLIMBER
 import os
 import numpy as np
 import random
+import matplotlib.pyplot as plt
 
 np.random.seed(1)
 random.seed(1)
