@@ -1,6 +1,7 @@
 from parallelHillClimber import PARALLEL_HILL_CLIMBER
 import os
 import numpy as np
+import random
 
 np.random.seed(1)
 random.seed(1)
