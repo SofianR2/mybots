@@ -42,8 +42,8 @@ class PARALLEL_HILL_CLIMBER:
       best = self.parents[0]
     for i in self.parents:
       if (self.parents[i].fitness < best.fitness):
-        best = self.parents[i].fitness
-    self.max.append(best)
+        best = self.parents[i]
+    self.max.append(best.fitness)
     
   def GraphBest(self):#############################################
      plt.plot(self.max,label='PHC')
