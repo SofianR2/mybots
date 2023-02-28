@@ -371,9 +371,9 @@ class SOLUTION:
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     random.choice(self.link_list).x += 5
-    self.max += 1
-    c.numSensorNeurons += 1
-    c.numMotorNeurons += 1
+    self.max -= 1
+    #c.numSensorNeurons += 1
+    #c.numMotorNeurons += 1
 
     
   def Set_ID(self, nextAvailableID):
