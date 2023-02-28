@@ -25,8 +25,8 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []
-    for j in range(self.max):
-      self.link_list.append(LINK())
+    #for j in range(self.max):
+    #  self.link_list.append(LINK())
     
     
   def Create_World(self):
@@ -313,7 +313,7 @@ class SOLUTION:
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint)
       #print("name = " + str(sensor_number) + " jointName = " + str(joint))
       sensor_number = sensor_number + 1
-    self.num_sensors = int(numpy.sum(self.get_sensor))
+    self.num_sensors = numpy.sum(self.get_sensor)
     self.num_motors = len(self.joint_list)
 
       
