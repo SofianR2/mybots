@@ -17,6 +17,13 @@ phc.Evolve()
 phc.Show_Best()
 phc.GraphBest()
 
+np.random.seed(3)
+random.seed(3)
+phc = PARALLEL_HILL_CLIMBER()
+phc.Evolve()
+phc.Show_Best()
+phc.GraphBest()
+
 plt.xticks(range(0, c.numberOfGenerations+1))
 plt.xlabel("Generation")
 plt.ylabel("Fitness")
