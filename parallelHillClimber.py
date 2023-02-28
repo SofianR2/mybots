@@ -60,17 +60,17 @@ class PARALLEL_HILL_CLIMBER:
     #print(self.fitness)
     #plt.plot(range(0, c.numberOfGenerations+1), self.fitness)
     plt.plot(self.max)
-    plt.xticks(range(0, c.numberOfGenerations+1))
-    plt.xlabel("Generation")
-    plt.ylabel("Fitness")
-    plt.title("Fitness Evolution")
+    #plt.xticks(range(0, c.numberOfGenerations+1))
+    #plt.xlabel("Generation")
+    #plt.ylabel("Fitness")
+    #plt.title("Fitness Evolution")
     
-    labels = []
-    for i in range(c.populationSize):
-      labels.append("Seed " + str(i + 1))
-    plt.legend(labels)
+    #labels = []
+    #for i in range(c.populationSize):
+    #  labels.append("Seed " + str(i + 1))
+    #plt.legend(labels)
     
-    plt.show()      
+    #plt.show()      
   
   def Evolve_For_One_Generation(self):
     self.Spawn()
