@@ -40,22 +40,24 @@ class PARALLEL_HILL_CLIMBER:
         self.parents[i] = self.children[i]
   
   def AddBest(self):###############################################
-    for i in self.parents:
-      self.fitness[self.currentgeneration][i] = -self.parents[i].fitness
-    self.currentgeneration = self.currentgeneration + 1
+    #for i in self.parents:
+    #  self.fitness[self.currentgeneration][i] = -self.parents[i].fitness
+    #self.currentgeneration = self.currentgeneration + 1
     
-    #for i in self.parents:
-    #  best = self.parents[0]
-    #for i in self.parents:
-    #  if (self.parents[i].fitness < best.fitness):
-    #    best = self.parents[i]
-    #self.max.append(-best.fitness)
+    for i in self.parents:
+      best = self.parents[0]
+    for i in self.parents:
+      if (self.parents[i].fitness < best.fitness):
+        best = self.parents[i]
+    self.max.append(-best.fitness)
     
   def GraphBest(self):#############################################
     #for i in self.fitness:
     #for j in range(c.numberofGenerations):
     #  self.max.append(self.fitness[j][0])
-    print(self.fitness)
+    
+    print(self.max)
+    #print(self.fitness)
     plt.plot(range(0, c.numberOfGenerations+1), self.fitness)
     plt.xticks(range(0, c.numberOfGenerations+1))
     plt.xlabel("Generation")
