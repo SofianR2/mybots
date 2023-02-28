@@ -41,7 +41,7 @@ class PARALLEL_HILL_CLIMBER:
   
   def AddBest(self, currentgeneration):###############################################
     for i in self.parents:
-      self.fitness[currentgeneration][i] = self.parents[i].fitness
+      self.fitness[currentgeneration][i] = -self.parents[i].fitness
     self.currentgeneration = self.currentgeneration + 1
     
     #for i in self.parents:
