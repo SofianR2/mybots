@@ -56,8 +56,8 @@ class PARALLEL_HILL_CLIMBER:
     #for j in range(c.numberofGenerations):
     #  self.max.append(self.fitness[j][0])
     print(self.fitness)
-    plt.plot(self.fitness)
-    plt.xticks(range(0, c.numberOfGenerations))
+    plt.plot(range(1, c.numberOfGenerations), self.fitness)
+    plt.xticks(range(1, c.numberOfGenerations))
     plt.xlabel("Generation")
     plt.ylabel("Fitness")
     plt.title("Fitness Evolution")
