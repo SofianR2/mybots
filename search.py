@@ -10,16 +10,16 @@ random.seed(1)
 phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 phc.Show_Best()
-phc.GraphBest()
-graph1 = phc.self.max
+#phc.GraphBest()
+graph1 = phc.max
 
 np.random.seed(2)
 random.seed(2)
 phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 phc.Show_Best()
-phc.GraphBest()
-graph2 = phc.self.max
+#phc.GraphBest()
+graph2 = phc.max
 
 #np.random.seed(3)
 #random.seed(3)
