@@ -11,7 +11,7 @@ class PARALLEL_HILL_CLIMBER:
     os.system("del fitness*.txt")
     self.parents = {}
     self.nextAvailableID = 0
-    self.fitness = numpy.zeros(c.numberofGenerations, c.populationSize)###########one generation
+    self.fitness = numpy.zeros(c.numberOfGenerations, c.populationSize)###########one generation
     self.max = []########### stores max of generations
     self.currentgeneration = 0
     for i in range(0, (c.populationSize)):
