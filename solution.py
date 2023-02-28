@@ -204,7 +204,7 @@ class SOLUTION:
           previous_direction = 1
           self.link_list[i].previous = 1
           self.SendSensor(link)
-          print(get_sensor)
+          print(self.get_sensor)
         
         if(direction == 2):#y direction
           #if(previous_child != p and i > 0):
@@ -247,7 +247,7 @@ class SOLUTION:
           previous_direction = 2
           self.link_list[i].previous = 2
           self.SendSensor(link)
-          print(get_sensor)
+          print(self.get_sensor)
           
         if(direction == 3):#z direction
           #if(previous_child != p and i > 0):
@@ -292,7 +292,7 @@ class SOLUTION:
           previous_direction = 3
           self.link_list[i].previous = 3
           self.SendSensor(link)
-          print(get_sensor)
+          print(self.get_sensor)
           
       if(i > 0):    
         previous_child = i
