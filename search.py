@@ -17,6 +17,18 @@ phc.Evolve()
 phc.Show_Best()
 phc.GraphBest()
 
+plt.xticks(range(0, c.numberOfGenerations+1))
+plt.xlabel("Generation")
+plt.ylabel("Fitness")
+plt.title("Fitness Evolution")
+
+labels = []
+for i in range(c.populationSize):
+  labels.append("Seed " + str(i + 1))
+plt.legend(labels)
+
+plt.show()      
+
 #for x in range(1, 6):
 #  os.system("python3 generate.py")
 #  os.system("python3 simulate.py")
