@@ -74,11 +74,11 @@ class SOLUTION:
       self.get_sensor.append(0)
   
   def Create_Body(self):
-    #self.get_sensor = []
+    self.get_sensor = []
     self.num_sensors = 0
     self.num_motors = 0
     self.coordinates = []
-    #self.link_list = []
+    self.link_list = []
     self.added_links = []
     self.joint_list = []
     height_offset = 1
@@ -91,15 +91,13 @@ class SOLUTION:
     z_offset = 0
     previous_child = 99
 
-    print("TESTSTSTSTST")
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
-    print(self.link_list)
     
     ##############################################
-    #self.get_sensor = []
-    #self.link_list = []
-    #for j in range(self.max):
-    #  self.link_list.append(LINK())
+    self.get_sensor = []
+    self.link_list = []
+    for j in range(self.max):
+      self.link_list.append(LINK())
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
@@ -205,7 +203,6 @@ class SOLUTION:
           previous_direction = 1
           self.link_list[i].previous = 1
           self.SendSensor(link)
-          print(self.get_sensor)
         
         if(direction == 2):#y direction
           #if(previous_child != p and i > 0):
@@ -248,7 +245,6 @@ class SOLUTION:
           previous_direction = 2
           self.link_list[i].previous = 2
           self.SendSensor(link)
-          print(self.get_sensor)
           
         if(direction == 3):#z direction
           #if(previous_child != p and i > 0):
@@ -293,7 +289,6 @@ class SOLUTION:
           previous_direction = 3
           self.link_list[i].previous = 3
           self.SendSensor(link)
-          print(self.get_sensor)
           
       if(i > 0):    
         previous_child = i
@@ -324,8 +319,6 @@ class SOLUTION:
 
     
     #for currentRow in range(0, c.numSensorNeurons):##################
-    print(self.num_sensors)
-    print(self.get_sensor)
     for currentRow in range(0, self.num_sensors-1):
       for currentColumn in range(0, self.num_motors-1):
         #pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])#######
