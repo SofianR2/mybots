@@ -319,7 +319,7 @@ class SOLUTION:
 
     
     #for currentRow in range(0, c.numSensorNeurons):##################
-    for currentRow in range(0, self.num_sensors-1):
+    for currentRow in range(0, int(self.num_sensors-1)):
       for currentColumn in range(0, self.num_motors-1):
         #pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])#######
         #print(self.weights)
