@@ -25,6 +25,8 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []   
+    for j in range(self.max):
+      self.link_list.append(LINK())
     
   def Create_World(self):
     length = self.length
@@ -94,8 +96,8 @@ class SOLUTION:
     ##############################################
     self.get_sensor = []
     self.link_list = []
-    for j in range(self.max):
-      self.link_list.append(LINK())
+    #for j in range(self.max):
+    #  self.link_list.append(LINK())
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
