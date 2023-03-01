@@ -67,10 +67,11 @@ class SOLUTION:
    
 
   def SendSensor(self, link):
-    if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
-      self.get_sensor.append(1)
-    else:
-      self.get_sensor.append(0)
+    if(len(self.get_sensor) < 4):
+      if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
+        self.get_sensor.append(1)
+      else:
+        self.get_sensor.append(0)
   
   def Create_Body(self):
     #self.get_sensor = []
