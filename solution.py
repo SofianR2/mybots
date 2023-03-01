@@ -79,9 +79,9 @@ class SOLUTION:
     self.added_links = []
     self.joint_list = []
     height_offset = 1
-    x = self.x
-    y = self.y
-    z = self.z + height_offset
+    x = link.x
+    y = link.y
+    z = link.z + height_offset
     joint_offset = 1
     width_offset = 0
     length_offset = 0
@@ -96,6 +96,10 @@ class SOLUTION:
     self.link_list = []
     for j in range(self.max):
       self.link_list.append(LINK())
+      if(j == 0):
+        self.link_list[j].x = self.x
+        self.link_list[j].x = self.y
+        self.link_list[j].x = self.z
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
