@@ -50,7 +50,7 @@ class SOLUTION:
       self.joint_list.append(jointName)
       
   def AddedLinks(self, name):
-    if(len(added_links) < self.max):
+    if(len(self.added_links) < self.max):
       self.added_links.append(name)
 
 
