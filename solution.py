@@ -371,6 +371,7 @@ class SOLUTION:
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     c.frequency += 1
+    print(c.frequency)
 
     
   def Set_ID(self, nextAvailableID):
