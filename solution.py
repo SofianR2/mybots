@@ -379,7 +379,6 @@ class SOLUTION:
     
     self.vx += 0.1
     self.vy += 0.1
-    #self.vz += 1
     
     #c.frequency += 1
     #print(c.frequency)
