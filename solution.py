@@ -370,11 +370,7 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    self.max+=1
-    self.num_sensors += 1
-    self.num_motors += 1
-    c.numSensorNeurons += 1
-    c.numMotorNeurons += 1
+    self.z + = 10
 
     
   def Set_ID(self, nextAvailableID):
