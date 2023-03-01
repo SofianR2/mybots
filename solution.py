@@ -46,11 +46,11 @@ class SOLUTION:
       time.sleep(0.01)
   
   def jointListAppend(self, jointName):
-    if(len(self.joint_list) < c.numMotorNeurons):
+    if(len(self.joint_list) < self.max-1):
       self.joint_list.append(jointName)
       
   def AddedLinks(self, name):
-    if(len(added_links) < self.max)):
+    if(len(added_links) < self.max):
       self.added_links.append(name)
 
 
