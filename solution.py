@@ -25,9 +25,9 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []   
-    self.vx = 1
-    self.vy = 1
-    self.vz = 1
+    self.vx = 0
+    self.vy = 0
+    self.vz = 0
     
   def Create_World(self):
     length = self.length
@@ -100,9 +100,9 @@ class SOLUTION:
     for j in range(self.max):
       self.link_list.append(LINK())
       if(j == 0):
-        #self.link_list[j].x = self.vx
-        #self.link_list[j].y = self.vy
-        self.link_list[j].z = self.vz
+        #self.link_list[j].x += self.vx
+        #self.link_list[j].y += self.vy
+        self.link_list[j].z += self.vz
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
@@ -377,9 +377,9 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    #self.vx += 1
-    #self.vy += 1
-    self.vz += 1
+    self.vx += 1
+    self.vy += 1
+    #self.vz += 1
     
     #c.frequency += 1
     #print(c.frequency)
