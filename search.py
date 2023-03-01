@@ -20,7 +20,7 @@ phc.Evolve()
 phc.Show_Best()
 phc.GraphBest()
 graph2 = phc.max
-'''
+
 np.random.seed(3)
 random.seed(3)
 phc = PARALLEL_HILL_CLIMBER()
@@ -62,7 +62,7 @@ for i in range(c.populationSize):
 plt.legend(labels)
 
 plt.show()      
-'''
+
 #for x in range(1, 6):
 #  os.system("python3 generate.py")
 #  os.system("python3 simulate.py")
