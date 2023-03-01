@@ -77,7 +77,7 @@ class SOLUTION:
     self.num_sensors = 0
     self.num_motors = 0
     self.coordinates = []
-    self.link_list = []
+    #self.link_list = []
     self.added_links = []
     self.joint_list = []
     height_offset = 1
@@ -95,8 +95,8 @@ class SOLUTION:
     
     ##############################################
     self.get_sensor = []
-    self.link_list = []
-    if(self.counter == 0):
+    #self.link_list = []
+    if(self.link_list == []):
       for j in range(self.max):
         self.link_list.append(LINK())
     self.counter+=1
