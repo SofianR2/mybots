@@ -137,7 +137,7 @@ class SOLUTION:
         parenty = self.link_list[p].y
         parentz = self.link_list[p].z
         #add and store newest link
-        AddedLinks(i)
+        self.AddedLinks(i)
         #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         z = 0
