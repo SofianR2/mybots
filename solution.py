@@ -370,7 +370,7 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    c.frequency += 10
+    c.frequency += 1
 
     
   def Set_ID(self, nextAvailableID):
