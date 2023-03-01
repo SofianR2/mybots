@@ -48,6 +48,11 @@ class SOLUTION:
   def jointListAppend(self, jointName):
     if(len(self.joint_list) < c.numMotorNeurons):
       self.joint_list.append(jointName)
+      
+  def AddedLinks(self, name):
+    if(len(added_links) < self.max)):
+      self.added_links.append(name)
+
 
   def SendSensor(self, link):
     if(len(self.get_sensor) < c.numSensorNeurons):
@@ -113,7 +118,7 @@ class SOLUTION:
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
         #add sensors based on color
         self.SendSensor(link)
-        self.added_links.append(i)
+        self.AddedLinks(i)
       else:
         #choose random parent link and add joint and link
         p = random.choice(self.added_links)
@@ -132,7 +137,7 @@ class SOLUTION:
         parenty = self.link_list[p].y
         parentz = self.link_list[p].z
         #add and store newest link
-        self.added_links.append(i)
+        AddedLinks(i)
         #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         z = 0
