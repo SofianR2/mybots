@@ -24,10 +24,7 @@ class SOLUTION:
     self.coordinates = []
     self.link_list = []
     self.added_links = []
-    self.joint_list = []
-    #for j in range(self.max):
-    #  self.link_list.append(LINK())
-    
+    self.joint_list = []   
     
   def Create_World(self):
     length = self.length
@@ -320,7 +317,6 @@ class SOLUTION:
 
     
     #for currentRow in range(0, c.numSensorNeurons):##################
-    print(self.num_sensors)
     for currentRow in range(0, self.num_sensors-1):
       for currentColumn in range(0, self.num_motors-1):
         #pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])#######
@@ -375,9 +371,6 @@ class SOLUTION:
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     random.choice(self.link_list).x += 5
-    self.max += 1
-    #c.numSensorNeurons += 1
-    #c.numMotorNeurons += 1
 
     
   def Set_ID(self, nextAvailableID):
