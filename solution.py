@@ -100,8 +100,8 @@ class SOLUTION:
     for j in range(self.max):
       self.link_list.append(LINK())
       if(j == 0):
-        #self.link_list[j].x += self.vx
-        self.link_list[j].y += self.vy
+        self.link_list[j].x += self.vx
+        #self.link_list[j].y += self.vy
         #self.link_list[j].z += self.vz
       
     for i, l in enumerate(self.link_list):
@@ -377,8 +377,8 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    self.vx += 0.05
-    self.vy += 0.05
+    self.vx += 0.1
+    self.vy += 0.1
     
     #c.frequency += 1
     #print(c.frequency)
