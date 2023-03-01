@@ -333,7 +333,7 @@ class SOLUTION:
         #print(self.num_sensors)
         #print(self.num_motors)
         print(self.weights)
-        pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow-1][currentColumn])
+        pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow][currentColumn-1])
     pyrosim.End()
     
   def Evaluate(self, directOrGUI):
