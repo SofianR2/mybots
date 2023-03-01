@@ -377,8 +377,8 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    self.vx += 0.1
-    self.vy += 0.1
+    self.vx += 1
+    self.vy += 1
     
     #c.frequency += 1
     #print(c.frequency)
