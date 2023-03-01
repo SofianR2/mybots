@@ -377,7 +377,7 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    c.dx += 0.05
+    c.dx += 0.0025
     self.vx += 1
     self.vy += 1
     
