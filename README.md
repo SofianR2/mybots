@@ -1,6 +1,7 @@
 Fitness Function: The fitness function simply has the robot move in the x direction.
 
 Morphospace: This body creates shapes by extending in either the x, y, or z direction from any previous links, allowing for many possible shapes and sizes. While the fitness function mostly allows for slow shimmying, it sometimes bounces when the figure is generated with legs/arms. 
+
 *Note my assignment 7 was incorrect as it did not allow for links to be generated from any part of the body, but this has since been fixed, allowing for generation from any previous link to create links with multiple child links. 
 
 The bodies are generated based on the direction the last body was generated, as it affects how the next joints need to be lined up. For instance, if moving in the same direction, the next joint will be offset by the full length of the body in that direction, while when changing directions, the next joint will be offset by the dimensions of the new link in the old direction plus the dimensions of the new link in the new direction (ex. offset x by x/2 when coming from the x direction and y by y/2 when going to the y direction). This will be more clearly shown in the diagram here:
