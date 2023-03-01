@@ -67,7 +67,7 @@ class SOLUTION:
   
   def jointListAppend(self, jointName):
     if(len(self.joint_list) < c.numMotorNeurons):
-      self.joint_list.append(new_joint_name)
+      self.joint_list.append(jointName)
 
     
     
