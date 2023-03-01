@@ -79,9 +79,9 @@ class SOLUTION:
     self.added_links = []
     self.joint_list = []
     height_offset = 1
-    x = link.x
-    y = link.y
-    z = link.z + height_offset
+    x = self.x
+    y = self.y
+    z = self.z + height_offset
     joint_offset = 1
     width_offset = 0
     length_offset = 0
@@ -109,9 +109,9 @@ class SOLUTION:
     for i, link in enumerate(self.link_list):
       if(i == 0):
         previous_direction = 0
-        parentx = self.x
-        parenty = self.y
-        parentz = self.z
+        parentx = link.x
+        parenty = link.y
+        parentz = link.z
       #print("Previous Direction: " + str(previous_direction))
       length = link.x
       width = link.y
