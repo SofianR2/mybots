@@ -75,8 +75,8 @@ class SOLUTION:
   
   def Create_Body(self):
     #self.get_sensor = []
-    self.num_sensors = 0
-    self.num_motors = 0
+    #self.num_sensors = 0
+    #self.num_motors = 0
     self.coordinates = []
     #self.link_list = []
     self.added_links = []
@@ -376,6 +376,7 @@ class SOLUTION:
   def Mutate(self):
     #randomRow = random.randint(0, c.numSensorNeurons-1)
     print(self.num_sensors)
+    print(self.weights)
     if(self.num_sensors == 1 or self.num_sensors == 0):
       randomRow = 0
     else:
