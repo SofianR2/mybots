@@ -374,7 +374,7 @@ class SOLUTION:
   def Mutate(self):
     #randomRow = random.randint(0, c.numSensorNeurons-1)
     print(self.num_sensors)
-    if(self.num_sensors = 1):
+    if(self.num_sensors == 1):
       randomRow = 0
     else:
       randomRow = random.randint(0, self.num_sensors-1)
