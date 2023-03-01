@@ -100,7 +100,7 @@ class SOLUTION:
     for j in range(self.max):
       self.link_list.append(LINK())
       if(j == 0):
-        self.link_list[j].x += self.vx
+        #self.link_list[j].x += self.vx
         self.link_list[j].y += self.vy
         #self.link_list[j].z += self.vz
       
