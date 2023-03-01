@@ -87,7 +87,7 @@ class SOLUTION:
     #for i, l in enumerate(self.link_list):
       #l.occupied = [0, 0, 0, 0, 0, 0]
 
-      self.joint_list = []  
+      #self.joint_list = []  
 
     for i, link in enumerate(self.link_list):
       if(i == 0):
