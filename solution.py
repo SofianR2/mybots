@@ -24,7 +24,10 @@ class SOLUTION:
     self.coordinates = []
     self.link_list = []
     self.added_links = []
-    self.joint_list = []   
+    self.joint_list = []
+    #for j in range(self.max):
+    #  self.link_list.append(LINK())
+    
     
   def Create_World(self):
     length = self.length
@@ -370,7 +373,12 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    random.choice(self.link_list).x += 5
+    #self.link_list.append(LINK())
+    
+    #random.choice(self.link_list).x += 5
+    #self.max += 1
+    #c.numSensorNeurons += 1
+    #c.numMotorNeurons += 1
 
     
   def Set_ID(self, nextAvailableID):
