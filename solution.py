@@ -25,9 +25,9 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []   
-    self.vx = 0
-    self.vy = 0
-    self.vz = 0
+    self.vx = 0.5
+    self.vy = 0.5
+    self.vz = 0.5
     
   def Create_World(self):
     length = self.length
