@@ -25,8 +25,6 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []
-    #for j in range(self.max):
-    #  self.link_list.append(LINK())
     
     
   def Create_World(self):
