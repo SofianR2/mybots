@@ -99,10 +99,10 @@ class SOLUTION:
     self.link_list = []
     for j in range(self.max):
       self.link_list.append(LINK())
-      if(j == 0):
-        self.link_list[j].x += self.vx
-        self.link_list[j].y += self.vy
-        self.link_list[j].z += self.vz
+      #if(j == 0):
+      self.link_list[j].x += self.vx
+      self.link_list[j].y += self.vy
+      self.link_list[j].z += self.vz
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
