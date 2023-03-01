@@ -73,13 +73,13 @@ class SOLUTION:
       self.get_sensor.append(0)
   
   def Create_Body(self):
-    self.get_sensor = []
+    #self.get_sensor = []
     #self.num_sensors = 0
     #self.num_motors = 0
-    self.coordinates = []
+    #self.coordinates = []
     #self.link_list = []
-    self.added_links = []
-    self.joint_list = []
+    #self.added_links = []
+    #self.joint_list = []
     height_offset = 1
     x = self.x
     y = self.y
