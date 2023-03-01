@@ -105,9 +105,9 @@ class SOLUTION:
     for i, link in enumerate(self.link_list):
       if(i == 0):
         previous_direction = 0
-        parentx = link.x
-        parenty = link.y
-        parentz = link.z
+        parentx = self.x
+        parenty = self.y
+        parentz = self.z
       #print("Previous Direction: " + str(previous_direction))
       length = link.x
       width = link.y
