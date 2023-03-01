@@ -379,8 +379,8 @@ class SOLUTION:
     if(self.num_sensors == 1 or self.num_sensors == 0):
       randomRow = 0
     else:
-      randomRow = random.randint(0, self.num_sensors-2)
-    randomColumn = random.randint(0, self.num_motors-2)
+      randomRow = random.randint(0, self.num_sensors-1)
+    randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     #self.link_list.append(LINK())
