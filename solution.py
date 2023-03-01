@@ -75,8 +75,8 @@ class SOLUTION:
   
   def Create_Body(self):
     #self.get_sensor = []
-    #self.num_sensors = 0
-    #self.num_motors = 0
+    self.num_sensors = 0
+    self.num_motors = 0
     self.coordinates = []
     #self.link_list = []
     self.added_links = []
