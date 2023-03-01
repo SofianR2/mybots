@@ -99,7 +99,7 @@ class SOLUTION:
     if(self.counter == 0):
       for j in range(self.max):
         self.link_list.append(LINK())
-    self.counter++
+    self.counter+=1
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
