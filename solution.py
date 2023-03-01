@@ -44,33 +44,10 @@ class SOLUTION:
     #while not os.path.exists("world.sdf"):##########
     while not os.path.exists("world" + str(self.myID) + ".sdf"):
       time.sleep(0.01)
-      
-  '''
-  def Directional_Cube(self, direction, new_joint_name, p, i):
-    if(direction == 1):
-      #check that we're not going back in the same direction
-      #move in direction
-      pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + length + jointTrueOffset, y, z], jointAxis = "0 1 0")  
-      self.joint_list.append(new_joint_name)
-      z = 0
-      pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-      if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
-        self.get_sensor.append(1)
-      else:
-        self.get_sensor.append(0)
-      
-    if(direction == 2):
-      pass
-    if(direction == 3):
-      pass    
-   '''
   
   def jointListAppend(self, jointName):
     if(len(self.joint_list) < c.numMotorNeurons):
       self.joint_list.append(jointName)
-
-    
-    
 
   def SendSensor(self, link):
     if(len(self.get_sensor) < c.numSensorNeurons):
@@ -107,8 +84,8 @@ class SOLUTION:
       for j in range(self.max):
         self.link_list.append(LINK())
       
-      for i, l in enumerate(self.link_list):
-        l.occupied = [0, 0, 0, 0, 0, 0]
+    for i, l in enumerate(self.link_list):
+      l.occupied = [0, 0, 0, 0, 0, 0]
 
       self.joint_list = []  
 
