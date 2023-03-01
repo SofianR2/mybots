@@ -11,7 +11,7 @@ The top section indicates how this robot can generate new links. As mentioned be
 The bottom section shows an example of evolution for this robot, where the initial link extends int the x direction while maintaining the ability to generate new links from any existing link. 
 
 
-Sensors are generated/assigned by keeping track of which links need sensors, in an list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question.
+Sensors are generated/assigned by keeping track of which links need sensors, in a list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question.
 
 Evolution: This robot evolves by extending its initial link in the X direction continuously. This is done in the mutation function within solution.py, which increments a constant called dx stored in the constants file. This variable is then added on to the initial link in create_body() every time the list of links is generated in a for loop, which ultimately increases the length of the first link as more generations pass. 
 
