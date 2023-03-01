@@ -6,7 +6,7 @@ Morphospace: This body creates shapes by extending in either the x, y, or z dire
 
 The bodies are generated based on the direction the last body was generated, as it affects how the next joints need to be lined up. For instance, if moving in the same direction, the next joint will be offset by the full length of the body in that direction, while when changing directions, the next joint will be offset by the dimensions of the new link in the old direction plus the dimensions of the new link in the new direction (ex. offset x by x/2 when coming from the x direction and y by y/2 when going to the y direction). This will be more clearly shown in the diagram here:
 
-![image](https://user-images.githubusercontent.com/103147652/222053965-83fdb0cf-8be2-4a09-a07c-3af50b8a6d58.png)
+![image](https://user-images.githubusercontent.com/103147652/222056534-330cad46-0888-4f64-8b78-a9d5d93e0fb2.png)
 The top section indicates how this robot can generate new links. As mentioned before, it extends in the x, y, and z directions and is able to generate new links from any of the existing links. 
 The bottom section shows an example of evolution for this robot, where the initial link extends int the x direction while maintaining the ability to generate new links from any existing link. 
 
