@@ -384,7 +384,7 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     print("randomRow " + str(randomRow))
     print("randomColumn " + str(randomColumn))
-    self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
+    self.weights[randomRow-1, randomColumn] =  random.random() * 2 - 1
     
     #self.link_list.append(LINK())
     
