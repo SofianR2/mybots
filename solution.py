@@ -332,8 +332,8 @@ class SOLUTION:
         #print(currentColumn)
         #print(self.num_sensors)
         #print(self.num_motors)
-        print("AAAAAAAAAAAAAAAA" + str(currentRow))
-        print("CCCCCCCCCCCCCCCCC" + str(currentColumn))
+        #print("AAAAAAAAAAAAAAAA" + str(currentRow))
+        #print("CCCCCCCCCCCCCCCCC" + str(currentColumn))
         pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow-2][currentColumn-2])
     pyrosim.End()
     
@@ -381,6 +381,8 @@ class SOLUTION:
     else:
       randomRow = random.randint(0, self.num_sensors-1)
     randomColumn = random.randint(0, self.num_motors-1)
+    print("randomRow " + str(randomRow))
+    print("randomColumn " + str(randomColumn))
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     #self.link_list.append(LINK())
