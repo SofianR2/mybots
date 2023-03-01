@@ -25,9 +25,9 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []   
-    self.vx = 0.5
-    self.vy = 0.5
-    self.vz = 0.5
+    self.vx = 0.1
+    self.vy = 0.1
+    self.vz = 0.1
     
   def Create_World(self):
     length = self.length
@@ -377,8 +377,8 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    self.vx += 1
-    self.vy += 1
+    self.vx += 0.1
+    self.vy += 0.1
     #self.vz += 1
     
     #c.frequency += 1
