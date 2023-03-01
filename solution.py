@@ -24,10 +24,7 @@ class SOLUTION:
     self.coordinates = []
     self.link_list = []
     self.added_links = []
-    self.joint_list = []
-    for j in range(self.max):
-      self.link_list.append(LINK())
-    
+    self.joint_list = []   
     
   def Create_World(self):
     length = self.length
@@ -74,11 +71,11 @@ class SOLUTION:
       self.get_sensor.append(0)
   
   def Create_Body(self):
-    #self.get_sensor = []
-    #self.num_sensors = 0
-    #self.num_motors = 0
+    self.get_sensor = []
+    self.num_sensors = 0
+    self.num_motors = 0
     self.coordinates = []
-    #self.link_list = []
+    self.link_list = []
     self.added_links = []
     self.joint_list = []
     height_offset = 1
@@ -95,10 +92,10 @@ class SOLUTION:
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
     ##############################################
-    #self.get_sensor = []
-    #self.link_list = []
-    #for j in range(self.max):
-    #  self.link_list.append(LINK())
+    self.get_sensor = []
+    self.link_list = []
+    for j in range(self.max):
+      self.link_list.append(LINK())
       
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
@@ -204,7 +201,6 @@ class SOLUTION:
           previous_direction = 1
           self.link_list[i].previous = 1
           self.SendSensor(link)
-          print(self.get_sensor)
         
         if(direction == 2):#y direction
           #if(previous_child != p and i > 0):
@@ -247,7 +243,6 @@ class SOLUTION:
           previous_direction = 2
           self.link_list[i].previous = 2
           self.SendSensor(link)
-          print(self.get_sensor)
           
         if(direction == 3):#z direction
           #if(previous_child != p and i > 0):
@@ -292,7 +287,6 @@ class SOLUTION:
           previous_direction = 3
           self.link_list[i].previous = 3
           self.SendSensor(link)
-          print(self.get_sensor)
           
       if(i > 0):    
         previous_child = i
@@ -323,7 +317,6 @@ class SOLUTION:
 
     
     #for currentRow in range(0, c.numSensorNeurons):##################
-    print(self.num_sensors-1)
     for currentRow in range(0, self.num_sensors-1):
       for currentColumn in range(0, self.num_motors-1):
         #pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + c.numSensorNeurons, weight = self.weights[currentRow][currentColumn])#######
@@ -332,9 +325,7 @@ class SOLUTION:
         #print(currentColumn)
         #print(self.num_sensors)
         #print(self.num_motors)
-        #print("AAAAAAAAAAAAAAAA" + str(currentRow))
-        #print("CCCCCCCCCCCCCCCCC" + str(currentColumn))
-        pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow-3][currentColumn-3])
+        pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow][currentColumn])
     pyrosim.End()
     
   def Evaluate(self, directOrGUI):
@@ -375,23 +366,11 @@ class SOLUTION:
     
   def Mutate(self):
     #randomRow = random.randint(0, c.numSensorNeurons-1)
-    print(self.num_sensors)
-    print(self.weights)
-    if(self.num_sensors == 1 or self.num_sensors == 0):
-      randomRow = 0
-    else:
-      randomRow = random.randint(0, self.num_sensors-1)
+    randomRow = random.randint(0, self.num_sensors-1)
     randomColumn = random.randint(0, self.num_motors-1)
-    print("randomRow " + str(randomRow))
-    print("randomColumn " + str(randomColumn))
-    self.weights[randomRow-1, randomColumn] =  random.random() * 2 - 1
+    self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    #self.link_list.append(LINK())
-    
-    #random.choice(self.link_list).x += 5
-    #self.max += 1
-    #c.numSensorNeurons += 1
-    #c.numMotorNeurons += 1
+    random.choice(self.link_list).x += 5
 
     
   def Set_ID(self, nextAvailableID):
