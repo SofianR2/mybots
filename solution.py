@@ -5,6 +5,7 @@ import random
 import time
 import constants as c
 from link import LINK
+from joint import JOINT
 
 class SOLUTION:
   def __init__(self, nextAvailableID):
