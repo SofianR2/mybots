@@ -55,7 +55,15 @@ class SOLUTION:
     else:
       self.get_sensor.append(0)
       
-  def BuildBody(self:
+  def BuildBody(self):
+    for i, link in enumerate(self.link_list):
+      pyrosim.Send_Cube(name = str(i), pos = [link.xpos, link.ypos, link.zpos], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+      
+    for joint in self.joint_list:
+      joint.Send_Joint(joint)
+      
+      
+    
     for i, link in enumerate(self.link_list):
       if(i == 0):#IF ON FIRST LINK, SET PARENT DIMENSIONS TO SELF
         parentx = link.x
