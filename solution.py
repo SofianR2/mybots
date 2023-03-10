@@ -65,25 +65,42 @@ class SOLUTION:
       joint.Send_Joint(joint)
       
   def AddNewLinkAndJoint(self):
-    #create link to be added
-    self.link_list.append(LINK())
-    current_link = link_list[len(link_list) - 1]
-    self.added_links.append(len(added_links)+1)
+    #pick random direction to move in
+    direction = random.randint(1,3)
 
-    
     #pick parent from existing body
     p = random.choice(self.added_links)
     
-    #pick random direction to move in
-    direction = random.randint(1,3)
+    #check to make sure we can move in that direction and change it otherwise
+    while(sum(self.link_list[p].occupied) == 3):            #check if parent is full
+          p = random.choice(self.added_links)
+        
+    #once everything with parent is set, then add the new link to the added link list
+    self.link_list.append(LINK())
+    self.added_links.append(len(added_links))
+    c = len(added_links) - 1
+
+        
+    while(self.link_list[p].occupied[direction-1] != 0):    #check if direction is open
+      direction = random.randint(1,3)
+    self.link_list[p].occupied[direction-1] = 1
+    self.link_list[c].occupied[direction+2] = 1
     
+    #set parent xyz
+    parentx = self.link_list[p].x
+    parenty = self.link_list[p].y
+    parentz = self.link_list[p].z
+        
     #update previous_direction for child accordingly
+    previous_direction = self.link_list[p].previous
+    
+    #udpate previous direction
+    self.link_list["insert current link"].previous = 1
     
 
 
     
     
-    #add the link
 
     
       
