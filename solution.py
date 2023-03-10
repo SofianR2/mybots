@@ -29,6 +29,7 @@ class SOLUTION:
     
     #Create initial link
     self.link_list.append(LINK())
+    self.added_links.append(0)
 
     
 
@@ -63,13 +64,28 @@ class SOLUTION:
     for joint in self.joint_list:
       joint.Send_Joint(joint)
       
-      
+  def AddNewLinkAndJoint(self):
+    #create link to be added
+    self.link_list.append(LINK())
+    current_link = link_list[len(link_list) - 1]
+    self.added_links.append(len(added_links)+1)
+
     
-    for i, link in enumerate(self.link_list):
-      if(i == 0):#IF ON FIRST LINK, SET PARENT DIMENSIONS TO SELF
-        parentx = link.x
-        parenty = link.y
-        parentz = link.z
+    #pick parent from existing body
+    p = random.choice(self.added_links)
+    
+    #pick random direction to move in
+    direction = random.randint(1,3)
+    
+    #update previous_direction for child accordingly
+    
+
+
+    
+    
+    #add the link
+
+    
       
       
   
@@ -163,7 +179,8 @@ class SOLUTION:
 
         if(i > 0 and p!= 0):
           previous_direction = self.link_list[p].previous
-          
+        
+        '''
         if(direction == 1):#x direction
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
@@ -251,6 +268,7 @@ class SOLUTION:
           previous_direction = 3
           self.link_list[i].previous = 3
           self.SendSensor(link)
+          '''
           
       if(i > 0):    
         previous_child = i
