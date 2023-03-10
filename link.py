@@ -25,4 +25,4 @@ class LINK:
     self.ypos
     self.zpos
     self.occupied = [0, 0, 0, 0, 0, 0]
-    self.previous = 99
+    self.previous = 0
