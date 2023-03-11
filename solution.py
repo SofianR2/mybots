@@ -183,11 +183,8 @@ class SOLUTION:
   
   def Create_Body(self):##########################################################
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
-    #self.BuildBody()
-    pyrosim.Send_Cube(name = str(0), pos = [0, 0, 0], size = [1, 1, 1], color =   '    <color rgba="0.0 0.0 1.0 1.0"/>', cname =  '<material name="Blue">')
-
-
-    
+    self.BuildBody()
+    #pyrosim.Send_Cube(name = str(0), pos = [0, 0, 0], size = [1, 1, 1], color =   '    <color rgba="0.0 0.0 1.0 1.0"/>', cname =  '<material name="Blue">')
     print("AAAAAAAAAAAAAAAAAAAAAAAAA")
     pyrosim.End()
 
