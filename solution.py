@@ -68,6 +68,7 @@ class SOLUTION:
       print("Link Name = " + str(i))
       
     for joint in self.joint_list:
+      print(self.joint_list)
       joint.Send_Joint(joint)
     
       
