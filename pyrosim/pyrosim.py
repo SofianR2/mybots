@@ -90,7 +90,7 @@ def Prepare_Link_Dictionary(bodyID):
         
         ################print(linkNamesToIndices)
 
-        print("LOOK HERE LINKNAME = " + linkName)
+        #print("LOOK HERE LINKNAME = " + linkName)
         linkNamesToIndices[linkName] = jointIndex
 
         if jointIndex==0:
