@@ -266,6 +266,7 @@ class SOLUTION:
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     self.AddNewLinkAndJoint()
+    print("Mutation Complete")
 
     
     #Add joint and extend one link
