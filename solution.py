@@ -30,11 +30,8 @@ class SOLUTION:
     #Create initial link
     self.link_list.append(LINK())
     self.added_links.append(0)
-
     
-
-    
-  def Create_World(self):
+  def Create_World(self):#########################################################
     length = self.length
     width = self.width
     height = self.height
@@ -51,13 +48,13 @@ class SOLUTION:
     while not os.path.exists("world" + str(self.myID) + ".sdf"):
       time.sleep(0.01)
 
-  def SendSensor(self, link): #Checks given link's color, adds to get_sensor
+  def SendSensor(self, link): ##################################################### Checks given link's color, adds to get_sensor
     if(link.color ==  '    <color rgba="0.0 0.0 1.0 1.0"/>'):
       self.get_sensor.append(1)
     else:
       self.get_sensor.append(0)
       
-  def BuildBody(self):
+  def BuildBody(self):#############################################################
     for i, link in enumerate(self.link_list):
       pyrosim.Send_Cube(name = str(i), pos = [link.xpos, link.ypos, link.zpos], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
       self.SendSensor(link)
@@ -65,15 +62,13 @@ class SOLUTION:
     for joint in self.joint_list:
       joint.Send_Joint(joint)
       
-  def AddNewLinkAndJoint(self):
+  def AddNewLinkAndJoint(self):####################################################
     #variables (MIGHT TAKE THESE OUT AND PUT IN CREATE BODY)
     height_offset = 1
     x = self.x
     y = self.y
     z = self.z + height_offset
-    
-    
-    
+
     #pick random direction to move in
     direction = random.randint(1,3)
 
@@ -88,7 +83,6 @@ class SOLUTION:
     self.link_list.append(LINK())
     self.added_links.append(len(added_links))
     c = len(added_links) - 1
-
         
     while(self.link_list[p].occupied[direction-1] != 0):    #check if direction is open
       direction = random.randint(1,3)
@@ -163,7 +157,7 @@ class SOLUTION:
     
 
   
-  def Create_Body(self):
+  def Create_Body(self):##############################################################
     self.get_sensor = []
     self.num_sensors = 0
     self.num_motors = 0
