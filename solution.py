@@ -92,19 +92,61 @@ class SOLUTION:
     parentz = self.link_list[p].z
         
     #update previous_direction for child accordingly
-    previous_direction = self.link_list[p].previous
+    if(c > 0 and p!= 0):
+          previous_direction = self.link_list[p].previous
+        
+    new_joint_name = str(p) + "_" + str(i)
+    z = 0
+        
+    #DEFINE JOINTS
+    self.joint_list.append[JOINT()]
+    current_joint = self.joint_list.append[len(joint_list) - 1]
+    print(current_joint)
     
-    #udpate previous direction
-    self.link_list["insert current link"].previous = 1
-    
+    if(direction == 1):#x direction
+          if(p == 0):
+            jointTrueOffset = parentx/2 - parentx
+            otherOffset = parentx/2
+            otherOffset2 = parenty/2
+            otherOffset3 = parentz/2
+            z = 1
+          if(previous_direction == 1 or previous_direction == 0):#coming from x
+            self.joint_list.append[len(joint_list) - 1]
+            pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x + parentx + jointTrueOffset, y, z], jointAxis = "0 1 0")  
+            self.joint_list.append(new_joint_name)
+            z = 0
+            pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+          if(previous_direction == 2):#coming from y
 
-
-    
-    
-
-    
+            pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x+parentx/2 + jointTrueOffset + otherOffset, y+parenty/2 - otherOffset2, z], jointAxis = "0 1 0")  
+            self.joint_list.append(new_joint_name)
+            z = 0
+            pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+          if(previous_direction == 3):#coming from z
+            #print("zx")
+            pyrosim.Send_Joint(name = new_joint_name, parent= str(p), child = str(i), type = "revolute", position = [x+parentx/2 + jointTrueOffset + otherOffset, y, z+parentz/2 - otherOffset3], jointAxis = "0 1 0")  
+            self.joint_list.append(new_joint_name)
+            z = 0
+            pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
+          previous_direction = 1
+          self.link_list[i].previous = 1
+          self.SendSensor(link)
+        
+        
       
-      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #udpate previous direction PUT THIS AFTER ACTUALLY PLACING JOINTS
+    self.link_list[c].previous = 1
+    
+
   
   def Create_Body(self):
     self.get_sensor = []
