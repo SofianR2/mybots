@@ -21,8 +21,8 @@ class LINK:
     #self.x = 1
     #self.y = 1
     #self.z= 1
-    self.xpos
-    self.ypos
-    self.zpos
+    self.xpos = 0
+    self.ypos = 0
+    self.zpos = 0
     self.occupied = [0, 0, 0, 0, 0, 0]
     self.previous = 0
