@@ -90,6 +90,7 @@ class SOLUTION:
     self.link_list[c].occupied[direction+2] = 1
     
     #set parent xyz
+    previous_direction = 0
     parentx = self.link_list[p].x
     parenty = self.link_list[p].y
     parentz = self.link_list[p].z
