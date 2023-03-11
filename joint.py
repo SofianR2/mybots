@@ -7,6 +7,7 @@ import constants as c
 
 class JOINT:
   def __init__(self):
+    self.name
     self.parent
     self.child
     self.xpos
