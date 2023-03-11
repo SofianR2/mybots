@@ -82,7 +82,7 @@ class SOLUTION:
     #once everything with parent is set, then add the new link to the added link list
     self.link_list.append(LINK())
     self.added_links.append(len(self.added_links))
-    c = len(added_links) - 1
+    c = len(self.added_links) - 1
         
     while(self.link_list[p].occupied[direction-1] != 0):    #check if direction is open
       direction = random.randint(1,3)
