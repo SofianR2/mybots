@@ -69,7 +69,7 @@ class SOLUTION:
       
     for joint in self.joint_list:
       print(self.joint_list)
-      joint.Send_Joint(joint)
+      joint.Send_Joint()
     
       
   def AddNewLinkAndJoint(self):####################################################
