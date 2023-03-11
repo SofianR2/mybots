@@ -26,3 +26,8 @@ class LINK:
     self.zpos = 0
     self.occupied = [0, 0, 0, 0, 0, 0]
     self.previous = 0
+  
+  def Update_Link_Pos(self, x, y, z):
+    self.xpos = x
+    self.ypos = y
+    self.zpos = z
