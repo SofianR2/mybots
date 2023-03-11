@@ -12,6 +12,7 @@ class SOLUTION:
     self.myID = nextAvailableID
     self.weights = numpy.random.rand(c.numSensorNeurons, c.numMotorNeurons)
     self.weights = self.weights * 2 - 1
+    pritn(self.weights)
     self.length = 1
     self.width = 1
     self.height = 1
