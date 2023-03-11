@@ -64,9 +64,10 @@ class SOLUTION:
     x = self.x
     y = self.y
     z = self.z + height_offset
-    otheroffset = 0
-    otheroffset2 = 0
-    otheroffset3 = 0
+    jointTrueOffset = 0
+    otherOffset = 0
+    otherOffset2 = 0
+    otherOffset3 = 0
 
     #pick random direction to move in
     direction = random.randint(1,3)
