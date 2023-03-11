@@ -254,11 +254,12 @@ class SOLUTION:
     
     
   def Mutate(self):
-    #randomRow = random.randint(0, c.numSensorNeurons-1)
+    randomRow = random.randint(0, c.numSensorNeurons-1)
     print("Num sensors: " + str(self.num_sensors))
-    randomRow = random.randint(0, self.num_sensors)
+    #randomRow = random.randint(0, self.num_sensors)
     #randomRow = random.randint(0, self.num_sensors-1)
-    randomColumn = random.randint(0, self.num_motors-1)
+    #randomColumn = random.randint(0, self.num_motors-1)
+    randomColumn = random.randint(0, c.numMotorNeurons-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
     self.AddNewLinkAndJoint()
