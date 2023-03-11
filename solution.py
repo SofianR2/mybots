@@ -259,7 +259,7 @@ class SOLUTION:
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    #self.AddNewLinkAndJoint()
+    self.AddNewLinkAndJoint()
 
     
     #Add joint and extend one link
