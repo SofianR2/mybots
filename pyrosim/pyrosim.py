@@ -72,7 +72,7 @@ def Prepare_Link_Dictionary(bodyID):
 
     print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
     print(p.getNumJoints(bodyID))
-    for jointIndex in range( 0 , p.getNumJoints(bodyID)+1 ):
+    for jointIndex in range( 0 , p.getNumJoints(bodyID)):
         
 
         jointInfo = p.getJointInfo( bodyID , jointIndex )
