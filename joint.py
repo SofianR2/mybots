@@ -15,5 +15,5 @@ class JOINT:
     self.axis
   
   def Send_Joint(self):
-  pyrosim.Send_Joint(name = new_joint_name, parent= str(self.parent), child = str(self.child), type = "revolute", position = [self.xpos, self.ypos, self.zpos], jointAxis = "0 1 0")  
+    pyrosim.Send_Joint(name = new_joint_name, parent= str(self.parent), child = str(self.child), type = "revolute", position = [self.xpos, self.ypos, self.zpos], jointAxis = "0 1 0")  
 
