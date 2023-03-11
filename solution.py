@@ -96,7 +96,7 @@ class SOLUTION:
         
     #update previous_direction for child accordingly
     if(c > 0 and p!= 0):
-          previous_direction = self.link_list[p].previous
+      previous_direction = self.link_list[p].previous
         
     new_joint_name = str(p) + "_" + str(c)
     z = 0
