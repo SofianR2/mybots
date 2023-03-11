@@ -6,6 +6,7 @@ solutionID = sys.argv[2]
 simulation = SIMULATION(directOrGUI, solutionID)
 print("SIMULATION DONE")
 simulation.Run()
+print("FINISHED RUNNING")
 simulation.Get_Fitness()
 
 
