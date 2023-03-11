@@ -43,7 +43,7 @@ def End_Model():
     model.Save_End_Tag(f)
 
 def Get_Touch_Sensor_Value_For_Link(linkName):
-    print(linkName)
+    #print(linkName)
 
     touchValue = -1.0
     
