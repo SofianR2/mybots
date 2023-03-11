@@ -171,7 +171,7 @@ class SOLUTION:
   
   def Create_Body(self):##########################################################
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
-    self.AddNewLinkAndJoint()
+    self.BuildBody()
     pyrosim.End()
 
   def Create_Brain(self):
@@ -238,6 +238,9 @@ class SOLUTION:
     randomRow = random.randint(0, self.num_sensors-1)
     randomColumn = random.randint(0, self.num_motors-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
+    
+    self.AddNewLinkAndJoint()
+
     
     #Add joint and extend one link
 
