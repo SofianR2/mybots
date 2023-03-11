@@ -51,6 +51,7 @@ class SOLUTION:
       self.get_sensor.append(0)
       
   def BuildBody(self):#############################################################
+    print(self.link_list)
     for i, link in enumerate(self.link_list):
       pyrosim.Send_Cube(name = str(i), pos = [link.xpos, link.ypos, link.zpos], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
       self.SendSensor(link)
