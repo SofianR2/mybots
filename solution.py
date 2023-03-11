@@ -157,7 +157,7 @@ class SOLUTION:
             self.link_list[i].previous = 3
   
   def Create_Body(self):##########################################################
-    self.get_sensor = []
+    #self.get_sensor = []
     #self.num_sensors = 0
     #self.num_motors = 0
     #self.link_list = []
@@ -167,8 +167,8 @@ class SOLUTION:
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
     ##############################################
-    self.get_sensor = []
-    self.link_list = []
+    #self.get_sensor = []
+    #self.link_list = []
     
     #OLD ADDING LINKS TO LINK LIST
     #for j in range(self.max):
