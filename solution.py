@@ -211,10 +211,10 @@ class SOLUTION:
     self.num_motors = len(self.joint_list)
   
     #print("DDDDDDDDDDDDDDDDDDDD")
-    for currentRow in range(0, c.numSensorNeurons):##################
-    #for currentRow in range(0, self.num_sensors):
-      #for currentColumn in range(0, self.num_motors):
-      for currentColumn in range(0, c.numMotorNeurons):
+    #for currentRow in range(0, c.numSensorNeurons):##################
+    for currentRow in range(0, self.num_sensors):
+      #for currentColumn in range(0, c.numMotorNeurons):
+      for currentColumn in range(0, self.num_motors):
         pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow-1][currentColumn])
     #print("EEEEEEEEEEEEEEEEEEEEEEEEEEEE")
     pyrosim.End()
