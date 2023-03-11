@@ -64,6 +64,7 @@ def Get_Touch_Sensor_Value_For_Link(linkName):
     return touchValue
 
 def Prepare_Link_Dictionary(bodyID):
+    print("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ")
 
     global linkNamesToIndices
 
