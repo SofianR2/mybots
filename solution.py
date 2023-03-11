@@ -126,47 +126,47 @@ class SOLUTION:
             self.link_list[c].Update_Link_Pos(x+length/2, y, z)
           self.link_list[i].previous = 1
           
-  if(direction == 2):#y direction
-          if(p == 0):
-            jointTrueOffset = parenty/2 - parenty
-            otherOffset = parentx/2
-            otherOffset2 = parenty/2
-            otherOffset3 = parentz/2
-            z = 1
-          if(previous_direction == 2 or previous_direction == 0):#coming from y
-            self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty+jointTrueOffset, z))
-            z = 0
-            self.link_list[c].Update_Link_Pos(x, y+width/2, z)
-          if(previous_direction == 1):#coming from x
-            self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y + parenty/2 + jointTrueOffset + otherOffset2, z))
-            z = 0
-            self.link_list[c].Update_Link_Pos(x, y+width/2, z)
-          if(previous_direction == 3):#coming from z
-            self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2 - otherOffset3))
-            z = 0
-            self.link_list[c].Update_Link_Pos(x, y+width/2, z)
-          self.link_list[i].previous = 2
-
-  if(direction == 3):#z direction
+    if(direction == 2):#y direction
             if(p == 0):
-              jointTrueOffset = parentz/2 - parentz
+              jointTrueOffset = parenty/2 - parenty
               otherOffset = parentx/2
               otherOffset2 = parenty/2
               otherOffset3 = parentz/2
               z = 1
-            if(previous_direction == 3 or previous_direction == 0):#coming from z
-              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y, z+parentz+jointTrueOffset))
+            if(previous_direction == 2 or previous_direction == 0):#coming from y
+              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty+jointTrueOffset, z))
               z = 0
-              self.link_list[c].Update_Link_Pos(x, y, z+height/2)
+              self.link_list[c].Update_Link_Pos(x, y+width/2, z)
             if(previous_direction == 1):#coming from x
-              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y, z + parentz/2 + jointTrueOffset + otherOffset3))
+              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y + parenty/2 + jointTrueOffset + otherOffset2, z))
               z = 0
-              self.link_list[c].Update_Link_Pos(x, y, z+height/2)
-            if(previous_direction == 2):#coming from y
-              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty/2 - otherOffset2, z + parentz/2 + jointTrueOffset + otherOffset3))
+              self.link_list[c].Update_Link_Pos(x, y+width/2, z)
+            if(previous_direction == 3):#coming from z
+              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2 - otherOffset3))
               z = 0
-              self.link_list[c].Update_Link_Pos(x, y, z+height/2)
-            self.link_list[i].previous = 3
+              self.link_list[c].Update_Link_Pos(x, y+width/2, z)
+            self.link_list[i].previous = 2
+
+    if(direction == 3):#z direction
+              if(p == 0):
+                jointTrueOffset = parentz/2 - parentz
+                otherOffset = parentx/2
+                otherOffset2 = parenty/2
+                otherOffset3 = parentz/2
+                z = 1
+              if(previous_direction == 3 or previous_direction == 0):#coming from z
+                self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y, z+parentz+jointTrueOffset))
+                z = 0
+                self.link_list[c].Update_Link_Pos(x, y, z+height/2)
+              if(previous_direction == 1):#coming from x
+                self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y, z + parentz/2 + jointTrueOffset + otherOffset3))
+                z = 0
+                self.link_list[c].Update_Link_Pos(x, y, z+height/2)
+              if(previous_direction == 2):#coming from y
+                self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty/2 - otherOffset2, z + parentz/2 + jointTrueOffset + otherOffset3))
+                z = 0
+                self.link_list[c].Update_Link_Pos(x, y, z+height/2)
+              self.link_list[i].previous = 3
   
   def Create_Body(self):##########################################################
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
