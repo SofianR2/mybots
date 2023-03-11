@@ -172,6 +172,7 @@ class SOLUTION:
   def Create_Body(self):##########################################################
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     self.BuildBody()
+    print("AAAAAAAAAAAAAAAAAAAAAAAAA")
     pyrosim.End()
 
   def Create_Brain(self):
