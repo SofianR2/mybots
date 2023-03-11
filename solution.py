@@ -178,6 +178,7 @@ class SOLUTION:
   def Create_Brain(self):
     sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
+    print("BBBBBBBBBBBBBBBBBBB")
     
     for i, link in enumerate(self.link_list):
       if(link.has_link == 1):
@@ -185,6 +186,7 @@ class SOLUTION:
         #print("name = " + str(sensor_number) + " linkName = " + str(i))
         sensor_number = sensor_number + 1
         
+    print("CCCCCCCCCCCCCCCC")    
     for i, joint in enumerate(self.joint_list):
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint.name)
       #print("name = " + str(sensor_number) + " jointName = " + str(joint))
@@ -192,10 +194,12 @@ class SOLUTION:
     self.num_sensors = numpy.sum(self.get_sensor)
     self.num_motors = len(self.joint_list)
   
+    print("DDDDDDDDDDDDDDDDDDDD")
     #for currentRow in range(0, c.numSensorNeurons):##################
     for currentRow in range(0, self.num_sensors):
       for currentColumn in range(0, self.num_motors):
         pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow][currentColumn])
+    print("EEEEEEEEEEEEEEEEEEEEEEEEEEEE")
     pyrosim.End()
     
   def Evaluate(self, directOrGUI):
