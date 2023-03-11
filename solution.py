@@ -65,10 +65,10 @@ class SOLUTION:
     for i, link in enumerate(self.link_list):
       pyrosim.Send_Cube(name = str(i), pos = [link.xpos, link.ypos, link.zpos], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
       self.SendSensor(link)
-      print("Link Name = " + str(i))
+      #print("Link Name = " + str(i))
       
     for joint in self.joint_list:
-      print(self.joint_list)
+      #print(self.joint_list)
       joint.Send_Joint()
     
       
