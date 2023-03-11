@@ -31,9 +31,6 @@ class SOLUTION:
     self.added_links.append(0)
     
   def Create_World(self):#########################################################
-    length = self.length
-    width = self.width
-    height = self.height
     x = self.x
     y = self.y
     z = self.z
@@ -101,7 +98,9 @@ class SOLUTION:
     z = 0
         
     #DEFINE JOINTS
-    #self.joint_list.append[JOINT()]    
+    length = self.link_list[c].x
+    width = self.link_list[c].y
+    height = self.link_list[c].z
     if(direction == 1):#x direction
           if(p == 0):
             jointTrueOffset = parentx/2 - parentx
