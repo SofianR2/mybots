@@ -29,6 +29,7 @@ class SOLUTION:
     #Create initial link
     self.link_list.append(LINK())
     self.added_links.append(0)
+    self.AddNewLinkAndJoint()
     
   def Create_World(self):#########################################################
     x = self.x
