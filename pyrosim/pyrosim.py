@@ -47,8 +47,8 @@ def Get_Touch_Sensor_Value_For_Link(linkName):
 
     touchValue = -1.0
     
-    print(linkNamesToIndices)######################################################
-    print(linkName + " LinkName")################################################################
+    #print(linkNamesToIndices)######################################################
+    #print(linkName + " LinkName")################################################################
     desiredLinkIndex = linkNamesToIndices[linkName]
 
     pts = p.getContactPoints()
@@ -64,14 +64,14 @@ def Get_Touch_Sensor_Value_For_Link(linkName):
     return touchValue
 
 def Prepare_Link_Dictionary(bodyID):
-    print("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ")
+    #print("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ")
 
     global linkNamesToIndices
 
     linkNamesToIndices = {}
 
-    print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
-    print(p.getNumJoints(bodyID))
+    #print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
+    #print(p.getNumJoints(bodyID))
     for jointIndex in range( 0 , p.getNumJoints(bodyID)):
         
 
