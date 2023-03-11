@@ -98,7 +98,7 @@ class SOLUTION:
     if(c > 0 and p!= 0):
           previous_direction = self.link_list[p].previous
         
-    new_joint_name = str(p) + "_" + str(i)
+    new_joint_name = str(p) + "_" + str(c)
     z = 0
         
     #DEFINE JOINTS
