@@ -116,7 +116,6 @@ class SOLUTION:
           if(previous_direction == 2):#coming from y
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y+parenty/2 - otherOffset2, z))            
             z = 0
-            pyrosim.Send_Cube(name = str(i), pos = [x+length/2, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
           if(previous_direction == 3):#coming from z
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y, z+parentz/2 - otherOffset3))            
             z = 0
