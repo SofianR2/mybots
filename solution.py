@@ -184,7 +184,8 @@ class SOLUTION:
                 self.link_list[c].Update_Link_Pos(x, y, z+height/2)
               self.link_list[c].previous = 3
   
-  def Create_Body(self):##########################################################
+  def Create_Body(self):##########################################################\
+    print("current links: " + self.added_links)
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     self.BuildBody()
     #pyrosim.Send_Cube(name = str(0), pos = [0, 0, 0], size = [1, 1, 1], color =   '    <color rgba="0.0 0.0 1.0 1.0"/>', cname =  '<material name="Blue">')
