@@ -177,6 +177,7 @@ class SOLUTION:
     #self.joint_list = []
 
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
+    self.AddNewLinkAndJoint()
     
     ##############################################
     #self.get_sensor = []
@@ -189,7 +190,7 @@ class SOLUTION:
     #    self.link_list[j].x += c.dx
         #self.link_list[j].y += self.vy
         #self.link_list[j].z += self.vz
-    
+    '''
     #OLD RESETTING OCCUPIED FOR LINKS
     for i, l in enumerate(self.link_list):
       l.occupied = [0, 0, 0, 0, 0, 0]
@@ -216,7 +217,7 @@ class SOLUTION:
       otherOffset2 = 0  
       otherOffset3 = 0
       
-      '''
+      
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
