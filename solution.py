@@ -215,6 +215,7 @@ class SOLUTION:
       otherOffset2 = 0  
       otherOffset3 = 0
       
+      '''
       #initial cube
       if(i == 0):
         pyrosim.Send_Cube(name = str(i), pos = [x, y, z], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
@@ -243,7 +244,7 @@ class SOLUTION:
         #make new joint and link
         new_joint_name = str(p) + "_" + str(i)
         z = 0
-        '''
+        
         if(i > 0 and p!= 0):
           previous_direction = self.link_list[p].previous
         
