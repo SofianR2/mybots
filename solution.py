@@ -165,16 +165,6 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []
-    #height_offset = 1
-    #x = self.x
-    #y = self.y
-    #z = self.z + height_offset
-    joint_offset = 1
-    width_offset = 0
-    length_offset = 0
-    z_offset = 0
-    previous_child = 99
-
 
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     
