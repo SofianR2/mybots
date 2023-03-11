@@ -120,7 +120,6 @@ class SOLUTION:
           if(previous_direction == 3):#coming from z
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y, z+parentz/2 - otherOffset3))            
             z = 0
-          #previous_direction = 1
           self.link_list[i].previous = 1
           
   if(direction == 2):#y direction
@@ -140,24 +139,26 @@ class SOLUTION:
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2 - otherOffset3))
             z = 0
           self.link_list[i].previous = 2
-        
-        
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    #udpate previous direction PUT THIS AFTER ACTUALLY PLACING JOINTS
-    self.link_list[c].previous = 1
-    
 
+  if(direction == 3):#z direction
+            if(p == 0):
+              jointTrueOffset = parentz/2 - parentz
+              otherOffset = parentx/2
+              otherOffset2 = parenty/2
+              otherOffset3 = parentz/2
+              z = 1
+            if(previous_direction == 3 or previous_direction == 0):#coming from z
+              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y, z+parentz+jointTrueOffset))
+              z = 0
+            if(previous_direction == 1):#coming from x
+              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y, z + parentz/2 + jointTrueOffset + otherOffset3))
+              z = 0
+            if(previous_direction == 2):#coming from y
+              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty/2 - otherOffset2, z + parentz/2 + jointTrueOffset + otherOffset3))
+              z = 0
+            self.link_list[i].previous = 3
   
-  def Create_Body(self):##############################################################
+  def Create_Body(self):##########################################################
     self.get_sensor = []
     self.num_sensors = 0
     self.num_motors = 0
@@ -336,13 +337,14 @@ class SOLUTION:
           previous_direction = 3
           self.link_list[i].previous = 3
           self.SendSensor(link)
-          '''
+          
           
       if(i > 0):    
         previous_child = i
       previousx = link.x
       previousy = link.y
       previousz = link.z
+      '''
           
     pyrosim.End()
 
