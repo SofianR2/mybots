@@ -125,7 +125,7 @@ class SOLUTION:
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y, z+parentz/2 - otherOffset3))            
             z = 0
             self.link_list[c].Update_Link_Pos(x+length/2, y, z)
-          self.link_list[i].previous = 1
+          self.link_list[c].previous = 1
           
     if(direction == 2):#y direction
             if(p == 0):
@@ -146,7 +146,7 @@ class SOLUTION:
               self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2 - otherOffset3))
               z = 0
               self.link_list[c].Update_Link_Pos(x, y+width/2, z)
-            self.link_list[i].previous = 2
+            self.link_list[c].previous = 2
 
     if(direction == 3):#z direction
               if(p == 0):
@@ -167,7 +167,7 @@ class SOLUTION:
                 self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty/2 - otherOffset2, z + parentz/2 + jointTrueOffset + otherOffset3))
                 z = 0
                 self.link_list[c].Update_Link_Pos(x, y, z+height/2)
-              self.link_list[i].previous = 3
+              self.link_list[c].previous = 3
   
   def Create_Body(self):##########################################################
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
