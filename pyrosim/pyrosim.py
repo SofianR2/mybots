@@ -70,8 +70,9 @@ def Prepare_Link_Dictionary(bodyID):
 
     linkNamesToIndices = {}
 
+    print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
     for jointIndex in range( 0 , p.getNumJoints(bodyID) ):
-        print("KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK")
+        
 
         jointInfo = p.getJointInfo( bodyID , jointIndex )
         #print(jointInfo)
