@@ -55,7 +55,8 @@ class SOLUTION:
       pyrosim.Send_Cube(name = str(i), pos = [link.xpos, link.ypos, link.zpos], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
       self.SendSensor(link)
       if(i < self.max-1):
-         self.joint_list[i].Send_Joint(joint)
+        print(i)
+        self.joint_list[i].Send_Joint(joint)
 
     '''
     for i, link in enumerate(self.link_list):
