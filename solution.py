@@ -63,7 +63,7 @@ class SOLUTION:
         self.joint_list[i].Send_Joint(joint)
     '''
 
-    
+    self.get_sensor = []
     for i, link in enumerate(self.link_list):
       pyrosim.Send_Cube(name = str(i), pos = [link.xpos, link.ypos, link.zpos], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
       print("Send_cube for " + str(i) + " completed")
