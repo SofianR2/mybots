@@ -124,6 +124,7 @@ class SOLUTION:
     width = self.link_list[c].y
     height = self.link_list[c].z
     if(direction == 1):#x direction
+      print("direction 1")
           if(p == 0):
             print("parent is 0")
             jointTrueOffset = parentx/2 - parentx
@@ -146,6 +147,7 @@ class SOLUTION:
           self.link_list[c].previous = 1
           
     if(direction == 2):#y direction
+      print("direction 2")
             if(p == 0):
               jointTrueOffset = parenty/2 - parenty
               otherOffset = parentx/2
@@ -167,6 +169,7 @@ class SOLUTION:
             self.link_list[c].previous = 2
 
     if(direction == 3):#z direction
+      print("direction 3")
               if(p == 0):
                 jointTrueOffset = parentz/2 - parentz
                 otherOffset = parentx/2
