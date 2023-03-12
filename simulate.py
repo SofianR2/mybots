@@ -4,9 +4,9 @@ import sys
 directOrGUI = sys.argv[1]
 solutionID = sys.argv[2]
 simulation = SIMULATION(directOrGUI, solutionID)
-print("SIMULATION DONE")
+#print("SIMULATION DONE")
 simulation.Run()
-print("FINISHED RUNNING")
+#print("FINISHED RUNNING")
 simulation.Get_Fitness()
 
 
