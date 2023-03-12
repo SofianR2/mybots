@@ -220,6 +220,8 @@ class SOLUTION:
   
     #print("DDDDDDDDDDDDDDDDDDDD")
     #for currentRow in range(0, c.numSensorNeurons):##################
+    print("num_sensors: " + int(self.num_sensors))
+    print("num_motors: " + int(self.num_motors))
     for currentRow in range(0, self.num_sensors):
       #for currentColumn in range(0, c.numMotorNeurons):
       for currentColumn in range(0, self.num_motors):
