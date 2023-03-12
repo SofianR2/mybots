@@ -30,7 +30,7 @@ class SOLUTION:
     #Create initial link
     self.link_list.append(LINK())
     self.added_links.append(0)
-    self.link_list[0].xpos += 1
+    self.link_list[0].zpos += 1
     self.AddNewLinkAndJoint()
     
   def Create_World(self):#########################################################
