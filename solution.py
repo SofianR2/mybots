@@ -125,70 +125,70 @@ class SOLUTION:
     height = self.link_list[c].z
     if(direction == 1):#x direction
       print("direction 1")
-          if(p == 0):
-            print("parent is 0")
-            jointTrueOffset = parentx/2 - parentx
-            otherOffset = parentx/2
-            otherOffset2 = parenty/2
-            otherOffset3 = parentz/2
-            #z = 1
-          if(previous_direction == 1 or previous_direction == 0):#coming from x #SET NAME, PARENT, CHILD, POSITION, and AXIS
-            self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x + parentx + jointTrueOffset), y, z))
-            #z = 0
-            self.link_list[c].Update_Link_Pos(x+length/2, y, z)
-          if(previous_direction == 2):#coming from y
-            self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y+parenty/2 - otherOffset2, z))            
-            #z = 0
-            self.link_list[c].Update_Link_Pos(x+length/2, y, z)
-          if(previous_direction == 3):#coming from z
-            self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y, z+parentz/2 - otherOffset3))            
-            #z = 0
-            self.link_list[c].Update_Link_Pos(x+length/2, y, z)
-          self.link_list[c].previous = 1
+      if(p == 0):
+        print("parent is 0")
+        jointTrueOffset = parentx/2 - parentx
+        otherOffset = parentx/2
+        otherOffset2 = parenty/2
+        otherOffset3 = parentz/2
+        #z = 1
+      if(previous_direction == 1 or previous_direction == 0):#coming from x #SET NAME, PARENT, CHILD, POSITION, and AXIS
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x + parentx + jointTrueOffset), y, z))
+        #z = 0
+        self.link_list[c].Update_Link_Pos(x+length/2, y, z)
+      if(previous_direction == 2):#coming from y
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y+parenty/2 - otherOffset2, z))            
+        #z = 0
+        self.link_list[c].Update_Link_Pos(x+length/2, y, z)
+      if(previous_direction == 3):#coming from z
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y, z+parentz/2 - otherOffset3))            
+        #z = 0
+        self.link_list[c].Update_Link_Pos(x+length/2, y, z)
+      self.link_list[c].previous = 1
           
     if(direction == 2):#y direction
       print("direction 2")
-            if(p == 0):
-              jointTrueOffset = parenty/2 - parenty
-              otherOffset = parentx/2
-              otherOffset2 = parenty/2
-              otherOffset3 = parentz/2
-              z = 1
-            if(previous_direction == 2 or previous_direction == 0):#coming from y
-              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty+jointTrueOffset, z))
-              z = 0
-              self.link_list[c].Update_Link_Pos(x, y+width/2, z)
-            if(previous_direction == 1):#coming from x
-              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y + parenty/2 + jointTrueOffset + otherOffset2, z))
-              z = 0
-              self.link_list[c].Update_Link_Pos(x, y+width/2, z)
-            if(previous_direction == 3):#coming from z
-              self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2 - otherOffset3))
-              z = 0
-              self.link_list[c].Update_Link_Pos(x, y+width/2, z)
-            self.link_list[c].previous = 2
+      if(p == 0):
+        jointTrueOffset = parenty/2 - parenty
+        otherOffset = parentx/2
+        otherOffset2 = parenty/2
+        otherOffset3 = parentz/2
+        z = 1
+      if(previous_direction == 2 or previous_direction == 0):#coming from y
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty+jointTrueOffset, z))
+        z = 0
+        self.link_list[c].Update_Link_Pos(x, y+width/2, z)
+      if(previous_direction == 1):#coming from x
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y + parenty/2 + jointTrueOffset + otherOffset2, z))
+        z = 0
+        self.link_list[c].Update_Link_Pos(x, y+width/2, z)
+      if(previous_direction == 3):#coming from z
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y + parenty/2 + jointTrueOffset + otherOffset2, z+parentz/2 - otherOffset3))
+        z = 0
+        self.link_list[c].Update_Link_Pos(x, y+width/2, z)
+      self.link_list[c].previous = 2
 
     if(direction == 3):#z direction
       print("direction 3")
-              if(p == 0):
-                jointTrueOffset = parentz/2 - parentz
-                otherOffset = parentx/2
-                otherOffset2 = parenty/2
-                otherOffset3 = parentz/2
-                z = 1
-              if(previous_direction == 3 or previous_direction == 0):#coming from z
-                self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y, z+parentz+jointTrueOffset))
-                z = 0
-                self.link_list[c].Update_Link_Pos(x, y, z+height/2)
-              if(previous_direction == 1):#coming from x
-                self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y, z + parentz/2 + jointTrueOffset + otherOffset3))
-                z = 0
-                self.link_list[c].Update_Link_Pos(x, y, z+height/2)
-              if(previous_direction == 2):#coming from y
-                self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty/2 - otherOffset2, z + parentz/2 + jointTrueOffset + otherOffset3))
-                z = 0
-                self.link_list[c].Update_Link_Pos(x, y, z+height/2)
-              self.link_list[c].previous = 3
+      if(p == 0):
+        jointTrueOffset = parentz/2 - parentz
+        otherOffset = parentx/2
+        otherOffset2 = parenty/2
+        otherOffset3 = parentz/2
+        z = 1
+      if(previous_direction == 3 or previous_direction == 0):#coming from z
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y, z+parentz+jointTrueOffset))
+        z = 0
+        self.link_list[c].Update_Link_Pos(x, y, z+height/2)
+      if(previous_direction == 1):#coming from x
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x+parentx/2 - otherOffset, y, z + parentz/2 + jointTrueOffset + otherOffset3))
+        z = 0
+        self.link_list[c].Update_Link_Pos(x, y, z+height/2)
+      if(previous_direction == 2):#coming from y
+        self.joint_list.append(JOINT(new_joint_name, str(p), str(c), x, y+parenty/2 - otherOffset2, z + parentz/2 + jointTrueOffset + otherOffset3))
+        z = 0
+        self.link_list[c].Update_Link_Pos(x, y, z+height/2)
+      self.link_list[c].previous = 3
   
   def Create_Body(self):##########################################################\
     print(self.added_links)
