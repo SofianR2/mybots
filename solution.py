@@ -78,7 +78,7 @@ class SOLUTION:
       
   def AddNewLinkAndJoint(self):####################################################
     #variables (MIGHT TAKE THESE OUT AND PUT IN CREATE BODY)
-    height_offset = 1
+    height_offset = 0
     x = self.x
     y = self.y
     z = self.z + height_offset
