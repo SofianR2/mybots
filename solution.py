@@ -66,12 +66,12 @@ class SOLUTION:
     self.get_sensor = []
     for i, link in enumerate(self.link_list):
       pyrosim.Send_Cube(name = str(i), pos = [link.xpos, link.ypos, link.zpos], size = [link.x, link.y, link.z], color = link.color, cname = link.color_name)
-      print("Send_cube for " + str(i) + " completed")
+      #print("Send_cube for " + str(i) + " completed")
       self.SendSensor(link)
       #print("Link Name = " + str(i))
       
     for joint in self.joint_list:
-      print(self.joint_list)
+      #print(self.joint_list)
       #print(self.joint_list)
       joint.Send_Joint()
     
@@ -125,9 +125,9 @@ class SOLUTION:
     width = self.link_list[c].y
     height = self.link_list[c].z
     if(direction == 1):#x direction
-      print("direction 1")
+      #print("direction 1")
       if(p == 0):
-        print("parent is 0")
+        #print("parent is 0")
         jointTrueOffset = parentx/2 - parentx
         otherOffset = parentx/2
         otherOffset2 = parenty/2
@@ -148,7 +148,7 @@ class SOLUTION:
       self.link_list[c].previous = 1
           
     if(direction == 2):#y direction
-      print("direction 2")
+      #print("direction 2")
       if(p == 0):
         jointTrueOffset = parenty/2 - parenty
         otherOffset = parentx/2
@@ -170,7 +170,7 @@ class SOLUTION:
       self.link_list[c].previous = 2
 
     if(direction == 3):#z direction
-      print("direction 3")
+      #print("direction 3")
       if(p == 0):
         jointTrueOffset = parentz/2 - parentz
         otherOffset = parentx/2
@@ -213,21 +213,21 @@ class SOLUTION:
     #print("CCCCCCCCCCCCCCCC")    
     for i, joint in enumerate(self.joint_list):
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint.name)
-      print("name = " + str(sensor_number) + " jointName = " + str(joint.name))
+      #print("name = " + str(sensor_number) + " jointName = " + str(joint.name))
       sensor_number = sensor_number + 1
-      print(self.get_sensor)
+      #print(self.get_sensor)
     self.num_sensors = numpy.sum(self.get_sensor)
     self.num_motors = len(self.joint_list)
   
     #print("DDDDDDDDDDDDDDDDDDDD")
     #for currentRow in range(0, c.numSensorNeurons):##################
-    print("num_sensors: " + str(self.num_sensors))
-    print("num_motors: " + str(self.num_motors))
+    #print("num_sensors: " + str(self.num_sensors))
+    #print("num_motors: " + str(self.num_motors))
     for currentRow in range(0, self.num_sensors):
       #for currentColumn in range(0, c.numMotorNeurons):
       for currentColumn in range(0, self.num_motors):
-        print("Row: " + str(currentRow))
-        print("Column: " + str(currentColumn))
+        #print("Row: " + str(currentRow))
+        #print("Column: " + str(currentColumn))
         pyrosim.Send_Synapse(sourceNeuronName = currentRow , targetNeuronName = currentColumn + self.num_sensors, weight = self.weights[currentRow-1][currentColumn])
     #print("EEEEEEEEEEEEEEEEEEEEEEEEEEEE")
     pyrosim.End()
