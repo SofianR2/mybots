@@ -191,7 +191,7 @@ class SOLUTION:
         self.link_list[c].Update_Link_Pos(x, y, z+height/2)
       self.link_list[c].previous = 3
   
-  def Create_Body(self):##########################################################\
+  def Create_Body(self):##########################################################
     print(self.added_links)
     pyrosim.Start_URDF("body" + str(self.myID) + ".urdf")
     self.BuildBody()
@@ -213,8 +213,9 @@ class SOLUTION:
     #print("CCCCCCCCCCCCCCCC")    
     for i, joint in enumerate(self.joint_list):
       pyrosim.Send_Motor_Neuron(name = sensor_number, jointName = joint.name)
-      #print("name = " + str(sensor_number) + " jointName = " + str(joint))
+      print("name = " + str(sensor_number) + " jointName = " + str(joint.name))
       sensor_number = sensor_number + 1
+      print(self.get_sensor)
     self.num_sensors = numpy.sum(self.get_sensor)
     self.num_motors = len(self.joint_list)
   
