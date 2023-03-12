@@ -125,6 +125,7 @@ class SOLUTION:
     height = self.link_list[c].z
     if(direction == 1):#x direction
           if(p == 0):
+            print("parent is 0")
             jointTrueOffset = parentx/2 - parentx
             otherOffset = parentx/2
             otherOffset2 = parenty/2
