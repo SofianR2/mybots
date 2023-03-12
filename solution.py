@@ -117,7 +117,7 @@ class SOLUTION:
       previous_direction = self.link_list[p].previous
         
     new_joint_name = str(p) + "_" + str(c)
-    z = 0
+    #z = 0
         
     #DEFINE JOINTS
     length = self.link_list[c].x
@@ -130,18 +130,18 @@ class SOLUTION:
             otherOffset = parentx/2
             otherOffset2 = parenty/2
             otherOffset3 = parentz/2
-            z = 1
+            #z = 1
           if(previous_direction == 1 or previous_direction == 0):#coming from x #SET NAME, PARENT, CHILD, POSITION, and AXIS
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x + parentx + jointTrueOffset), y, z))
-            z = 0
+            #z = 0
             self.link_list[c].Update_Link_Pos(x+length/2, y, z)
           if(previous_direction == 2):#coming from y
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y+parenty/2 - otherOffset2, z))            
-            z = 0
+            #z = 0
             self.link_list[c].Update_Link_Pos(x+length/2, y, z)
           if(previous_direction == 3):#coming from z
             self.joint_list.append(JOINT(new_joint_name, str(p), str(c), (x+parentx/2 + jointTrueOffset + otherOffset), y, z+parentz/2 - otherOffset3))            
-            z = 0
+            #z = 0
             self.link_list[c].Update_Link_Pos(x+length/2, y, z)
           self.link_list[c].previous = 1
           
