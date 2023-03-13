@@ -10,8 +10,8 @@ random.seed(1)
 phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 #input("Press Any Key to Continue")
-#phc.Show_Best()
-phc.GraphBest()
+phc.Show_Best()
+#phc.GraphBest()
 graph1 = phc.max
 
 np.random.seed(2)
