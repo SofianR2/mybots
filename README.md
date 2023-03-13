@@ -15,7 +15,7 @@ As detailed below, links and joints are stored in lists. Send_Cube() which adds 
 ## Body Mutation
 
 The diagram below shows how mutation works.
-The robot starts with two links and extends in the x, y, or z direction from any of the existing links. Each link keeps track of which direction it grew from so it can generate a new link from itself properly (with regards to dimensions/coordinates). 
+The robot starts with two links and extends in the x, y, or z direction from any of the existing links. Each link keeps track of which direction it grew from so it can generate a new link from itself properly (with regards to dimensions/coordinates). The body has a capacity of 12 links, and when the robot mutates enough and 
 
 ![image](https://user-images.githubusercontent.com/103147652/224819166-bd374676-e55e-452c-8142-0d8a8848ae80.png)
 
