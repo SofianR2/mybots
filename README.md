@@ -16,7 +16,7 @@ The bottom section shows an example of evolution for this robot, where the initi
 
 ## Sensor Assignment
 
-![image](https://user-images.githubusercontent.com/103147652/224825518-c13a4930-3dc6-490c-b5ba-119f61589726.png)
+![image](https://user-images.githubusercontent.com/103147652/224837539-681611e4-14e2-43c3-9a78-5ba3e92da195.png)
 
 Sensors are generated/assigned by keeping track of which links need sensors, in a list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question.
 
