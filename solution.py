@@ -284,10 +284,10 @@ class SOLUTION:
     if(len(self.link_list) < 4):
       self.AddNewLinkAndJoint()
       #print("Mutation Complete")
-    #else:
-    #  self.link_list.pop()
-    #  self.added_links.pop()
-    #  self.joint_list.pop()
+    else:
+      self.link_list.pop()
+      self.added_links.pop()
+      self.joint_list.pop()
       
     #else:
     #  random_link = random.randint(0, 3)
