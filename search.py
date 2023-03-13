@@ -10,7 +10,7 @@ random.seed(1)
 phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 #input("Press Any Key to Continue")
-phc.Show_Best()
+#phc.Show_Best()
 phc.GraphBest()
 graph1 = phc.max
 
