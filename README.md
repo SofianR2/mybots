@@ -1,4 +1,4 @@
-#3D Parallel Hill Climbing Evolutionary Robot
+# 3D Parallel Hill Climbing Evolutionary Robot
 Fitness Function: The fitness function simply has the robot move in the x direction.
 
 Morphospace: This body creates shapes by extending in either the x, y, or z direction from any previous links, allowing for many possible shapes and sizes. While the fitness function mostly allows for slow shimmying, it sometimes bounces when the figure is generated with legs/arms. 
