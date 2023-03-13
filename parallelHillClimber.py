@@ -71,8 +71,6 @@ class PARALLEL_HILL_CLIMBER:
     plt.legend(labels)
     
     plt.show()
-    time.sleep(1)
-    plt.close()
   
   def Evolve_For_One_Generation(self):
     self.Spawn()
