@@ -7,6 +7,8 @@ The bodies mutates based on the direction the last body was generated, as it aff
 
 ## Body Generation
 
+As detailed below, links and joints are stored in lists. Send_Cube() which adds links to the simulation is run over each link in the list, and Send_Joint() which adds joints to the simulation is run over each joint in the list, ultimately making a robot. This is repeated for each generation, taking into account any mutations to the robot. 
+
 ![image](https://user-images.githubusercontent.com/103147652/224840520-6b693645-5cdf-4bc9-a0c1-1c8b9d2ad5e9.png)
 
 
