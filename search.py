@@ -50,11 +50,61 @@ phc.Show_Best()
 phc.GraphBest()
 graph5 = phc.max
 
+np.random.seed(6)
+random.seed(6)
+phc = PARALLEL_HILL_CLIMBER()
+phc.Evolve()
+input("Press Any Key to Continue")
+phc.Show_Best()
+phc.GraphBest()
+graph6 = phc.max
+
+np.random.seed(7)
+random.seed(7)
+phc = PARALLEL_HILL_CLIMBER()
+phc.Evolve()
+input("Press Any Key to Continue")
+phc.Show_Best()
+phc.GraphBest()
+graph7 = phc.max
+
+np.random.seed(8)
+random.seed(8)
+phc = PARALLEL_HILL_CLIMBER()
+phc.Evolve()
+input("Press Any Key to Continue")
+phc.Show_Best()
+phc.GraphBest()
+graph8 = phc.max
+
+np.random.seed(9)
+random.seed(9)
+phc = PARALLEL_HILL_CLIMBER()
+phc.Evolve()
+input("Press Any Key to Continue")
+phc.Show_Best()
+phc.GraphBest()
+graph9 = phc.max
+
+np.random.seed(10)
+random.seed(10)
+phc = PARALLEL_HILL_CLIMBER()
+phc.Evolve()
+input("Press Any Key to Continue")
+phc.Show_Best()
+phc.GraphBest()
+graph10 = phc.max
+
 plt.plot(graph1)
 plt.plot(graph2)
 plt.plot(graph3)
 plt.plot(graph4)
 plt.plot(graph5)
+plt.plot(graph6)
+plt.plot(graph7)
+plt.plot(graph8)
+plt.plot(graph9)
+plt.plot(graph10)
 
 plt.xticks(range(0, c.numberOfGenerations+1))
 plt.xlabel("Generation")
