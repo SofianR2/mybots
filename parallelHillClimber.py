@@ -73,7 +73,7 @@ class PARALLEL_HILL_CLIMBER:
     #plt.show()
     
     plt.show(block=False)
-    plt.pause(10)
+    plt.pause(11)
     plt.close()
 
   
