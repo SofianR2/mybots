@@ -15,7 +15,7 @@ As detailed below, links and joints are stored in lists. Send_Cube() which adds 
 ## Body Mutation
 
 The diagram below shows how mutation works.
-The robot starts with two links and extends in the x, y, or z direction from any of the existing links. Each link keeps track of which direction it grew from so it can generate a new link from itself properly (with regards to dimensions/coordinates). Each link also keeps track of its occupied faces to prevent links growing from the same face twice or links growing back into their parent. The body has a capacity of 12 links, and when this capacity is reached, the robot stops growing and instead mutates by deleting the last added link and joint and generating a new link randomly somewhere else. 
+The robot starts with two links and extends in the x, y, or z direction from any of the existing links. Each link keeps track of which direction it grew from so it can generate a new link from itself properly (with regards to dimensions/coordinates). Each link also keeps track of its occupied faces to prevent links growing from the same face twice or links growing back into their parent. The body has a capacity of 12 links, and when this capacity is reached, the robot stops growing and instead mutates by deleting the last added link. 
 
 ![image](https://user-images.githubusercontent.com/103147652/224819166-bd374676-e55e-452c-8142-0d8a8848ae80.png)
 
@@ -24,8 +24,6 @@ The robot starts with two links and extends in the x, y, or z direction from any
 ![image](https://user-images.githubusercontent.com/103147652/224837539-681611e4-14e2-43c3-9a78-5ba3e92da195.png)
 
 Sensors are generated/assigned by keeping track of which links need sensors, in a list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question.
-
-Evolution: This robot evolves by extending its initial link in the X direction continuously. This is done in the mutation function within solution.py, which increments a constant called dx stored in the constants file. This variable is then added on to the initial link in create_body() every time the list of links is generated in a for loop, which ultimately increases the length of the first link as more generations pass. 
 
 ## Steps to run the program: 
 Open Command Prompt/Git Bash and move to a local directory where you want to add the git repo using the cd command. cd (insert directory name here)
