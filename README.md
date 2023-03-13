@@ -5,7 +5,7 @@ Put GIF here
 Put Video Here
 
 ## Visualization of Results
-### 10 seeds x 500 generations x 10 population
+### 10 seeds x 500 generations x 10 population = 50,000 simulations
 
 ![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
 
