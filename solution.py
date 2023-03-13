@@ -284,16 +284,17 @@ class SOLUTION:
     if(len(self.link_list) < 12):
       self.AddNewLinkAndJoint()
       #print("Mutation Complete")
-    else:
-      self.link_list.pop()
-      self.added_links.pop()
-      self.joint_list.pop()
-      
     #else:
-    #  random_link = random.randint(0, 3)
-    #  self.link_list[random_link].x = random.uniform(0.2, 1)
-    #  self.link_list[random_link].y = random.uniform(0.2, 1)
-    #  self.link_list[random_link].z = random.uniform(0.2, 1)
+    #  self.link_list.pop()
+    #  self.added_links.pop()
+    #  self.joint_list.pop()
+      
+    else:
+      random_link = random.randint(0, 11)
+      self.link_list[random_link].x = random.uniform(0.2, 1)
+      self.link_list[random_link].y = random.uniform(0.2, 1)
+      self.link_list[random_link].z = random.uniform(0.2, 1)
+      self.BuildBody()
 
     
     #Add joint and extend one link
