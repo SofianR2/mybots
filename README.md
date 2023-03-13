@@ -14,6 +14,9 @@ The bodies are generated based on the direction the last body was generated, as 
 The top section indicates how this robot can generate new links. As mentioned before, it extends in the x, y, and z directions and is able to generate new links from any of the existing links. 
 The bottom section shows an example of evolution for this robot, where the initial link extends int the x direction while maintaining the ability to generate new links from any existing link. 
 
+## Sensor Assignment
+
+![image](https://user-images.githubusercontent.com/103147652/224825518-c13a4930-3dc6-490c-b5ba-119f61589726.png)
 
 Sensors are generated/assigned by keeping track of which links need sensors, in a list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question.
 
