@@ -277,11 +277,11 @@ class SOLUTION:
     randomColumn = random.randint(0, c.numMotorNeurons-1)
     self.weights[randomRow, randomColumn] =  random.random() * 2 - 1
     
-    if(len(self.link_list) < 15):
+    if(len(self.link_list) < 12):
       self.AddNewLinkAndJoint()
       #print("Mutation Complete")
     else:
-      random_link = random.randint(0, 4)
+      random_link = random.randint(0, 11)
       self.link_list[random_link].x = random.uniform(0.2, 1)
       self.link_list[random_link].y = random.uniform(0.2, 1)
       self.link_list[random_link].z = random.uniform(0.2, 1)
