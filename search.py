@@ -11,7 +11,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 #input("Press Any Key to Continue")
 phc.Show_Best()
-#phc.GraphBest()
+phc.GraphBest()
 graph1 = phc.max
 
 np.random.seed(2)
@@ -20,7 +20,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 #input("Press Any Key to Continue")
 phc.Show_Best()
-#phc.GraphBest()
+phc.GraphBest()
 graph2 = phc.max
 
 np.random.seed(3)
@@ -29,7 +29,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 #input("Press Any Key to Continue")
 phc.Show_Best()
-#phc.GraphBest()
+phc.GraphBest()
 graph3 = phc.max
 
 np.random.seed(4)
@@ -38,7 +38,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 #input("Press Any Key to Continue")
 phc.Show_Best()
-#phc.GraphBest()
+phc.GraphBest()
 graph4 = phc.max
 
 np.random.seed(5)
@@ -47,7 +47,7 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 #input("Press Any Key to Continue")
 phc.Show_Best()
-#phc.GraphBest()
+phc.GraphBest()
 graph5 = phc.max
 
 plt.plot(graph1)
