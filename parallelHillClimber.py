@@ -70,7 +70,7 @@ class PARALLEL_HILL_CLIMBER:
       labels.append("Seed " + str(i + 1))
     plt.legend(labels)
     
-    plot.ion()
+    plt.ion()
     plt.show()
   
   def Evolve_For_One_Generation(self):
