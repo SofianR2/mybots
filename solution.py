@@ -285,7 +285,7 @@ class SOLUTION:
       self.AddNewLinkAndJoint()
       #print("Mutation Complete")
     else:
-      random_link = random.randint(0, 11)
+      random_link = random.randint(0, 3)
       self.link_list[random_link].x = random.uniform(0.2, 1)
       self.link_list[random_link].y = random.uniform(0.2, 1)
       self.link_list[random_link].z = random.uniform(0.2, 1)
