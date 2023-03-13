@@ -5,6 +5,7 @@ import random
 import matplotlib.pyplot as plt
 import constants as c
 
+os.system("del world" + str(self.myID) + ".sdf")
 np.random.seed(1)
 random.seed(1)
 phc = PARALLEL_HILL_CLIMBER()
