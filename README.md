@@ -27,9 +27,9 @@ Select the repository using the following command: cd https://github.com/SofianR
 
 Check your current branch using the following command: git branch
 
-If the branch highlighted is not finalProject, input the following commands to change to this branch: git fetch origin phc3d
+If the branch highlighted is not finalProject, input the following commands to change to this branch: git fetch origin Final
 
-git checkout phc3d
+git checkout Final
 
 Make sure to run the command git pull to ensure that the code is the latest available.
 
