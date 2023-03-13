@@ -18,7 +18,7 @@ Sensors are generated/assigned by keeping track of which links need sensors, in 
 
 Evolution: This robot evolves by extending its initial link in the X direction continuously. This is done in the mutation function within solution.py, which increments a constant called dx stored in the constants file. This variable is then added on to the initial link in create_body() every time the list of links is generated in a for loop, which ultimately increases the length of the first link as more generations pass. 
 
-#Steps to run the program: 
+# Steps to run the program: 
 Open Command Prompt/Git Bash and move to a local directory where you want to add the git repo using the cd command. cd (insert directory name here)
 
 Clone the repository using the following command: git clone https://github.com/SofianR2/mybots.git
