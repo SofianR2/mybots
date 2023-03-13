@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import constants as c
 
 os.system("del world*.sdf")
-np.random.seed(1)
-random.seed(1)
+np.random.seed(3)
+random.seed(3)
 phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Any Key to Continue")
