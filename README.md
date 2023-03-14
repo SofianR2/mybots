@@ -73,14 +73,13 @@ Ultimately, most of the robots saw a significant improvement in their movement, 
 
 ## Code/Files to Look At:
 
+viewfinal.py - runs simulations of the best robots saved from each seed from the 500 generations of 10 population for 10 seeds. 
+
 search.py - runs the parallel hill climber using multiple seeds (randomization that can be replicated) and graphs the fitness results of the robot
 
 parallelHillClimber.py - generates the list of parents and children to mutate/evolve, actually evolves them, and shows the best result
 
 solution.py - the actual "robots" and where they are generated - AddNewLinkAndJoint() adds new links and joints to add to the link and joint lists, and BuildBody() goes through these lists and actually creates the links and joints. The Mutate() function is where mutations occur such as extending the robot's body or removing a link from the body. 
-
-viewfinal.py - runs simulations of the best robots from the 500 generations of 10 population for 10 seeds. 
-
 
 ## Steps to run the program: 
 Open Command Prompt/Git Bash and move to a local directory where you want to add the git repo using the cd command. cd (insert directory name here)
