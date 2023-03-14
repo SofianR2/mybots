@@ -49,7 +49,7 @@ Search.py - runs the parallel hill climber using multiple seeds (randomization t
 
 parallelHillClimber.py - generates the list of parents and children to mutate/evolve, actually evolves them, and shows the best result
 
-solution.py - the actual "robots" and where they are generated - AddNewLinkAndJoint() adds new links and joints to add to the link and joint lists, and BuildBody() goes through these lists and actually creates the links and joints. The Mutate() Function is where mutations occur such as extending the robot's body or removing a link from the body. 
+solution.py - the actual "robots" and where they are generated - AddNewLinkAndJoint() adds new links and joints to add to the link and joint lists, and BuildBody() goes through these lists and actually creates the links and joints. The Mutate() function is where mutations occur such as extending the robot's body or removing a link from the body. 
 
 
 
