@@ -1,6 +1,6 @@
 # 3D Parallel Hill Climbing Evolutionary Robot
 
-(https://github.com/SofianR2/mybots/blob/Final/CSAL%20Teaser%20GIF%20Final.gif)
+![](https://github.com/SofianR2/mybots/blob/Final/CSAL%20Teaser%20GIF%20Final.gif)
 
 
 
