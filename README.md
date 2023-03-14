@@ -39,9 +39,19 @@ If a child has a better fitness value than its parent, it replaces the parent an
 
 ![image](https://user-images.githubusercontent.com/103147652/224863060-e5fa7d2b-408e-4656-9135-a99448b192bc.png)
 
+## Results and Conclusions
+
+Here are some examples of robots before and after they were evolved:
+
+(insert pictures here)
+
+
 ## Visualization of Results
 ### 10 seeds x 500 generations x 10 population = 50,000 simulations
 ![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
+
+After evolving for 500 generations, we can see that evolution occurs much more rapidly in earlier generations, and eventually plateaus in later generations. 
+If we do not set a limit to the number of links we generate, we may be able to see better fitness values, although the program may become computationally taxing, depending on the number of generations.
 
 ## Code/Files to Look At:
 
