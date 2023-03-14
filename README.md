@@ -51,7 +51,8 @@ Here are some examples of robots before and after they were evolved:
 ### 10 seeds x 500 generations x 10 population = 50,000 simulations
 ![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
 
-After evolving for 500 generations, we can see that evolution occurs much more rapidly in earlier generations, and eventually plateaus in later generations. 
+After evolving for 500 generations, we can see that evolution occurs much more rapidly in earlier generations, and eventually plateaus in later generations. It can also be seen that evolution typically stopped or plateaued if there was an extreme improvement in fitness, which makes sense as we essentially "skip" the earlier levels of fitness by having one big jump. 
+
 If we do not set a limit to the number of links we generate, we may be able to see better fitness values, although the program may become computationally taxing, depending on the number of generations.
 
 ## Code/Files to Look At:
