@@ -86,4 +86,7 @@ Now type the command python search.py to run the simulation.*
 
 *If this doesn’t work, try running python3 search.py instead
 
+### Credits:
+Explosion Effect - https://www.youtube.com/watch?v=Q7KmAe8_jZE
+
 [Inspiration from Karl Sims and Ludobots]
