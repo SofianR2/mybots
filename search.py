@@ -26,6 +26,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best2.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph2 = phc.max
 
@@ -36,6 +39,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best3.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph3 = phc.max
 
@@ -46,6 +52,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best4.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph4 = phc.max
 
@@ -56,6 +65,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best5.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph5 = phc.max
 
@@ -66,6 +78,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best6.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph6 = phc.max
 
@@ -76,6 +91,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best7.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph7 = phc.max
 
@@ -86,6 +104,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best8.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph8 = phc.max
 
@@ -96,6 +117,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best9.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph9 = phc.max
 
@@ -106,6 +130,9 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+with open('best10.txt', 'wb') as f:
+  pickle.dump(phc.best, f)
+  f.close()
 phc.GraphBest()
 graph10 = phc.max
 
