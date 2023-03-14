@@ -69,6 +69,8 @@ After evolving for 500 generations, we can see that evolution occurs much more r
 
 If we do not set a limit to the number of links we generate, we may be able to see even better fitness values, although the program may become computationally taxing, depending on the number of generations. 
 
+Ultimately, most of the robots saw a significant improvement in their movement, going from moving extremely slowly or not at all to moving significantly faster. Even within the evolved robots, some robots were faster than others, which is evident by the fitness diagram above. It would be interesting to see how much better these robots can get if we increase the generations and populations and set no limits to growth. 
+
 ## Code/Files to Look At:
 
 Search.py - runs the parallel hill climber using multiple seeds (randomization that can be replicated) and graphs the fitness results of the robot
