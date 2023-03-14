@@ -1,6 +1,8 @@
 # 3D Parallel Hill Climbing Evolutionary Robot
 
-Put GIF here
+https://user-images.githubusercontent.com/103147652/225082973-a714d958-7584-49bc-a43b-5ecb05d94094.mp4
+
+
 
 Put Video Here
 
