@@ -107,7 +107,7 @@ If you would like to run the simulation of 500 generations of 10 population for 
 
 ***WARNING: FULLY RUNNING search.py TAKES A FEW HOURS AND DEPENDS ON THE SPECS OF THE MACHINE IT'S BEING RUN ON***
 
-### Credits:
+## Credits:
 Explosion Effect - https://www.youtube.com/watch?v=Q7KmAe8_jZE
 
 Video Music - https://www.youtube.com/watch?v=6eWIffP2M3Y
