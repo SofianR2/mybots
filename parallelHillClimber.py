@@ -14,7 +14,6 @@ class PARALLEL_HILL_CLIMBER:
     self.fitness = numpy.empty((c.numberOfGenerations+1, c.populationSize))###########one generation
     self.max = []########### stores max of generations
     self.currentgeneration = 0
-    self.results = []
     
     for i in range(0, (c.populationSize)):
       self.parents[i] = SOLUTION(self.nextAvailableID)
@@ -113,8 +112,6 @@ class PARALLEL_HILL_CLIMBER:
     for i in self.parents:
       if (self.parents[i].fitness < best.fitness):
         best = self.parents[i]
-        self.results.append(best)
-        numpy.save("BestRobot", self.results)
     best.Start_Simulation("GUI")
   
   def Evaluate(self, solutions):
