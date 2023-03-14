@@ -4,8 +4,6 @@ Put GIF here
 
 Put Video Here
 
-![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
-
 ## Fitness and Morphospace
 
 Fitness Function: The fitness function simply has the robot move in the x direction.
@@ -43,7 +41,7 @@ If a child has a better fitness value than its parent, it replaces the parent an
 
 ## Visualization of Results
 ### 10 seeds x 500 generations x 10 population = 50,000 simulations
-
+![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
 
 ## Steps to run the program: 
 Open Command Prompt/Git Bash and move to a local directory where you want to add the git repo using the cd command. cd (insert directory name here)
