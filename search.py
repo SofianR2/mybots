@@ -4,6 +4,7 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 import constants as c
+import pickle
 
 os.system("del world*.sdf")
 np.random.seed(1)
@@ -12,6 +13,10 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
+phc.best
+with open('best1.txt', 'wb') as f:
+  pickle.dump(phc.best, fh)
+  f.close()
 phc.GraphBest()
 graph1 = phc.max
 
