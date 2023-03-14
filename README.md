@@ -101,7 +101,7 @@ Take all of the best*.txt files from the "Final" branch in the git repo and copy
 
 Now type the command python viewfinal.py to run the simulation.
 
-*If this doesn’t work, try running python3 viewfinal.py instead.
+*If this doesn’t work, try running python3 viewfinal.py instead.*
 
 If you would like to run the simulation of 500 generations of 10 population for 10 seeds, run search.py instead of viewfinal.py.
 
