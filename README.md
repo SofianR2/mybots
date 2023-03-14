@@ -52,6 +52,7 @@ git checkout Final
 Make sure to run the command git pull to ensure that the code is the latest available.
 
 Now type the command python search.py to run the simulation.* 
+
 *If this doesn’t work, try running python3 search.py instead
 
 [Inspiration from Karl Sims and Ludobots]
