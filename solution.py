@@ -26,6 +26,7 @@ class SOLUTION:
     self.link_list = []
     self.added_links = []
     self.joint_list = []
+    self.results = []
     
     #Create initial link
     self.link_list.append(LINK())
