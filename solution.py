@@ -202,6 +202,7 @@ class SOLUTION:
   def Create_Brain(self):#########################################################
     sensor_number = 0
     pyrosim.Start_NeuralNetwork("brain" + str(self.myID) + ".nndf")
+    print(self.myID)
     print("BBBBBBBBBBBBBBBBBBB")
     
     for i, link in enumerate(self.link_list):
