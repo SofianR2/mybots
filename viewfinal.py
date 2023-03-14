@@ -8,7 +8,7 @@ import pickle
 import time
 
 
-with open ("best1.txt, "rb") as f:
+with open ("best1.txt", "rb") as f:
   p = pickle.load(f)
 p[0].Start_Simulation("GUI")
 f.close()
