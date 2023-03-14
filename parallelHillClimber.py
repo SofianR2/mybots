@@ -18,6 +18,8 @@ class PARALLEL_HILL_CLIMBER:
     
     for i in range(0, (c.populationSize)):
       self.parents[i] = SOLUTION(self.nextAvailableID)
+      if i = 0:
+        self.parent[0].Start_Simulation("GUI")
       self.nextAvailableID += 1
     
   def Spawn(self):
