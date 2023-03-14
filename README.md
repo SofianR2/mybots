@@ -8,6 +8,7 @@ https://user-images.githubusercontent.com/103147652/225114677-c35de801-6305-4df2
 
 
 ## Fitness and Morphospace
+*Note I spoke with Sam regarding confusion on Assignment 8 which caused a misimplementation and was told this implementation was acceptable. 
 
 Fitness Function: The fitness function simply has the robot move in the x direction.
 
