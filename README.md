@@ -91,7 +91,7 @@ Select the repository using the following command: cd https://github.com/SofianR
 
 Check your current branch using the following command: git branch
 
-If the branch highlighted is not finalProject, input the following commands to change to this branch: git fetch origin Final
+If the branch highlighted is not Final, input the following commands to change to this branch: git fetch origin Final
 
 git checkout Final
 
