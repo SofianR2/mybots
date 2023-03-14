@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import constants as c
 import pickle
 
-with open ("best2.txt", "rb") as f:
+with open ("best1.txt", "rb") as f:
   p = pickle.load(f)
 p[0].Start_Simulation("GUI")
 
