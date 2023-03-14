@@ -73,12 +73,13 @@ Ultimately, most of the robots saw a significant improvement in their movement, 
 
 ## Code/Files to Look At:
 
-Search.py - runs the parallel hill climber using multiple seeds (randomization that can be replicated) and graphs the fitness results of the robot
+search.py - runs the parallel hill climber using multiple seeds (randomization that can be replicated) and graphs the fitness results of the robot
 
 parallelHillClimber.py - generates the list of parents and children to mutate/evolve, actually evolves them, and shows the best result
 
 solution.py - the actual "robots" and where they are generated - AddNewLinkAndJoint() adds new links and joints to add to the link and joint lists, and BuildBody() goes through these lists and actually creates the links and joints. The Mutate() function is where mutations occur such as extending the robot's body or removing a link from the body. 
 
+viewfinal.py - runs simulations of the best robots from the 500 generations of 10 population for 10 seeds. 
 
 
 ## Steps to run the program: 
@@ -96,9 +97,11 @@ git checkout Final
 
 Make sure to run the command git pull to ensure that the code is the latest available.
 
-Now type the command python search.py to run the simulation.* 
+Now type the command python viewfinal.py to run the simulation.* 
 
-*If this doesn’t work, try running python3 search.py instead
+*If this doesn’t work, try running python3 viewfinal.py instead
+
+If you would like to run the simulation of 500 generations of 10 population for 10 seeds, run search.py instead of viewfinal.py. 
 
 ### Credits:
 Explosion Effect - https://www.youtube.com/watch?v=Q7KmAe8_jZE
