@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import constants as c
 import pickle
 import time
-import best1 as b1
+import best1.txt as b1
 
 
 with open (b1, "rb") as f:
