@@ -53,7 +53,4 @@ Make sure to run the command git pull to ensure that the code is the latest avai
 
 Now type the command python search.py to run the simulation.* *If this doesn’t work, try running python3 search.py instead
 
-Graph showing improvement of fitness between 5 different seeds with 5 population and 100 generations: 
-![image](https://user-images.githubusercontent.com/103147652/222050028-536e50b9-aa0d-4561-b08b-b44091729eed.png)
-
 [Inspiration from Karl Sims and Ludobots]
