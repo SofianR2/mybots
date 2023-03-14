@@ -5,6 +5,8 @@ import random
 import matplotlib.pyplot as plt
 import constants as c
 import pickle
+import pyrosim.pyrosim as pyrosim
+
 
 
 with open ("best1.txt", "rb") as f:
