@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 import constants as c
 import pickle
 import time
+import best1 as b1
 
 
-
-with open ("best1.txt", "rb") as f:
+with open (b1, "rb") as f:
   p = pickle.load(f)
 p[0].Start_Simulation("GUI")
 f.close()
