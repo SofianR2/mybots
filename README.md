@@ -97,9 +97,11 @@ git checkout Final
 
 Make sure to run the command git pull to ensure that the code is the latest available.
 
-Now type the command python viewfinal.py to run the simulation.* 
+Take all of the best*.txt files in the "Final" branch from the git repo and copy them into your working directory. 
 
-*If this doesn’t work, try running python3 viewfinal.py instead
+Now type the command python viewfinal.py to run the simulation.
+
+*If this doesn’t work, try running python3 viewfinal.py instead.
 
 If you would like to run the simulation of 500 generations of 10 population for 10 seeds, run search.py instead of viewfinal.py.
 
