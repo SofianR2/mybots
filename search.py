@@ -11,10 +11,6 @@ import pyrosim.pyrosim as pyrosim
 
 with open ("best1.txt", "rb") as f:
   p = pickle.load(f)
-print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-print(p[0].myID)
-print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
-pyrosim.Start_SDF("world3354.sdf")
 p[0].Start_Simulation("GUI")
 
 os.system("del world*.sdf")
