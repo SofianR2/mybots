@@ -40,7 +40,7 @@ class SOLUTION:
     ###pyrosim.Start_SDF("world.sdf")#########
     pyrosim.Start_SDF("world" + str(self.myID) + ".sdf")
     #pyrosim.Send_Cube(name="Box", pos=[x,y,z] , size=[length+40,width+3,height])
-    os.system("del world" + str(self.myID) + ".sdf")
+    ###################os.system("del world" + str(self.myID) + ".sdf")
     pyrosim.End()
     
     #while not os.path.exists("world.sdf"):##########
