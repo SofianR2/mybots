@@ -13,6 +13,7 @@ with open ("best1.txt", "rb") as f:
   p = pickle.load(f)
 p[0].Start_Simulation("GUI")
 f.close()
+time.sleep(15)
 
 with open ("best2.txt", "rb") as f:
   p = pickle.load(f)
