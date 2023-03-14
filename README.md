@@ -97,7 +97,7 @@ git checkout Final
 
 Make sure to run the command git pull to ensure that the code is the latest available.
 
-Take all of the best*.txt files in the "Final" branch from the git repo and copy them into your working directory. 
+Take all of the best*.txt files from the "Final" branch in the git repo and copy them into your working directory. 
 
 Now type the command python viewfinal.py to run the simulation.
 
