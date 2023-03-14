@@ -5,7 +5,7 @@ import random
 import matplotlib.pyplot as plt
 import constants as c
 import pickle
-
+'''
 os.system("del world*.sdf")
 np.random.seed(1)
 random.seed(1)
@@ -31,7 +31,7 @@ with open('best2.txt', 'wb') as f:
   f.close()
 phc.GraphBest()
 graph2 = phc.max
-
+'''
 os.system("del world*.sdf")
 np.random.seed(3)
 random.seed(3)
