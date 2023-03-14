@@ -101,6 +101,7 @@ Now type the command python viewfinal.py to run the simulation.*
 *If this doesn’t work, try running python3 viewfinal.py instead
 
 If you would like to run the simulation of 500 generations of 10 population for 10 seeds, run search.py instead of viewfinal.py.
+(WARNING FULLY RUNNING search.py TAKES A FEW HOURS AND DEPENDS ON THE SPECS OF THE MACHINE IT'S BEING RUN ON)
 
 ### Credits:
 Explosion Effect - https://www.youtube.com/watch?v=Q7KmAe8_jZE
