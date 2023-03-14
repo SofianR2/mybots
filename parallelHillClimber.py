@@ -80,7 +80,7 @@ class PARALLEL_HILL_CLIMBER:
 
   
   def Evolve_For_One_Generation(self):
-    solutions[0].Start_Simulation("GUI")
+    self.solutions[0].Start_Simulation("GUI")
     self.Spawn()
     self.Mutate()
     self.Evaluate(self.children)
