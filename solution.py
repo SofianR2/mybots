@@ -288,6 +288,8 @@ class SOLUTION:
       self.link_list.pop()
       self.added_links.pop()
       self.joint_list.pop()
+      self.Create_Body()
+      self.Create_Brain()
       
     #else:
     #  random_link = random.randint(0, 11)
