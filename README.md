@@ -42,7 +42,7 @@ If a child has a better fitness value than its parent, it replaces the parent an
 
 ![image](https://user-images.githubusercontent.com/103147652/224863060-e5fa7d2b-408e-4656-9135-a99448b192bc.png)
 
-## Results and Conclusions
+## Results
 
 Here are some examples of unevolved and evolved robots:
 ### Unevolved - 0 generations, 1 population
@@ -61,17 +61,13 @@ Here are some examples of unevolved and evolved robots:
 ![image](https://user-images.githubusercontent.com/103147652/225115753-9eb55d03-102e-4c02-bf77-4a440ab08265.png)
 ![image](https://user-images.githubusercontent.com/103147652/225115767-036ae3f3-87b8-4b8d-9baf-d5666c43f14a.png)
 
-
-
-
-
-## Visualization of Results
+### Visualization of Results
 ### 10 seeds x 500 generations x 10 population = 50,000 simulations
 ![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
 
 After evolving for 500 generations, we can see that evolution occurs much more rapidly in earlier generations, and eventually plateaus in later generations. It can also be seen that evolution typically stopped or plateaued if there was an extreme improvement in fitness, which makes sense as we essentially "skip" the earlier levels of fitness by having one big jump. 
 
-If we do not set a limit to the number of links we generate, we may be able to see better fitness values, although the program may become computationally taxing, depending on the number of generations.
+If we do not set a limit to the number of links we generate, we may be able to see even better fitness values, although the program may become computationally taxing, depending on the number of generations. 
 
 ## Code/Files to Look At:
 
