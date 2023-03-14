@@ -15,7 +15,7 @@ input("Press Enter to Continue")
 phc.Show_Best()
 phc.best
 with open('best1.txt', 'wb') as f:
-  pickle.dump(phc.best, fh)
+  pickle.dump(phc.best, f)
   f.close()
 phc.GraphBest()
 graph1 = phc.max
