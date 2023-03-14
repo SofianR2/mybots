@@ -13,7 +13,6 @@ phc = PARALLEL_HILL_CLIMBER()
 phc.Evolve()
 input("Press Enter to Continue")
 phc.Show_Best()
-phc.best
 with open('best1.txt', 'wb') as f:
   pickle.dump(phc.best, f)
   f.close()
