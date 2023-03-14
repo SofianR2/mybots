@@ -44,10 +44,24 @@ If a child has a better fitness value than its parent, it replaces the parent an
 
 ## Results and Conclusions
 
-Here are some examples of robots before and after they were evolved:
-
+Here are some examples of unevolved and evolved robots:
+### Unevolved
 ![image](https://user-images.githubusercontent.com/103147652/224865811-11c03045-3a5c-4b18-a74b-7ca1c24b4e03.png)
-![image](https://user-images.githubusercontent.com/103147652/224865701-93930962-d06f-4316-91e0-fced3391b0d5.png)
+![image](https://user-images.githubusercontent.com/103147652/225115426-999d9254-b5c2-4774-8587-be86d74a373a.png)
+![image](https://user-images.githubusercontent.com/103147652/225115500-b1881809-65af-4d88-981c-6a69645b1056.png)
+![image](https://user-images.githubusercontent.com/103147652/225115532-ea7f7b10-6da4-4220-a8ef-b6215f0e2833.png)
+![image](https://user-images.githubusercontent.com/103147652/225115549-9ad07c79-fee9-420b-b720-dff58b97d6f6.png)
+
+### Evolved
+![image](https://user-images.githubusercontent.com/103147652/225115625-1951c30c-97a7-45ec-b067-0a9744f31d85.png)
+![image](https://user-images.githubusercontent.com/103147652/225115650-42fbff1e-d27e-45ea-8d41-11772e4050ff.png)
+![image](https://user-images.githubusercontent.com/103147652/225115678-9ad13860-f005-4d31-ab1f-82ded2906fbf.png)
+![image](https://user-images.githubusercontent.com/103147652/225115713-e48b4667-8d6e-473a-850e-cf9bfeed3b58.png)
+![image](https://user-images.githubusercontent.com/103147652/225115753-9eb55d03-102e-4c02-bf77-4a440ab08265.png)
+![image](https://user-images.githubusercontent.com/103147652/225115767-036ae3f3-87b8-4b8d-9baf-d5666c43f14a.png)
+
+
+
 
 
 ## Visualization of Results
