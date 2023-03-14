@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 import constants as c
 import pickle
 
+with open ("best1.txt", "rb") as f:
+  p = pickle.load(f)
+p.Start_Simulation("GUI")
+
 os.system("del world*.sdf")
 np.random.seed(1)
 random.seed(1)
