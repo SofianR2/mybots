@@ -34,9 +34,16 @@ The robot starts with two links and extends in the x, y, or z direction from any
 ## Sensor Assignment
 Sensors are generated/assigned by keeping track of which links need sensors, in a list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question. Motors are assigned to every link by iterating over the list of links. 
 
+![image](https://user-images.githubusercontent.com/103147652/224837539-681611e4-14e2-43c3-9a78-5ba3e92da195.png)
+
 ## Selection - Parallel Hill Climber
 
-![image](https://user-images.githubusercontent.com/103147652/224837539-681611e4-14e2-43c3-9a78-5ba3e92da195.png)
+Evolution takes place through parallel hill climbing, which involves looking at a population of samples which are all subject to certain mutations. In this robot, the mutations are changing the robot's fitness values (how well it moves in the x direction), creating new links, and eventually removing the newest link. 
+
+If a child has a better fitness value than its parent, it replaces the parent and becomes the next in line to mutate and evolve. This process of mutating and evolving an entire population (below) spans for several generations, which essentially means we repeat this process to further increase fitness via more mutations. 
+
+![image](https://user-images.githubusercontent.com/103147652/224863060-e5fa7d2b-408e-4656-9135-a99448b192bc.png)
+
 
 ## Steps to run the program: 
 Open Command Prompt/Git Bash and move to a local directory where you want to add the git repo using the cd command. cd (insert directory name here)
