@@ -15,7 +15,7 @@ p[0].Start_Simulation("GUI")
 
 time.sleep(15)
 
-#os.system("del world*.sdf")
+os.system("del world*.sdf")
 np.random.seed(1)
 random.seed(1)
 phc = PARALLEL_HILL_CLIMBER()
