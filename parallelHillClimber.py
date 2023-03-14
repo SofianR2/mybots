@@ -81,6 +81,7 @@ class PARALLEL_HILL_CLIMBER:
   
   def Evolve_For_One_Generation(self):
     self.Spawn()
+    self.parents[0].Start_Simulation("GUI")
     self.Mutate()
     self.Evaluate(self.children)
     self.Print()
@@ -88,7 +89,6 @@ class PARALLEL_HILL_CLIMBER:
     self.AddBest()
     
   def Evolve(self):
-    self.parents[0].Start_Simulation("GUI")
     self.Evaluate(self.parents)
     self.AddBest()
     self.currentgeneration -= 1
