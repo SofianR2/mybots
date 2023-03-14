@@ -43,7 +43,7 @@ If a child has a better fitness value than its parent, it replaces the parent an
 
 Here are some examples of robots before and after they were evolved:
 
-(insert pictures here)
+![image](https://user-images.githubusercontent.com/103147652/224865701-93930962-d06f-4316-91e0-fced3391b0d5.png)
 
 
 ## Visualization of Results
