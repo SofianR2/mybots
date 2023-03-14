@@ -10,7 +10,7 @@ import pickle
 with open ("best1.txt", "rb") as f:
   p = pickle.load(f)
 print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-print(p)
+print(p[0])
 print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
 p[0].myID = 3354
 p[0].Create_World()
