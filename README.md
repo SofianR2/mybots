@@ -1,4 +1,4 @@
-# 3D Parallel Hill Climbing Evolutionary Robot - by Sofian Rahhali
+# 3D Parallel Hill Climbing Evolutionary Robot
 
 Put GIF here
 
