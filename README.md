@@ -43,6 +43,14 @@ If a child has a better fitness value than its parent, it replaces the parent an
 ### 10 seeds x 500 generations x 10 population = 50,000 simulations
 ![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
 
+## Code/Files to Look At:
+
+Search.py - runs the parallel hill climber using multiple seeds (randomization that can be replicated) and graphs the fitness results of the robot
+parallelHillClimber.py - generates the list of parents and children to mutate/evolve, actually evolves them, and shows the best result
+solution.py - the actual "robots" and where they are generated - AddNewLinkAndJoint() adds new links and joints to add to the link and joint lists, and BuildBody() goes through these lists and actually creates the links and joints. The Mutate() Function is where mutations occur such as extending the robot's body or removing a link from the body. 
+
+
+
 ## Steps to run the program: 
 Open Command Prompt/Git Bash and move to a local directory where you want to add the git repo using the cd command. cd (insert directory name here)
 
