@@ -105,4 +105,4 @@ Explosion Effect - https://www.youtube.com/watch?v=Q7KmAe8_jZE
 
 Video Music - https://www.youtube.com/watch?v=6eWIffP2M3Y
 
-[Inspiration from Karl Sims and Ludobots]
+Inspiration from Karl Sims and Ludobots
