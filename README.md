@@ -4,9 +4,6 @@ Put GIF here
 
 Put Video Here
 
-## Visualization of Results
-### 10 seeds x 500 generations x 10 population = 50,000 simulations
-
 ![Figure_1](https://user-images.githubusercontent.com/103147652/224849475-b6fa0add-d7cc-466d-b8d6-61e913f30c9a.png)
 
 ## Fitness and Morphospace
@@ -43,6 +40,9 @@ Evolution takes place through parallel hill climbing, which involves looking at 
 If a child has a better fitness value than its parent, it replaces the parent and becomes the next in line to mutate and evolve. This process of mutating and evolving an entire population (below) spans for several generations, which essentially means we repeat this process to further increase fitness via more mutations. 
 
 ![image](https://user-images.githubusercontent.com/103147652/224863060-e5fa7d2b-408e-4656-9135-a99448b192bc.png)
+
+## Visualization of Results
+### 10 seeds x 500 generations x 10 population = 50,000 simulations
 
 
 ## Steps to run the program: 
