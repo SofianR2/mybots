@@ -14,6 +14,8 @@ class PARALLEL_HILL_CLIMBER:
     self.fitness = numpy.empty((c.numberOfGenerations+1, c.populationSize))###########one generation
     self.max = []########### stores max of generations
     self.currentgeneration = 0
+    self.results = []
+    
     for i in range(0, (c.populationSize)):
       self.parents[i] = SOLUTION(self.nextAvailableID)
       self.nextAvailableID += 1
