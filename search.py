@@ -12,8 +12,7 @@ with open ("best1.txt", "rb") as f:
 print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 print(p[0].myID)
 print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
-p[0].myID = 3354
-p[0].Create_World()
+pyrosim.Start_SDF("world3354.sdf")
 p[0].Start_Simulation("GUI")
 
 os.system("del world*.sdf")
