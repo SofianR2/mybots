@@ -113,6 +113,8 @@ class PARALLEL_HILL_CLIMBER:
     for i in self.parents:
       if (self.parents[i].fitness < best.fitness):
         best = self.parents[i]
+        self.results.append(best)
+        numpy.save("BestRobot", self.results)
     best.Start_Simulation("GUI")
   
   def Evaluate(self, solutions):
