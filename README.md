@@ -34,6 +34,8 @@ The robot starts with two links and extends in the x, y, or z direction from any
 ## Sensor Assignment
 Sensors are generated/assigned by keeping track of which links need sensors, in a list of 0s and 1s, with 1s representing sensors. Additionally, the index of this list coorelates to the name of the sensor in question. Motors are assigned to every link by iterating over the list of links. 
 
+## Selection - Parallel Hill Climber
+
 ![image](https://user-images.githubusercontent.com/103147652/224837539-681611e4-14e2-43c3-9a78-5ba3e92da195.png)
 
 ## Steps to run the program: 
