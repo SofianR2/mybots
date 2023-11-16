@@ -8,8 +8,6 @@ https://user-images.githubusercontent.com/103147652/225114677-c35de801-6305-4df2
 
 
 ## Fitness and Morphospace
-*Note: I spoke with Sam regarding confusion on Assignment 8 which caused a misimplementation and was told this new implementation was acceptable for this project.* 
-
 Fitness Function: The fitness function simply has the robot move in the x direction.
 
 Morphospace: This body creates shapes by extending in either the x, y, or z direction from any previous links, allowing for many possible shapes and sizes. While the fitness function mostly allows for shimmying/hopping forward, it sometimes bounces when the figure is generated with legs/arms. 
